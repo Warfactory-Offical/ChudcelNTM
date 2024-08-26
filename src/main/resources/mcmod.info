@@ -1,12 +1,12 @@
 [{
     "modid": "${modid}",
     "name": "${modname}",
-    "description": "An example mod for Minecraft 1.12.2 with Forge",
+    "description": "Chudcel's rewrite of HBM:NTM mod for 1.12.2, with custom content",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "logoFile": "",
-    "url": "",
-    "authorList": [],
-    "credits": "",
+    "url": "https://github.com/Warfactory-Offical/ChudcelNTM/",
+    "authorList": ["rawhav0kk", "qubix00n"],
+    "credits": "HBM:NTM",
     "dependencies": []
 }]
