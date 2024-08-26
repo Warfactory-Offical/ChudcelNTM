@@ -23,7 +23,7 @@ public class CraftingManager {
     private static RegistryEvent.Register<IRecipe> CRAFTING_REGISTRY = null;
 
     @SubscribeEvent
-    public void craftingRegister(RegistryEvent.Register<IRecipe> e){
+    public static void craftingRegister(RegistryEvent.Register<IRecipe> e){
         CRAFTING_REGISTRY = e;
 
         addAllRecipes();
