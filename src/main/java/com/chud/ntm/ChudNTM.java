@@ -1,5 +1,6 @@
 package com.chud.ntm;
 
+import com.chud.ntm.hazard.HazardRegistry;
 import com.chud.ntm.manager.OreDictionaryManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -19,22 +20,19 @@ public class ChudNTM {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         LOGGER.info("PreInit start " + NAME + " v" + VERSION);
+        {
+
+        }
         LOGGER.info("PreInit end");
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         LOGGER.info("PostInit start");
-        OreDictionaryManager.registerAll();
-//        for (String shape : new String[] { "ingot", "dust", "plate" }) {
-//            for (MaterialNTM material : MaterialNTM.values()) {
-//                final String material_Xxx = material.PascalCase();
-//                LOGGER.info("OreDict: {}, Hazards: [/* TODO */]", shape + material_Xxx);
-//            }
-//        }
-
-//        OreDictionary.getOres("")
-
+        {
+            OreDictionaryManager.registerAll();
+            HazardRegistry.populate();
+        }
         LOGGER.info("PostInit end");
     }
 
