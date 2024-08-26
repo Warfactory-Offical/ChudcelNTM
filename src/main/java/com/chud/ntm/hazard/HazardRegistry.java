@@ -23,15 +23,15 @@ public class HazardRegistry {
         shapeMultipliers.put("block", 10.f);
     }
 
-    private static final Map<MaterialNTM, List<Hazard>> materialHazards = new LinkedHashMap<>();
+    private static final Map<MaterialNTM, HazardList> materialHazards = new LinkedHashMap<>();
 
     static {
-        materialHazards.put(MaterialNTM.lead, Arrays.asList(
+        materialHazards.put(MaterialNTM.lead, new HazardList(
                 new Hazard(Hazard.Type.TOXIC, 2.f)
         ));
     }
 
-    private static final Map<Pair<Item, Integer>, List<Hazard>> hazardMap = new LinkedHashMap();
+    private static final Map<Pair<Item, Integer>, HazardList> hazardMap = new LinkedHashMap();
 
     public static void populate() {
         for (Map.Entry<String, Float> shapeEntry : shapeMultipliers.entrySet()) {
@@ -40,11 +40,13 @@ public class HazardRegistry {
 
                 final String oreDictEntryName = shapeEntry.getKey() + material.PascalCase();
 
-                List<Hazard> hazards = materialHazards
-                        .get(material)
-                        .stream()
-                        .map(hazard -> hazard.multiply(shapeEntry.getValue()))
-                        .collect(Collectors.toList());
+                HazardList hazards = new HazardList(
+                        materialHazards
+                            .get(material)
+                            .stream()
+                            .map(hazard -> hazard.multiply(shapeEntry.getValue()))
+                            .collect(Collectors.toList())
+                );
 
                 for (ItemStack is : OreDictionary.getOres(oreDictEntryName)) {
                     Pair<Item, Integer> key = new Pair<>(is.getItem(), is.getMetadata());
@@ -56,16 +58,18 @@ public class HazardRegistry {
         }
     }
 
-    public static List<Hazard> getHazardsForItemStack(ItemStack is) {
+    public static HazardList getHazardsForItemStack(ItemStack is) {
         Pair<Item, Integer> key = new Pair<>(is.getItem(), is.getMetadata());
 
-        return hazardMap.containsKey(key)
+        return new HazardList(
+            hazardMap.containsKey(key)
                 ? hazardMap
                     .get(key)
                     .stream()
                     .map(hazard -> hazard.multiply(is.getCount()))
                     .collect(Collectors.toList())
-                : new ArrayList<>();
+                : new ArrayList<>()
+        );
     }
 
 }
