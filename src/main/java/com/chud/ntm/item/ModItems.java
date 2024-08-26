@@ -1,6 +1,5 @@
 package com.chud.ntm.item;
 
-import com.chud.ntm.ChudNTM;
 import com.chud.ntm.item.enums.MaterialNTM;
 import com.chud.ntm.item.templates.IngotItem;
 import com.chud.ntm.item.templates.PlateItem;
@@ -8,23 +7,52 @@ import com.chud.ntm.item.templates.WireItem;
 import com.chud.ntm.item.tool.*;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.function.Consumer;
 
-import static com.chud.ntm.RefStrings.*;
 
-@EventBusSubscriber(modid=MODID)
 public class ModItems {
+
+    public static void forEachItem(Consumer<Item> action) {
+        Field[] fields = ModItems.class.getFields();
+
+        for (Field field : fields) {
+            if (field.getType() == Item.class) {
+                field.setAccessible(true);
+                try {
+                    Item item = (Item) field.get(null);
+                    if (item != null) {
+                        ResourceLocation itemRegistryName = item.getRegistryName();
+
+                        if (itemRegistryName == null) continue;
+
+                        ResourceLocation textureLocation = new ResourceLocation(
+                                itemRegistryName.getNamespace(),
+                                "textures/items/" + itemRegistryName.getPath() + ".png"
+                        );
+
+                        try {
+                            if (Minecraft.getMinecraft().getResourceManager().getResource(textureLocation) != null) {
+                                action.accept(item);
+                            } else {
+                                // TODO: Generate textures on the fly??
+                            }
+                        } catch (IOException ignored) {
+
+                        }
+                    } else {
+                        throw new RuntimeException();
+                    }
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+    }
 
     // items
 
@@ -344,70 +372,5 @@ public class ModItems {
     public static final Item plate_verticium = new PlateItem(MaterialNTM.verticium);
     public static final Item plate_weidanium = new PlateItem(MaterialNTM.weidanium);
     public static final Item plate_zirconium = new PlateItem(MaterialNTM.zirconium);
-
-    // functions
-
-    private static void forEachItem(Consumer<Item> action) {
-        Field[] fields = ModItems.class.getFields();
-
-        for (Field field : fields) {
-            if (field.getType() == Item.class) {
-                field.setAccessible(true);
-                try {
-                    Item item = (Item) field.get(null);
-                    if (item != null) {
-                        ResourceLocation itemRegistryName = item.getRegistryName();
-
-                        if (itemRegistryName == null) continue;
-
-                        ResourceLocation textureLocation = new ResourceLocation(
-                            itemRegistryName.getNamespace(),
-                            "textures/items/" + itemRegistryName.getPath() + ".png"
-                        );
-
-                        try {
-                            if (Minecraft.getMinecraft().getResourceManager().getResource(textureLocation) != null) {
-                                action.accept(item);
-                            } else {
-                                // TODO: Generate textures on the fly??
-                            }
-                        } catch (IOException ignored) {
-
-                        }
-                    } else {
-                        throw new RuntimeException();
-                    }
-                } catch (IllegalAccessException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> event) {
-        forEachItem(item -> {
-            event.getRegistry().register(item);
-            ChudNTM.LOGGER.info("Registered item: {}", item.getRegistryName());
-        });
-    }
-
-    private static void registerRender(Item item) {
-        ModelLoader
-                .setCustomModelResourceLocation(item, 0,
-                        new ModelResourceLocation(
-                            item.getRegistryName(),
-                            "inventory"
-                        )
-                );
-    }
-
-    @SubscribeEvent
-    public static void registerRenders(ModelRegistryEvent event) {
-        forEachItem(item -> {
-            registerRender(item);
-            ChudNTM.LOGGER.info("Registered render for item: {}", item.getRegistryName());
-        });
-    }
 
 }

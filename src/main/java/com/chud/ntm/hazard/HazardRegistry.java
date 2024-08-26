@@ -7,19 +7,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static com.chud.ntm.RefStrings.*;
-
-@EventBusSubscriber(modid=MODID)
 public class HazardRegistry {
 
     private static final Map<String, Float> shapeMultipliers = new LinkedHashMap<>();
@@ -292,28 +286,6 @@ public class HazardRegistry {
     public static void addFullTooltip(ItemStack stack, EntityPlayer player, List<String> list) {
         HazardList hazards = getHazardsForItemStack(stack);
         hazards.addHazardInformation(player, list, stack);
-    }
-
-    @SubscribeEvent
-    public static void drawTooltip(ItemTooltipEvent event) {
-        ItemStack stack = event.getItemStack();
-        EntityPlayer entityPlayer = event.getEntityPlayer();
-        List<String> list = event.getToolTip();
-
-        // TODO: HAZMAT INFO
-
-        // TODO: CLADDING
-
-        // TODO: ARMOR MODS
-
-        // TODO: CUSTOM NUKE
-
-        // TODO: NEUTRON RADS
-
-        // TODO: MKU
-
-        // HAZARD
-        HazardRegistry.addFullTooltip(stack, entityPlayer, list);
     }
 
     private static void applyHazards(ItemStack stack, EntityPlayer target) {

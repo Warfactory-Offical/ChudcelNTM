@@ -10,25 +10,22 @@ import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import org.jetbrains.annotations.NotNull;
 
 import static com.chud.ntm.RefStrings.MODID;
 
-@EventBusSubscriber(modid=MODID)
 public class CraftingManager {
 
     private static RegistryEvent.Register<IRecipe> CRAFTING_REGISTRY = null;
 
-    @SubscribeEvent
-    public static void craftingRegister(RegistryEvent.Register<IRecipe> e){
-        CRAFTING_REGISTRY = e;
-
+    public static void register(@NotNull RegistryEvent.Register<IRecipe> registry) {
+        CRAFTING_REGISTRY = registry;
         addAllRecipes();
+        CRAFTING_REGISTRY = null;
     }
 
-    public static ResourceLocation getRecipeName(ItemStack output) {
+    private static ResourceLocation getRecipeName(ItemStack output) {
         ResourceLocation loc = new ResourceLocation(MODID, output.getItem().getRegistryName().getPath());
         int i = 0;
         ResourceLocation r_loc = loc;
@@ -39,7 +36,7 @@ public class CraftingManager {
         return r_loc;
     }
 
-    public static void addRecipeAuto(ItemStack output, Object... args) {
+    private static void addRecipeAuto(ItemStack output, Object... args) {
         boolean shouldUseOD = false;
         boolean patternEnded = false;
 
@@ -70,7 +67,7 @@ public class CraftingManager {
         ChudNTM.LOGGER.info("Added recipe for {}", loc);
     }
 
-    public static void addAllRecipes() {
+    private static void addAllRecipes() {
         addRecipeAuto(new ItemStack(ModItems.redstone_sword, 1), new Object[] { "R", "R", "S", 'R', Blocks.REDSTONE_BLOCK, 'S', Items.STICK });
     }
 
