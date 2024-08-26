@@ -41,5 +41,6 @@ dependencies {
 
     implementation rfg.deobf("curse.maven:groovyscript-687577:5635093")
     implementation 'zone.rong:mixinbooter:9.3'
+    runtimeOnlyNonPublishable rfg.deobf("curse.maven:nuclearcraft-mod-226254:5340979")
 
 }
