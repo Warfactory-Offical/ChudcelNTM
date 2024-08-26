@@ -1,4 +1,4 @@
 package com.chud.ntm.capabilites;
 
-public class NtmCapability {
+public class LivingCapabilityNTM {
 }
