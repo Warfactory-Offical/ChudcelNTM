@@ -209,8 +209,34 @@ public class HazardRegistry {
         materialHazards.put(MaterialNTM.tcalloy, new HazardList(
                new Hazard(Hazard.Type.RADIATION, 0.075f)
         ));
-        //MOX
-
+        //POLONIUM
+        materialHazards.put(MaterialNTM.polonium, new HazardList(
+                new Hazard(Hazard.Type.RADIATION, 75.f)
+        ));
+        //STRONTIUM
+        materialHazards.put(MaterialNTM.strontium, new HazardList(
+                new Hazard(Hazard.Type.RADIATION, 15f),
+                new Hazard(Hazard.Type.HYDROACTIVE, 8f),
+                new Hazard(Hazard.Type.HOT, 8f)
+        ));
+        //IODINE131
+        materialHazards.put(MaterialNTM.i131, new HazardList(
+                new Hazard(Hazard.Type.RADIATION, 150.f)
+        ));
+        //RADIUM
+        materialHazards.put(MaterialNTM.ra226, new HazardList(
+                new Hazard(Hazard.Type.RADIATION, 7.5f),
+                new Hazard(Hazard.Type.HYDROACTIVE, 10f)
+        ));
+        //GOLD 198
+        materialHazards.put(MaterialNTM.ra226, new HazardList(
+                new Hazard(Hazard.Type.RADIATION, 500.f),
+                new Hazard(Hazard.Type.HOT, 8f)
+        ));
+        //AC227
+        materialHazards.put(MaterialNTM.ac227, new HazardList(
+                new Hazard(Hazard.Type.RADIATION, 30.f)
+        ));
     }
 
     private static final Map<Pair<Item, Integer>, HazardList> hazardMap = new LinkedHashMap();
