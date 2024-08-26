@@ -1,4 +1,4 @@
-package com.ntm.config;
+package com.chud.ntm.config;
 
 import com.hbm.items.ModItems;
 import com.hbm.potion.HbmPotion;

@@ -1,4 +1,4 @@
-package com.ntm.config;
+package com.chud.ntm.config;
 
 import java.util.HashSet;
 

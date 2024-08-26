@@ -1,6 +1,6 @@
-package com.ntm.config;
+package com.chud.ntm.config;
 
-import com.ntm.config.CompatibilityConfig;
+import com.chud.ntm.config.CompatibilityConfig;
 
 public class WorldConfig {
 

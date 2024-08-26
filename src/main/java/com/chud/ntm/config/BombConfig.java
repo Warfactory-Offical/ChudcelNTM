@@ -1,4 +1,4 @@
-package com.ntm.config;
+package com.chud.ntm.config;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;

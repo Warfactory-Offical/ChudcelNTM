@@ -1,12 +1,11 @@
-package com.ntm.config;
+package com.chud.ntm.config;
 
 import java.util.Locale;
 
+import com.chud.ntm.ChudNTM;
 import org.apache.logging.log4j.Level;
 import org.lwjgl.opengl.GLContext;
 
-import com.hbm.main.MainRegistry;
-import com.hbm.render.GLCompat;
 
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraftforge.common.config.Configuration;
@@ -113,10 +112,10 @@ public class GeneralConfig {
 		useShaders = shaders.getBoolean(false);
 		if(FMLCommonHandler.instance().getSide() == Side.CLIENT)
 			if(!OpenGlHelper.shadersSupported) {
-				MainRegistry.logger.log(Level.WARN, "GLSL shaders are not supported; not using shaders");
+				ChudNTM.LOGGER.log(Level.WARN, "GLSL shaders are not supported; not using shaders");
 				useShaders = false;
 			} else if(!GLContext.getCapabilities().OpenGL30) {
-				MainRegistry.logger.log(Level.WARN, "OpenGL 3.0 is not supported; not using shaders");
+				ChudNTM.LOGGER.log(Level.WARN, "OpenGL 3.0 is not supported; not using shaders");
 				useShaders = false;
 			}
 		useShaders = false;
@@ -159,19 +158,19 @@ public class GeneralConfig {
 		
 		bloodFX = CommonConfig.createConfigBool(config, CATEGORY_GENERAL, "1.32_enable_blood_effects", "Enables the over-the-top blood visual effects for some weapons", true);
 	
-		if((instancedParticles || depthEffects || flowingDecalAmountMax > 0 || bloodFX || bloom || heatDistortion) && (!GLCompat.error.isEmpty() || !useShaders2)){
-			MainRegistry.logger.error("Warning - Open GL 3.3 not supported! Disabling 3.3 effects...");
-			if(!useShaders2){
-				MainRegistry.logger.error("Shader effects manually disabled");
-			}
-			instancedParticles = false;
-			depthEffects = false;
-			flowingDecalAmountMax = 0;
-			bloodFX = false;
-			useShaders2 = false;
-			bloom = false;
-			heatDistortion = false;
-		}
+//		if((instancedParticles || depthEffects || flowingDecalAmountMax > 0 || bloodFX || bloom || heatDistortion) && (!GLCompat.error.isEmpty() || !useShaders2)){
+//			ChudNTM.LOGGER.error("Warning - Open GL 3.3 not supported! Disabling 3.3 effects...");
+//			if(!useShaders2){
+//				ChudNTM.LOGGER.error("Shader effects manually disabled");
+//			}
+//			instancedParticles = false;
+//			depthEffects = false;
+//			flowingDecalAmountMax = 0;
+//			bloodFX = false;
+//			useShaders2 = false;
+//			bloom = false;
+//			heatDistortion = false;
+//		}
 		if(!depthEffects){
 			flashlight = false;
 			bulletHoleNormalMapping = false;

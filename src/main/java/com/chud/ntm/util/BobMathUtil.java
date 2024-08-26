@@ -19,7 +19,7 @@ import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector4f;
 
 //import com.hbm.main.ClientProxy;
-//import com.hbm.main.MainRegistry;
+//import com.hbm.main.ChudNTM;
 //import com.hbm.render.amlfrom1710.Vec3;
 
 import net.minecraft.client.Minecraft;

@@ -1,4 +1,4 @@
-package com.ntm.config;
+package com.chud.ntm.config;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,11 +6,14 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import com.chud.ntm.ChudNTM;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonWriter;
+
+import com.chud.ntm.config.JsonConfig;
 
 
 public class BedrockOreJsonConfig {
@@ -175,7 +178,7 @@ public class BedrockOreJsonConfig {
 
 			return true;
 		} catch(Exception ex) {
-			MainRegistry.logger.error("Loading the bedrock ore config resulted in an error");
+			ChudNTM.LOGGER.error("Loading the bedrock ore config resulted in an error");
 			ex.printStackTrace();
 			return false;
 		}

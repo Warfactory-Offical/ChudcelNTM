@@ -1,21 +1,24 @@
-package com.ntm.config;
+package com.chud.ntm.config;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+import com.chud.ntm.ChudNTM;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonWriter;
+import org.apache.commons.lang3.NotImplementedException;
 
-import com.hbm.main.MainRegistry;
 
 public class JsonConfig {
 
 	public static final Gson gson = new Gson();
 	
 	private static File getFile(String filename){
-		return new File(MainRegistry.proxy.getDataDir().getPath() + "/config/hbm" + File.separatorChar + filename);
+		//TODO:Add proxy
+//		return new File(ChudNTM.proxy.getDataDir().getPath() + "/config/hbm" + File.separatorChar + filename);
+		throw new NotImplementedException("Config doesn't work due to unimplemented proxy.");
 	}
 
 	public static JsonWriter startWriting(String filename){

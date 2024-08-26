@@ -1,9 +1,9 @@
-package com.ntm.config;
+package com.chud.ntm.config;
 
 import java.util.HashMap;
 import java.util.HashSet;
 
-import com.hbm.main.MainRegistry;
+import com.chud.ntm.ChudNTM;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
@@ -85,8 +85,8 @@ public class CommonConfig {
 	public static int setDefZero(int value, int def) {
 
 		if(value < 0) {
-			MainRegistry.logger.error("Fatal error config: Randomizer value has been below zero, despite bound having to be positive integer!");
-			MainRegistry.logger.error(String.format("Errored value will default back to %d, PLEASE REVIEW CONFIGURATION DESCRIPTION BEFORE MEDDLING WITH VALUES!", def));
+			ChudNTM.LOGGER.error("Fatal error config: Randomizer value has been below zero, despite bound having to be positive integer!");
+			ChudNTM.LOGGER.error(String.format("Errored value will default back to %d, PLEASE REVIEW CONFIGURATION DESCRIPTION BEFORE MEDDLING WITH VALUES!", def));
 			return def;
 		}
 
@@ -96,8 +96,8 @@ public class CommonConfig {
 	public static int setDef(int value, int def) {
 	
 		if(value <= 0) {
-			MainRegistry.logger.error("Fatal error config: Randomizer value has been set to zero, despite bound having to be positive integer!");
-			MainRegistry.logger.error(String.format("Errored value will default back to %d, PLEASE REVIEW CONFIGURATION DESCRIPTION BEFORE MEDDLING WITH VALUES!", def));
+			ChudNTM.LOGGER.error("Fatal error config: Randomizer value has been set to zero, despite bound having to be positive integer!");
+			ChudNTM.LOGGER.error(String.format("Errored value will default back to %d, PLEASE REVIEW CONFIGURATION DESCRIPTION BEFORE MEDDLING WITH VALUES!", def));
 			return def;
 		}
 	
