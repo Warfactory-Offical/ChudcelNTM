@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 
 import com.chud.ntm.util.I18nUtil;
 
-public class HazardList implements Iterator<Hazard> {
+public class HazardList {
 
     private final List<Hazard> hazards;
 
