@@ -8,19 +8,20 @@ import net.minecraft.util.ResourceLocation;
 
 import static com.chud.ntm.RefStrings.MODID;
 
-public class IngotItem extends Item {
+public class NuggetItem extends Item {
 
-    public IngotItem(MaterialNTM material) {
+    public NuggetItem(MaterialNTM material) {
         final String material_xxx = material.lowercase();
         final String material_Xxx = material.PascalCase();
 
-        final String itemName = "ingot_" + material_xxx;
+        final String itemName = "nugget_" + material_xxx;
 
         setTranslationKey(itemName);
         setRegistryName(new ResourceLocation(MODID, itemName));
         setCreativeTab(CreativeTabsManager.partsTab);
 
-        OreDictionaryManager.queueRegisterOre("ingot" + material_Xxx, this);
+        OreDictionaryManager.queueRegisterOre("nugget" + material_Xxx, this);
     }
 
 }
+
