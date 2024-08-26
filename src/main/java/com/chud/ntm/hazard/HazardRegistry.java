@@ -62,6 +62,10 @@ public class HazardRegistry {
         materialHazards.put(MaterialNTM.lead, new HazardList(
                 new Hazard(Hazard.Type.TOXIC, 2.f)
         ));
+        //ASBESTOS
+        materialHazards.put(MaterialNTM.asbestos, new HazardList(
+                new Hazard(Hazard.Type.ASBESTOS, 1f)
+        ));
         materialHazards.put(MaterialNTM.pb209, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 10_000.f),
                 new Hazard(Hazard.Type.TOXIC, 2.f),
