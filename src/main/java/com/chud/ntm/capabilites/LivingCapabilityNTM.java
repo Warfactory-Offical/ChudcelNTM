@@ -2,6 +2,8 @@ package com.chud.ntm.capabilites;
 
 import com.chud.ntm.hazard.Hazard;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.TextComponentString;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -16,6 +18,10 @@ public class LivingCapabilityNTM {
         UUID uuid = target.getUniqueID();
 
         hazardMap.put(uuid, hazardMap.getOrDefault(uuid, 0.f) + v);
+
+        if (target instanceof EntityPlayer player) {
+            player.sendMessage(new TextComponentString("Your " + type.toString().toLowerCase() + " is now at " + hazardMap.get(uuid)));
+        }
     }
 
     public static void incrementAsbestos(EntityLivingBase target, float v) {
