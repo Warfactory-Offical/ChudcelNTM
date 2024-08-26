@@ -49,8 +49,8 @@ public class HazardRegistry {
         shapeMultipliers.put("nugget",      nugget);
         shapeMultipliers.put("ore",         ore);
         shapeMultipliers.put("plate",       plate);
-        shapeMultipliers.put("powder",      powder);
-        shapeMultipliers.put("powderTiny",  powderTiny);
+        shapeMultipliers.put("dust",        powder);
+        shapeMultipliers.put("dustTiny",    powderTiny);
         shapeMultipliers.put("rod",         rod);
         shapeMultipliers.put("rodDual",     rodDual);
         shapeMultipliers.put("rodQuad",     rodQuad);
