@@ -2,6 +2,7 @@ package com.chud.ntm.item.templates;
 
 import com.chud.ntm.item.enums.MaterialNTM;
 import com.chud.ntm.manager.CreativeTabsManager;
+import com.chud.ntm.manager.OreDictionaryManager;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.oredict.OreDictionary;
@@ -20,7 +21,7 @@ public class WireItem extends Item {
         setRegistryName(new ResourceLocation(MODID, itemName));
         setCreativeTab(CreativeTabsManager.partsTab);
 
-        OreDictionary.registerOre("wire" + material_Xxx, this);
+        OreDictionaryManager.queueRegisterOre("wire" + material_Xxx, this);
     }
 
 }

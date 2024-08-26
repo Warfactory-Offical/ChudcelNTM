@@ -1,6 +1,6 @@
 package com.chud.ntm;
 
-import com.chud.ntm.item.enums.MaterialNTM;
+import com.chud.ntm.manager.OreDictionaryManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.*;
@@ -24,6 +24,7 @@ public class ChudNTM {
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         LOGGER.info("PostInit start");
+        OreDictionaryManager.registerAll();
 //        for (String shape : new String[] { "ingot", "dust", "plate" }) {
 //            for (MaterialNTM material : MaterialNTM.values()) {
 //                final String material_Xxx = material.PascalCase();
