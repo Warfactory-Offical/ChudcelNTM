@@ -40,5 +40,6 @@
 dependencies {
 
     implementation rfg.deobf("curse.maven:groovyscript-687577:5635093")
+    implementation 'zone.rong:mixinbooter:9.3'
 
 }
