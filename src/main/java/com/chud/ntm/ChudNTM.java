@@ -1,14 +1,11 @@
 package com.chud.ntm;
 
-import com.chud.ntm.item.ModItems;
+import com.chud.ntm.item.enums.MaterialNTM;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.sql.Ref;
 
 import static com.chud.ntm.RefStrings.*;
 
@@ -20,7 +17,20 @@ public class ChudNTM {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        LOGGER.info("PreInit " + NAME + " v" + VERSION);
+        LOGGER.info("PreInit start " + NAME + " v" + VERSION);
+        LOGGER.info("PreInit end");
+    }
+
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
+        LOGGER.info("PostInit start");
+//        for (String shape : new String[] { "ingot", "dust", "plate" }) {
+//            for (MaterialNTM material : MaterialNTM.values()) {
+//                final String material_Xxx = material.PascalCase();
+//                LOGGER.info("OreDict: {}, Hazards: [/* TODO */]", shape + material_Xxx);
+//            }
+//        }
+        LOGGER.info("PostInit end");
     }
 
 }
