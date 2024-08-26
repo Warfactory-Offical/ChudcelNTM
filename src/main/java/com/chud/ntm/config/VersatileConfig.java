@@ -1,11 +1,10 @@
 package com.chud.ntm.config;
 
-import com.hbm.items.ModItems;
-import com.hbm.potion.HbmPotion;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.potion.PotionEffect;
+import org.apache.commons.lang3.NotImplementedException;
 
 public class VersatileConfig {
 
@@ -24,12 +23,15 @@ public class VersatileConfig {
 		
 		if(PotionConfig.potionSickness == 2)
 			duration *= 12;
-		
-		entity.addPotionEffect(new PotionEffect(HbmPotion.potionsickness, duration * 20));
+
+		//TODO
+		//entity.addPotionEffect(new PotionEffect(HbmPotion.potionsickness, duration * 20));
 	}
 
 	public static boolean hasPotionSickness(EntityLivingBase entity) {
-		return entity.isPotionActive(HbmPotion.potionsickness);
+		//TODO
+		//return entity.isPotionActive(HbmPotion.potionsickness);
+		throw new NotImplementedException("HBM POTIONS not implemented yet");
 	}
 
 	static int minute = 60 * 20;
