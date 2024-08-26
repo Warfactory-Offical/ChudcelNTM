@@ -1,9 +1,18 @@
 package com.chud.ntm.hazard;
 
+import com.chud.ntm.capabilites.LivingCapabilityNTM;
+import com.chud.ntm.config.GeneralConfig;
+import com.chud.ntm.config.RadiationConfig;
+import com.chud.ntm.util.ArmorRegistry;
+import com.chud.ntm.util.BobMathUtil;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -14,6 +23,8 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import com.chud.ntm.util.I18nUtil;
+
+import static com.chud.ntm.config.RadiationConfig.hazardRate;
 
 public class HazardList {
 
@@ -27,8 +38,147 @@ public class HazardList {
         this.hazards = hazards;
     }
 
-    public void onUpdate(EntityLivingBase target, float level, ItemStack stack) {
+    public static boolean isHoldingReacher(EntityLivingBase target) {
+//        if (target instanceof EntityPlayer && !GeneralConfig.enable528) {
+//            return Library.checkForHeld((EntityPlayer) target, ModItems.reacher);
+//        }
 
+        return false;
+    }
+
+    public static void applyPotionEffect(EntityLivingBase target, Potion potion, int duration, int amplifier) {
+        target.addPotionEffect(new PotionEffect(potion, duration, amplifier));
+    }
+
+    public void onUpdate(EntityLivingBase target, ItemStack stack) {
+        for (Hazard hazard : hazards) {
+            float level = hazard.getStrength();
+
+            switch (hazard.getType()) {
+                case ASBESTOS -> {
+//                    if (ArmorRegistry.hasProtection(target, EntityEquipmentSlot.HEAD, HazardClass.PARTICLE_FINE))
+//                        ArmorUtil.damageGasMaskFilter(target, (int) level * hazardRate);
+//                    else
+                        LivingCapabilityNTM.incrementAsbestos(target, (int) Math.min(level, 10) * hazardRate);
+                }
+                case BLINDING -> {
+//                    if (!ArmorRegistry.hasProtection(target, EntityEquipmentSlot.HEAD, HazardClass.LIGHT)) {
+                        target.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, (int)level, 0));
+//                    }
+                }
+                case COAL -> {
+//                    if (!ArmorRegistry.hasProtection(target, EntityEquipmentSlot.HEAD, HazardClass.PARTICLE_COARSE)) {
+                        LivingCapabilityNTM.incrementBlackLung(target, (int) Math.min(level * stack.getCount(), 10) * hazardRate);
+//                    } else {
+//                        if(target.getRNG().nextInt(Math.max(65 - stack.getCount(), 1)) == 0) {
+//                            ArmorUtil.damageGasMaskFilter(target, (int) level * hazardRate);
+//                        }
+//                    }
+                }
+                case COLD -> {
+//                    boolean reacher = isHoldingReacher(target);
+//
+//                    if (reacher) return;
+//
+//                    if (target instanceof EntityPlayer && ArmorUtil.checkForHazmat(target)) return; // Early return if protected
+//
+//                    int baseLevel = (int) level - 1;
+//                    int witherLevel = (int) level - 3;
+//
+//                    applyPotionEffect(target, MobEffects.MINING_FATIGUE, 110, baseLevel);
+//                    applyPotionEffect(target, MobEffects.SLOWNESS, 110, Math.min(4, baseLevel));
+//                    applyPotionEffect(target, MobEffects.WEAKNESS, 110, baseLevel);
+//
+//                    if (level > 4) {
+//                        applyPotionEffect(target, MobEffects.WITHER, 110, witherLevel);
+//                    }
+                }
+                case DIGAMMA -> {
+//                    ContaminationUtil.applyDigammaData(target, (level / 20F)*hazardRate);
+                }
+                case EXPLOSIVE -> {
+                    if(target.isBurning() && stack.getCount() > 0) {
+                        stack.setCount(0);
+                        target.world.newExplosion(null, target.posX, target.posY + target.getEyeHeight() - target.getYOffset(), target.posZ, level, false, true);
+                    }
+                }
+                case HOT -> {
+//                    boolean wetOrReacher = isHoldingReacher(target) || target.isWet() ;
+//                    if(!wetOrReacher) return;
+
+                    target.setFire((int) Math.ceil(level));
+                }
+                case HYDROACTIVE -> {
+                    boolean playerIsWet = target.isWet() || (target.world.isRaining() && target.world.canSeeSky(target.getPosition()));
+
+                    if(playerIsWet && stack.getCount() > 0) {
+                        stack.setCount(0);
+                        target.world.newExplosion(null, target.posX, target.posY + target.getEyeHeight() - target.getYOffset(), target.posZ, level, false, true);
+                    }
+                }
+                case RADIATION -> {
+                    boolean reacher = isHoldingReacher(target);
+
+                    level *= stack.getCount();
+
+                    if(level > 0) {
+                        float rad = (level / 20F)/2;
+
+                        if(GeneralConfig.enable528 && reacher) {
+                            rad = (float) (rad / 49F);	//More realistic function for 528: x / distance^2
+                        } else if(reacher) {
+                            rad = (float) BobMathUtil.squirt(rad); //Reworked radiation function: sqrt(x+1/(x+2)^2)-1/(x+2)
+                        }
+
+//                        ContaminationUtil.contaminate(target, Hazard.Type.RADIATION, ContaminationType.CREATIVE, rad*hazardRate);
+                    }
+                }
+                case TOXIC -> {
+                    boolean reacher = isHoldingReacher(target);
+                    boolean hasToxFilter = false;
+                    boolean hasHazmat = false;
+
+//                    if (target instanceof EntityPlayer) {
+//                        EntityPlayer player = (EntityPlayer) target;
+//                        hasToxFilter = ArmorRegistry.hasProtection(player, EntityEquipmentSlot.HEAD, ArmorRegistry.HazardClass.NERVE_AGENT);
+//
+//                        if (hasToxFilter) {
+//                            ArmorUtil.damageGasMaskFilter(player, 1);
+//                        }
+//
+//                        hasHazmat = ArmorUtil.checkForHazmat(player);
+//                    }
+
+                    boolean isUnprotected = !(hasToxFilter || hasHazmat || reacher);
+
+                    if (isUnprotected) {
+                        applyPotionEffect(target, MobEffects.WEAKNESS, 110, (int) (level - 1));
+
+                        if (level > 2) {
+                            applyPotionEffect(target, MobEffects.SLOWNESS, 110, (int) Math.min(4, level - 4));
+                        }
+
+                        if (level > 4) {
+                            applyPotionEffect(target, MobEffects.HUNGER, 110, (int) level);
+                        }
+
+                        if (level > 6 && target.world.rand.nextInt((int) (2000 / level)) == 0) {
+                            applyPotionEffect(target, MobEffects.POISON, 110, (int) (level - 4));
+                        }
+                    }
+
+                    if (!hasHazmat || !hasToxFilter || !reacher) {
+                        if (level > 8) {
+                            applyPotionEffect(target, MobEffects.MINING_FATIGUE, 110, (int) (level - 8));
+                        }
+
+                        if (level > 16) {
+                            applyPotionEffect(target, MobEffects.INSTANT_DAMAGE, 110, (int) (level - 16));
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public void updateEntity(EntityItem item, float level) {

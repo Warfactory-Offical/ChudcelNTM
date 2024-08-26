@@ -6,6 +6,7 @@ import com.chud.ntm.item.enums.MaterialNTM;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -279,8 +280,39 @@ public class HazardRegistry {
         // TODO: MKU
 
         // HAZARD
-
         HazardRegistry.addFullTooltip(stack, entityPlayer, list);
+    }
+
+    private static void applyHazards(ItemStack stack, EntityPlayer target) {
+        HazardList hazards = getHazardsForItemStack(stack);
+        hazards.onUpdate(target, stack);
+    }
+
+    public static void updatePlayerInventory(EntityPlayer player) {
+        NonNullList<ItemStack> mainInventory = player.inventory.mainInventory;
+        NonNullList<ItemStack> armorInventory = player.inventory.armorInventory;
+
+        // Iterate over main inventory
+        for (int i = 0; i < mainInventory.size(); i++) {
+            ItemStack stack = mainInventory.get(i);
+
+            // Check if stack is not empty
+            if (!stack.isEmpty()) {
+                applyHazards(stack, player);
+
+                // Check if stack is now empty after applying hazards
+                if (stack.getCount() == 0) {
+                    mainInventory.set(i, ItemStack.EMPTY);
+                }
+            }
+        }
+
+        // Iterate over armor inventory
+        for (ItemStack stack : armorInventory) {
+            if (!stack.isEmpty()) {
+                applyHazards(stack, player);
+            }
+        }
     }
 
 }
