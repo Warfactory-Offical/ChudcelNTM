@@ -216,6 +216,9 @@ public class HazardRegistry {
         ));
         //STRONTIUM
         materialHazards.put(MaterialNTM.strontium, new HazardList(
+                new Hazard(Hazard.Type.HYDROACTIVE, 8f)
+        ));
+        materialHazards.put(MaterialNTM.sr90, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 15f),
                 new Hazard(Hazard.Type.HYDROACTIVE, 8f),
                 new Hazard(Hazard.Type.HOT, 8f)
@@ -237,6 +240,10 @@ public class HazardRegistry {
         //AC227
         materialHazards.put(MaterialNTM.ac227, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 30.f)
+        ));
+        //RADSPICE
+        materialHazards.put(MaterialNTM.radspice, new HazardList(
+                new Hazard(Hazard.Type.RADIATION, 20_000.f)
         ));
     }
 
