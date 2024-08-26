@@ -17,8 +17,6 @@ public class ChudNTM {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         LOGGER.info("PreInit " + NAME + " v" + VERSION);
-
-        ModItems.register();
     }
 
 }

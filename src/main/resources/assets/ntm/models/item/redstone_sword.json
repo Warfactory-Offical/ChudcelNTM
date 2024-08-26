@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "ntm:item/redstone_sword"
+    "layer0": "ntm:items/redstone_sword"
   }
 }
