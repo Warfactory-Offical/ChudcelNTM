@@ -39,6 +39,6 @@
  */
 dependencies {
 
-    implementation fg.deobf("curse.maven:groovyscript-687577:5635093")
+    implementation rfg.deobf("curse.maven:groovyscript-687577:5635093")
 
 }
