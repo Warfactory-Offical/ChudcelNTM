@@ -89,9 +89,6 @@ public class HazardRegistry {
         materialHazards.put(MaterialNTM.uranium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 0.35f)
         ));
-        materialHazards.put(MaterialNTM.uranium, new HazardList(
-                new Hazard(Hazard.Type.RADIATION, 0.35f)
-        ));
         materialHazards.put(MaterialNTM.u233, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 5.f)
         ));
