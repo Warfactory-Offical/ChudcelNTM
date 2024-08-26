@@ -12,7 +12,6 @@ public class Hazard {
 
     public enum Type {
         ASBESTOS,
-        BASE,
         BLINDING,
         COAL,
         COLD,
