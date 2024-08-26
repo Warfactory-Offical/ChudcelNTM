@@ -38,7 +38,6 @@ public class PlayerTickHandler {
 
         if (player.ticksExisted % HAZARD_POLL_RATE == 0) {
             HazardRegistry.updatePlayerInventory(player);
-            player.sendMessage(new TextComponentString("onPlayerTick " + player.ticksExisted));
         }
     }
 
