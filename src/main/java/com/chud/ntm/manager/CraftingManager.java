@@ -1,21 +1,20 @@
 package com.chud.ntm.manager;
 
 import com.chud.ntm.ChudNTM;
+import com.chud.ntm.item.ModItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.ShapedRecipes;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
-import com.chud.ntm.item.ModItems;
-
-import static com.chud.ntm.RefStrings.*;
+import static com.chud.ntm.RefStrings.MODID;
 
 @EventBusSubscriber(modid=MODID)
 public class CraftingManager {
