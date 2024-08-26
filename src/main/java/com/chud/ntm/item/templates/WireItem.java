@@ -11,8 +11,8 @@ import static com.chud.ntm.RefStrings.MODID;
 public class WireItem extends Item {
 
     public WireItem(MaterialNTM material) {
-        final String material_xxx = material.toString().toLowerCase();
-        final String material_Xxx = material.toString().toUpperCase().charAt(0) + material_xxx.substring(1);
+        final String material_xxx = material.lowercase();
+        final String material_Xxx = material.PascalCase();
 
         final String itemName = "wire_" + material_xxx;
 
