@@ -95,6 +95,13 @@ public class HazardRegistry {
         materialHazards.put(MaterialNTM.u233, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 5.f)
         ));
+        materialHazards.put(MaterialNTM.u238, new HazardList(
+                new Hazard(Hazard.Type.RADIATION, 5.f)
+        ));
+        materialHazards.put(MaterialNTM.schrabidium, new HazardList(
+                new Hazard(Hazard.Type.RADIATION, 15.f),
+                new Hazard(Hazard.Type.BLINDING,  50.f)
+        ));
     }
 
     private static final Map<Pair<Item, Integer>, HazardList> hazardMap = new LinkedHashMap();
