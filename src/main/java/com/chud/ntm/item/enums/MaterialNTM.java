@@ -48,6 +48,7 @@ public enum MaterialNTM {
     lanthanium,
     lead,
     les,
+    lithium,
     magnetized_tungsten,
     meteorite,
     meteorite_forged,
