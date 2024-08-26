@@ -4,6 +4,7 @@ import com.chud.ntm.manager.OreDictionaryManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.*;
+import net.minecraftforge.oredict.OreDictionary;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -31,6 +32,9 @@ public class ChudNTM {
 //                LOGGER.info("OreDict: {}, Hazards: [/* TODO */]", shape + material_Xxx);
 //            }
 //        }
+
+//        OreDictionary.getOres("")
+
         LOGGER.info("PostInit end");
     }
 

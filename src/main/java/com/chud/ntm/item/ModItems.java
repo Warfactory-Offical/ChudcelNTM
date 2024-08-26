@@ -36,6 +36,7 @@ public class ModItems {
     public static final Item ingot_aluminium = new IngotItem(MaterialNTM.aluminium);
     public static final Item ingot_beryllium = new IngotItem(MaterialNTM.beryllium);
 //    public static final Item ingot_lead = new /* ItemHazard */ IngotItem("ingot_lead").addToxic(2).toItem().setCreativeTab(ChudNTM.partsTab);
+    public static final Item ingot_lead = new IngotItem(MaterialNTM.lead);
 //    public static final Item ingot_asbestos = new /* ItemHazard */ IngotItem("ingot_asbestos").addAsbestos(6).toItem().setCreativeTab(ChudNTM.partsTab);
 //    public static final Item ingot_magnetized_tungsten = new /* ItemHazard */ IngotItem(ItemHazard.magt, "ingot_magnetized_tungsten").setCreativeTab(ChudNTM.partsTab);
 //    public static final Item ingot_combine_steel = new ItemCustomLore("ingot_combine_steel").setCreativeTab(ChudNTM.partsTab);
