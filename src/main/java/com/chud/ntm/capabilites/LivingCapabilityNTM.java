@@ -33,7 +33,7 @@ public class LivingCapabilityNTM {
     }
 
     public static void incrementBlackLung(EntityLivingBase target, float v) {
-        incrementFloating(target, Hazard.Type.BLINDING, v);
+        incrementFloating(target, Hazard.Type.COAL, v);
     }
 
     public static void decrementBlackLung(EntityLivingBase target, float v) {
