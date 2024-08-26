@@ -41,23 +41,23 @@ public class HazardRegistry {
         final float rodQuad = rod * 4;
         final float rodRbmk = rod * 8;
 
-        shapeMultipliers.put("nugget",      nugget);
-        shapeMultipliers.put("wire",        wire);
-        shapeMultipliers.put("stick",       stick);
         shapeMultipliers.put("billet",      billet);
-        shapeMultipliers.put("ingot",       ingot);
+        shapeMultipliers.put("block",       block);
+        shapeMultipliers.put("crystal",     crystal);
         shapeMultipliers.put("gem",         gem);
+        shapeMultipliers.put("ingot",       ingot);
+        shapeMultipliers.put("nugget",      nugget);
+        shapeMultipliers.put("ore",         ore);
         shapeMultipliers.put("plate",       plate);
         shapeMultipliers.put("powder",      powder);
         shapeMultipliers.put("powderTiny",  powderTiny);
-        shapeMultipliers.put("crystal",     crystal);
         shapeMultipliers.put("rod",         rod);
         shapeMultipliers.put("rodDual",     rodDual);
         shapeMultipliers.put("rodQuad",     rodQuad);
         shapeMultipliers.put("rodRbmk",     rodRbmk);
         shapeMultipliers.put("rtg",         rtg);
-        shapeMultipliers.put("ore",         ore);
-        shapeMultipliers.put("block",       block);
+        shapeMultipliers.put("stick",       stick);
+        shapeMultipliers.put("wire",        wire);
     }
 
     private static final Map<MaterialNTM, HazardList> materialHazards = new LinkedHashMap<>();
