@@ -11,6 +11,7 @@ public class RedstoneSwordItem extends ItemSword {
     public RedstoneSwordItem() {
         // TODO: load from config
         super(ToolMaterial.STONE);
+
         setTranslationKey("redstone_sword");
         setRegistryName(new ResourceLocation(MODID, "redstone_sword"));
         setCreativeTab(CreativeTabs.COMBAT);

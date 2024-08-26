@@ -1,5 +1,5 @@
-package com.chud.ntm.item;
+package com.chud.ntm.item.enums;
 
 public enum MaterialNTM {
-    STEEL
+    steel, titanium, copper, red_copper, advanced_alloy, tungsten, aluminium, beryllium, cdalloy, cadmium, zirconium, boron, firebrick
 }
