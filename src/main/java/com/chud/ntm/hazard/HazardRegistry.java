@@ -4,6 +4,8 @@ import akka.japi.Pair;
 import com.chud.ntm.ChudNTM;
 import com.chud.ntm.item.enums.MaterialNTM;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
@@ -270,6 +272,11 @@ public class HazardRegistry {
                 ChudNTM.LOGGER.info("oreDictEntryName: {}, hazards: {}", oreDictEntryName, hazards);
             }
         }
+
+        // Quick fix. Will be rewritten in the near future
+        hazardMap.put(new Pair<>(Items.COAL, 0), new HazardList(
+                new Hazard(Hazard.Type.COAL, 1.f)
+        ));
     }
 
     public static HazardList getHazardsForItemStack(ItemStack is) {
