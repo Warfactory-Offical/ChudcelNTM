@@ -1,0 +1,8 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "ntm:items/rbmk_pellet_balefire_gold",
+		"layer1": "ntm:items/rbmk_pellet_overlay_e2",
+		"layer2": "ntm:items/rbmk_pellet_overlay_xenon"
+	}
+}

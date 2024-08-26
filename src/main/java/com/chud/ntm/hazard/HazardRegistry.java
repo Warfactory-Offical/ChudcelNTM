@@ -55,6 +55,7 @@ public class HazardRegistry {
         shapeMultipliers.put("rodQuad", rodQuad);
         shapeMultipliers.put("rodRbmk", rodRbmk);
         shapeMultipliers.put("rtg",     rtg);
+        shapeMultipliers.put("billet",  billet);
         shapeMultipliers.put("ore",     ore);
     }
 

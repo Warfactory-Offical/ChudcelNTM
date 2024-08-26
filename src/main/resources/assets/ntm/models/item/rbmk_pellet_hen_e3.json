@@ -1,0 +1,7 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "ntm:items/rbmk_pellet_hen",
+		"layer1": "ntm:items/rbmk_pellet_overlay_e3"
+	}
+}

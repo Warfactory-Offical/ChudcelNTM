@@ -1,0 +1,11 @@
+{
+	"parent": "ntm:block/hadron_diode",
+	"textures": {
+		"north": "ntm:blocks/hadron_diode",
+		"south": "ntm:blocks/hadron_diode",
+		"east": "ntm:blocks/hadron_diode",
+		"west": "ntm:blocks/hadron_diode",
+		"up": "ntm:blocks/hadron_diode",
+		"down": "ntm:blocks/hadron_diode"
+	}
+}

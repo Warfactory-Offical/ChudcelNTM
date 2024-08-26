@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"down": "ntm:blocks/cable_diode_bottom",
+		"up": "ntm:blocks/cable_diode_top",
+		"north": "ntm:blocks/cable_diode_front",
+		"south": "ntm:blocks/cable_diode_back",
+		"west": "ntm:blocks/cable_diode_left",
+		"east": "ntm:blocks/cable_diode_right",
+		"particle": "ntm:blocks/cable_diode_top"
+	}
+}

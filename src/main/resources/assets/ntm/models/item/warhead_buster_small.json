@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "ntm:items/warhead_buster_small"
+	}
+}
