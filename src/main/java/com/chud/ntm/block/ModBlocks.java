@@ -1,7 +1,7 @@
 package com.chud.ntm.block;
 
 import com.chud.ntm.ChudNTM;
-import com.chud.ntm.item.enums.MaterialNTM;
+import com.chud.ntm.item.enums.EMaterial;
 import com.chud.ntm.manager.CreativeTabsManager;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -11,9 +11,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
+import org.apache.commons.lang3.NotImplementedException;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.logging.Logger;
 
 public class ModBlocks {
 
@@ -22,10 +27,8 @@ public class ModBlocks {
     public static void preInit() {
         populate();
         register();
-    }
-
-    public Block get(String name) {
-        return ALL_BLOCKS.get(name);
+        registerOredict();
+        addBlastTooltip();
     }
 
     private static void populate() {
@@ -123,7 +126,7 @@ public class ModBlocks {
         ALL_BLOCKS.put("fwatz_scaffold", new BlockBase(Material.IRON, "fwatz_scaffold").setHardness(5.0F).setResistance(10.0F).setCreativeTab(CreativeTabsManager.machineTab));
         ALL_BLOCKS.put("fwatz_computer", new BlockBase(Material.IRON, "fwatz_computer").setHardness(5.0F).setResistance(10.0F).setCreativeTab(CreativeTabsManager.machineTab));
         ALL_BLOCKS.put("pink_planks", new BlockBase(Material.WOOD, "pink_planks").setSoundType(SoundType.WOOD).setCreativeTab(null));
-        ALL_BLOCKS.put("block_uranium", new BlockBase(Material.IRON, "block_uranium", MaterialNTM.uranium).setSoundType(SoundType.METAL).setCreativeTab(null));
+        ALL_BLOCKS.put("block_uranium", new BlockBase(Material.IRON, "block_uranium").setSoundType(SoundType.METAL).setCreativeTab(null));
     }
 
     private static void registerBlocks(IForgeRegistry<Block> registry) {
@@ -156,6 +159,27 @@ public class ModBlocks {
         registerBlocks(ForgeRegistries.BLOCKS);
         registerBlockItems(ForgeRegistries.ITEMS);
         registerModels();
+    }
+
+    private static void registerOredict() {
+        ModBlocks.ALL_BLOCKS.keySet().forEach(blockName -> {
+            for (EMaterial material : EMaterial.values()) {
+                if (blockName.substring(0).equals("block_" + material))
+                    OreDictionary.registerOre("block" + material.PascalCase(), ALL_BLOCKS.get(blockName));
+            }
+        });
+    }
+
+    private static void addBlastTooltip() {
+        ModBlocks.ALL_BLOCKS.values().forEach(block -> {
+            if (block.getExplosionResistance(null) >= 50)
+                ChudNTM.LOGGER.warn("Blast Tooltip for {} should be there, but its unimplemented!", block);
+            // TODO: add Blast Tooltip
+        });
+    }
+
+    public Block get(String name) {
+        return ALL_BLOCKS.get(name);
     }
 
 }

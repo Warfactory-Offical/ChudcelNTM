@@ -40,4 +40,5 @@ public class ItemTooltipHandler {
         CustomLoreManager.addCustomLore(stack, list);
     }
 
+
 }

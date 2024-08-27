@@ -1,6 +1,6 @@
 package com.chud.ntm.block;
 
-import com.chud.ntm.item.enums.MaterialNTM;
+import com.chud.ntm.item.enums.EMaterial;
 import com.chud.ntm.manager.CreativeTabsManager;
 import com.chud.ntm.manager.OreDictionaryManager;
 import net.minecraft.block.Block;
@@ -26,22 +26,6 @@ public class BlockBase extends Block {
         setCreativeTab(CreativeTabsManager.controlTab);
     }
 
-    public BlockBase(Material material, String name, MaterialNTM ntmMaterial) {
-        super(material);
-        String material_xxx = ntmMaterial.lowercase();
-        final String material_Xxx = ntmMaterial.PascalCase();
-
-        final String itemName = "block_" + material_xxx;
-
-        setTranslationKey(name);
-        setRegistryName(new ResourceLocation(MODID, name));
-
-        // defaults. perhaps to remove
-        setHarvestLevel("pickaxe", 0);
-        setCreativeTab(CreativeTabsManager.controlTab);
-
-        OreDictionary.registerOre("block" + material_Xxx, this);
-    }
 
 
 //    public BlockBase(Material material, SoundType sound, String name) {
