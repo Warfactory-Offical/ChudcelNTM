@@ -32,18 +32,18 @@ public class CreativeTabsManager {
     public static CreativeTabs partsTab = new Tab("tabParts", ModItems.ingot_zirconium);
     // items that belong in machines, fuels, etc
     public static CreativeTabs controlTab = new Tab("tabControl", /* TODO: ModItems.pellet_rtg */ Items.IRON_PICKAXE);
-//    // templates, siren tracks
-//    public static CreativeTabs templateTab = new Tab("tabTemplate", null);
-//    // ore and mineral blocks
-//    public static CreativeTabs resourceTab = new Tab("tabResource", null);
-//    // construction blocks
-//    public static CreativeTabs blockTab = new Tab("tabBlocks", null);
-//    // machines, structure parts
-//    public static CreativeTabs machineTab = new Tab("tabMachine", null);
+    // templates, siren tracks
+    public static CreativeTabs templateTab = new Tab("tabTemplate", Items.IRON_PICKAXE);
+    // ore and mineral blocks
+    public static CreativeTabs resourceTab = new Tab("tabResource", Items.IRON_PICKAXE);
+    // construction blocks
+    public static CreativeTabs blockTab = new Tab("tabBlocks", Items.IRON_PICKAXE);
+    // machines, structure parts
+    public static CreativeTabs machineTab = new Tab("tabMachine", Items.IRON_PICKAXE);
     // bombs
     public static CreativeTabs nukeTab = new Tab("tabNuke", /* TODO: ModBlocks.nuke_man */ Items.IRON_PICKAXE);
-//    // missiles, satellites
-//    public static CreativeTabs missileTab = new Tab("tabMissile", null);
+    // missiles, satellites
+    public static CreativeTabs missileTab = new Tab("tabMissile", Items.IRON_PICKAXE);
     // turrets, weapons, ammo
     public static CreativeTabs weaponTab = new Tab("tabWeapon", /* TODO: ModItems.gun_lever_action */ Items.IRON_PICKAXE);
     // drinks, kits, tools

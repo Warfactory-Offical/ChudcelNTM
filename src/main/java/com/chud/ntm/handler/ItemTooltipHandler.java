@@ -1,6 +1,7 @@
 package com.chud.ntm.handler;
 
 import com.chud.ntm.hazard.HazardRegistry;
+import com.chud.ntm.manager.CustomLoreManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
@@ -34,6 +35,9 @@ public class ItemTooltipHandler {
 
         // HAZARD
         HazardRegistry.addFullTooltip(stack, entityPlayer, list);
+
+        // CUSTOM LORE
+        CustomLoreManager.addCustomLore(stack, list);
     }
 
 }
