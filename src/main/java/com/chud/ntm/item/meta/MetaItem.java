@@ -2,6 +2,7 @@ package com.chud.ntm.item.meta;
 
 import com.chud.ntm.item.enums.EMaterial;
 import com.chud.ntm.item.enums.EShape;
+import com.chud.ntm.manager.OreDictionaryManager;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -11,8 +12,12 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 import static com.chud.ntm.RefStrings.MODID;
@@ -92,6 +97,14 @@ public class MetaItem extends Item {
         setTranslationKey(name);
         setRegistryName(new ResourceLocation(MODID, name));
         setHasSubtypes(true);
+
+        for (EMaterial material : materials) {
+            OreDictionaryManager.queueRegisterOre(shape.ODPrefix + material.PascalCase() + shape.ODSuffix, getItemStack(material));
+        }
+    }
+
+    private ItemStack getItemStack(EMaterial material) {
+        return new ItemStack(this, 1, Arrays.asList(materials).indexOf(material));
     }
 
     @Override
