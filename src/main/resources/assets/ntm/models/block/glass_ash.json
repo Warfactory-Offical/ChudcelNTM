@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/glass_ash"
+		"all": "ntm:blocks/glass_ash"
 	}
 }

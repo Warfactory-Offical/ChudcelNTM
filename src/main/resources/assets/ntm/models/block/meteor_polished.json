@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/meteor_polished"
+		"all": "ntm:blocks/meteor_polished"
 	}
 }

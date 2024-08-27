@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_column",
 	"textures": {
-		"end": "hbm:blocks/fusion_heater_top",
-		"side": "hbm:blocks/fusion_heater_side"
+		"end": "ntm:blocks/fusion_heater_top",
+		"side": "ntm:blocks/fusion_heater_side"
 	}
 }

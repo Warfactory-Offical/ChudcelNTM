@@ -2,9 +2,9 @@
     "ambientocclusion": false,
     "parent": "block/block",
     "textures": {
-        "particle": "hbm:blocks/grate_top",
-        "end": "hbm:blocks/grate_top",
-        "side": "hbm:blocks/grate_side"
+        "particle": "ntm:blocks/grate_top",
+        "end": "ntm:blocks/grate_top",
+        "side": "ntm:blocks/grate_side"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],

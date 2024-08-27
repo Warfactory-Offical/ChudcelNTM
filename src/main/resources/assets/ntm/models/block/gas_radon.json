@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/gas_radon"
+		"all": "ntm:blocks/gas_radon"
 	}
 }

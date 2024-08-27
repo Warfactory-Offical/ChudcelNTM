@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/machine_converter_he_rf"
+		"all": "ntm:blocks/machine_converter_he_rf"
 	}
 }

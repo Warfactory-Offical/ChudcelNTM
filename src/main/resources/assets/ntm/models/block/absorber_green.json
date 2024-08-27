@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/absorber_green"
+		"all": "ntm:blocks/absorber_green"
 	}
 }

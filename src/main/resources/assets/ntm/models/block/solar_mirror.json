@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/solar_mirror"
+		"all": "ntm:blocks/solar_mirror"
 	}
 }

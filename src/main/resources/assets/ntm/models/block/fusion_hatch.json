@@ -1,12 +1,12 @@
 {
 	"parent": "block/cube",
 	"textures": {
-		"particle": "hbm:blocks/fusion_hatch",
-		"north": "hbm:blocks/fusion_hatch",
-		"south": "hbm:blocks/fusion_heater_side",
-		"east": "hbm:blocks/fusion_heater_side",
-		"west": "hbm:blocks/fusion_heater_side",
-		"up": "hbm:blocks/block_tungsten",
-		"down": "hbm:blocks/block_tungsten"
+		"particle": "ntm:blocks/fusion_hatch",
+		"north": "ntm:blocks/fusion_hatch",
+		"south": "ntm:blocks/fusion_heater_side",
+		"east": "ntm:blocks/fusion_heater_side",
+		"west": "ntm:blocks/fusion_heater_side",
+		"up": "ntm:blocks/block_tungsten",
+		"down": "ntm:blocks/block_tungsten"
 	}
 }

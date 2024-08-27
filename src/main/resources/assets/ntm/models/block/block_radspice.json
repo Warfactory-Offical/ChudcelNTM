@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/block_radspice"
+		"all": "ntm:blocks/block_radspice"
 	}
 }

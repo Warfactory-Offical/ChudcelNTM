@@ -7,6 +7,6 @@
 		"west": "#west",
 		"up": "#up",
 		"down": "#down",
-		"particle": "hbm:blocks/hadron_diode"
+		"particle": "ntm:blocks/hadron_diode"
 	}
 }

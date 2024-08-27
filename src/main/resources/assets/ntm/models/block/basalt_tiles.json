@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/basalt_tiles"
+		"all": "ntm:blocks/basalt_tiles"
 	}
 }

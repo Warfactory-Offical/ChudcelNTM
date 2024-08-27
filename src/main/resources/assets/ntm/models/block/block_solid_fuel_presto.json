@@ -1,8 +1,8 @@
 {
 	"parent": "block/cube_bottom_top",
 	"textures": {
-		"side": "hbm:blocks/block_solid_fuel_presto_side",
-		"bottom": "hbm:blocks/block_solid_fuel_presto",
-		"top": "hbm:blocks/block_solid_fuel_presto"
+		"side": "ntm:blocks/block_solid_fuel_presto_side",
+		"bottom": "ntm:blocks/block_solid_fuel_presto",
+		"top": "ntm:blocks/block_solid_fuel_presto"
 	}
 }

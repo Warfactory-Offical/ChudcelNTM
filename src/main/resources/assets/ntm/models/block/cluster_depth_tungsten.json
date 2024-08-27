@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/cluster_depth_tungsten"
+		"all": "ntm:blocks/cluster_depth_tungsten"
 	}
 }

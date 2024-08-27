@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/block_pu238"
+		"all": "ntm:blocks/block_pu238"
 	}
 }

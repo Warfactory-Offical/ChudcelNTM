@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/basalt_brick"
+		"all": "ntm:blocks/basalt_brick"
 	}
 }

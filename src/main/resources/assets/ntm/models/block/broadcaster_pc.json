@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/broadcaster_pc"
+		"all": "ntm:blocks/broadcaster_pc"
 	}
 }

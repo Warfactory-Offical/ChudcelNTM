@@ -1,7 +1,7 @@
 {
-    "parent": "hbm:block/fire_floor",
+    "parent": "ntm:block/fire_floor",
     "textures": {
-        "particle": "hbm:blocks/balefire",
-        "fire": "hbm:blocks/balefire"
+        "particle": "ntm:blocks/balefire",
+        "fire": "ntm:blocks/balefire"
     }
 }

@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_column",
 	"textures": {
-		"end": "hbm:blocks/block_cap_korl_top",
-		"side": "hbm:blocks/block_cap_korl"
+		"end": "ntm:blocks/block_cap_korl_top",
+		"side": "ntm:blocks/block_cap_korl"
 	}
 }

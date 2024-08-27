@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/field_disturber"
+		"all": "ntm:blocks/field_disturber"
 	}
 }

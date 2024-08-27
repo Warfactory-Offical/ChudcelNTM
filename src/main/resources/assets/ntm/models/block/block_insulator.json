@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_column",
 	"textures": {
-		"end": "hbm:blocks/block_insulator_top",
-		"side": "hbm:blocks/block_insulator_side"
+		"end": "ntm:blocks/block_insulator_top",
+		"side": "ntm:blocks/block_insulator_side"
 	}
 }

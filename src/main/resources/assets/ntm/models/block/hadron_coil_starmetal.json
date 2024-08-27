@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/hadron_coil_starmetal"
+		"all": "ntm:blocks/hadron_coil_starmetal"
 	}
 }

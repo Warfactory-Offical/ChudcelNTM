@@ -1,8 +1,8 @@
 {
 	"parent": "block/cube_bottom_top",
 	"textures": {
-		"top": "hbm:blocks/radsensor",
-		"bottom": "hbm:blocks/radsensor",
-		"side": "hbm:blocks/radsensor_side"
+		"top": "ntm:blocks/radsensor",
+		"bottom": "ntm:blocks/radsensor",
+		"side": "ntm:blocks/radsensor_side"
 	}
 }

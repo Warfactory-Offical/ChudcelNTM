@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/baleonitite_slaked"
+		"all": "ntm:blocks/baleonitite_slaked"
 	}
 }

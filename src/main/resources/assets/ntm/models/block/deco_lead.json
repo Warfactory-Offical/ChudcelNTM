@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/deco_lead"
+		"all": "ntm:blocks/deco_lead"
 	}
 }

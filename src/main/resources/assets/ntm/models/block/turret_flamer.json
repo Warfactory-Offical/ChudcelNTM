@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/turret_flamer"
+		"all": "ntm:blocks/turret_flamer"
 	}
 }

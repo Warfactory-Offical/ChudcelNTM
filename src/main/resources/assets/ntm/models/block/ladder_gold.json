@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "hbm:blocks/ladder_gold",
-        "texture": "hbm:blocks/ladder_gold"
+        "particle": "ntm:blocks/ladder_gold",
+        "texture": "ntm:blocks/ladder_gold"
     },
     "elements": [
         {   "from": [ 0, 0, 15.2 ],

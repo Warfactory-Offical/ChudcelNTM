@@ -20,6 +20,10 @@ public class HazardRegistry {
 
     private static final Map<String, Float> shapeMultipliers = new LinkedHashMap<>();
 
+    public static void postInit() {
+        populate();
+    }
+
     static {
         final float nugget = 0.1F;
         final float wire = 0.2F;
@@ -233,7 +237,7 @@ public class HazardRegistry {
 
     private static final Map<Pair<Item, Integer>, HazardList> hazardMap = new LinkedHashMap();
 
-    public static void populate() {
+    private static void populate() {
         for (Map.Entry<String, Float> shapeEntry : shapeMultipliers.entrySet()) {
             for (MaterialNTM material : MaterialNTM.values()) {
                 if (!materialHazards.containsKey(material)) continue; // TODO: remove

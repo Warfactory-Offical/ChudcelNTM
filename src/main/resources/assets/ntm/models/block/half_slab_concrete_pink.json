@@ -1,9 +1,9 @@
 {
     "parent": "block/half_slab",
     "textures": {
-        "bottom": "hbm:blocks/concrete_pink",
-        "top": "hbm:blocks/concrete_pink",
-        "side": "hbm:blocks/concrete_pink"
+        "bottom": "ntm:blocks/concrete_pink",
+        "top": "ntm:blocks/concrete_pink",
+        "side": "ntm:blocks/concrete_pink"
     }
 }
 

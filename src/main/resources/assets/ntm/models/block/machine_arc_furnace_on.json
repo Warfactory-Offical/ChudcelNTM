@@ -1,12 +1,12 @@
 {
 	"parent": "block/cube",
 	"textures": {
-		"particle": "hbm:blocks/machine_arc_furnace_side",
-		"down": "hbm:blocks/machine_arc_furnace_bottom",
-		"up": "hbm:blocks/machine_arc_furnace_top_on",
-		"north": "hbm:blocks/machine_arc_furnace_front_on",
-		"east": "hbm:blocks/machine_arc_furnace_side",
-		"south": "hbm:blocks/machine_arc_furnace_side",
-		"west": "hbm:blocks/machine_arc_furnace_side"
+		"particle": "ntm:blocks/machine_arc_furnace_side",
+		"down": "ntm:blocks/machine_arc_furnace_bottom",
+		"up": "ntm:blocks/machine_arc_furnace_top_on",
+		"north": "ntm:blocks/machine_arc_furnace_front_on",
+		"east": "ntm:blocks/machine_arc_furnace_side",
+		"south": "ntm:blocks/machine_arc_furnace_side",
+		"west": "ntm:blocks/machine_arc_furnace_side"
 	}
 }

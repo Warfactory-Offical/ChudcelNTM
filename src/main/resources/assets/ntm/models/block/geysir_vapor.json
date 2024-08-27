@@ -1,8 +1,8 @@
 {
 	"parent": "block/cube",
 	"textures": {
-		"particle": "hbm:blocks/geysir_stone",
-		"up": "hbm:blocks/geysir_stone",
+		"particle": "ntm:blocks/geysir_stone",
+		"up": "ntm:blocks/geysir_stone",
 		"down": "blocks/stone",
 		"east": "blocks/stone",
 		"west": "blocks/stone",

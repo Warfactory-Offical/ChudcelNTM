@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_column",
 	"textures": {
-		"end": "hbm:blocks/brick_jungle",
-		"side": "hbm:blocks/brick_jungle_glyph_0"
+		"end": "ntm:blocks/brick_jungle",
+		"side": "ntm:blocks/brick_jungle_glyph_0"
 	}
 }

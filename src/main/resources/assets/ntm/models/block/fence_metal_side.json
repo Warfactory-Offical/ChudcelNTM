@@ -1,6 +1,6 @@
 {
-	"parent": "hbm:block/fence_flat_side",
+	"parent": "ntm:block/fence_flat_side",
 	"textures": {
-		"texture": "hbm:blocks/fence_metal"
+		"texture": "ntm:blocks/fence_metal"
 	}
 }

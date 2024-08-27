@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "hbm:blocks/ladder_titanium",
-        "texture": "hbm:blocks/ladder_titanium"
+        "particle": "ntm:blocks/ladder_titanium",
+        "texture": "ntm:blocks/ladder_titanium"
     },
     "elements": [
         {   "from": [ 0, 0, 15.2 ],

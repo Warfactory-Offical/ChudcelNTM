@@ -1,8 +1,8 @@
 {
     "parent": "block/cube_bottom_top",
     "textures": {
-        "bottom": "hbm:blocks/waste_sandstone_bottom",
-        "top": "hbm:blocks/waste_sandstone_top",
-        "side": "hbm:blocks/waste_sandstone_normal"
+        "bottom": "ntm:blocks/waste_sandstone_bottom",
+        "top": "ntm:blocks/waste_sandstone_top",
+        "side": "ntm:blocks/waste_sandstone_normal"
     }
 }

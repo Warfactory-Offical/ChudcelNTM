@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "hbm:blocks/ladder_sturdy",
-        "texture": "hbm:blocks/ladder_sturdy"
+        "particle": "ntm:blocks/ladder_sturdy",
+        "texture": "ntm:blocks/ladder_sturdy"
     },
     "elements": [
         {   "from": [ 0, 0, 15.2 ],

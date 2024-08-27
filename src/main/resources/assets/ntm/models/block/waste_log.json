@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_column",
 	"textures": {
-		"end": "hbm:blocks/waste_log_top",
-		"side": "hbm:blocks/waste_log_side"
+		"end": "ntm:blocks/waste_log_top",
+		"side": "ntm:blocks/waste_log_side"
 	}
 }

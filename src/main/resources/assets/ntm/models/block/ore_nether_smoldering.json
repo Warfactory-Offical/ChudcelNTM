@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/ore_nether_smoldering"
+		"all": "ntm:blocks/ore_nether_smoldering"
 	}
 }

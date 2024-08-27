@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/plasma_heater"
+		"all": "ntm:blocks/plasma_heater"
 	}
 }

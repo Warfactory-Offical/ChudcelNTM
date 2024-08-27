@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/deco_red_copper"
+		"all": "ntm:blocks/deco_red_copper"
 	}
 }

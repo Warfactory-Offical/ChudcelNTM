@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/steel_roof"
+		"all": "ntm:blocks/steel_roof"
 	}
 }

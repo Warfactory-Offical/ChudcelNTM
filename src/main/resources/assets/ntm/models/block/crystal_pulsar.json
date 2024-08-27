@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/crystal_pulsar"
+		"all": "ntm:blocks/crystal_pulsar"
 	}
 }

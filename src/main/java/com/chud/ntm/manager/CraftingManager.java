@@ -68,7 +68,7 @@ public class CraftingManager {
     }
 
     private static void addAllRecipes() {
-        addRecipeAuto(new ItemStack(ModItems.redstone_sword, 1), new Object[] { "R", "R", "S", 'R', Blocks.REDSTONE_BLOCK, 'S', Items.STICK });
+        addRecipeAuto(new ItemStack(ModItems.get("redstone_sword"), 1), new Object[] { "R", "R", "S", 'R', Blocks.REDSTONE_BLOCK, 'S', Items.STICK });
     }
 
 }

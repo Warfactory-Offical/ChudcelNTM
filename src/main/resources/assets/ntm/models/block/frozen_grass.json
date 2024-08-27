@@ -1,8 +1,8 @@
 {
 	"parent": "block/cube_bottom_top",
 	"textures": {
-		"top": "hbm:blocks/frozen_grass_top",
-		"bottom": "hbm:blocks/frozen_dirt",
-		"side": "hbm:blocks/frozen_grass_side"
+		"top": "ntm:blocks/frozen_grass_top",
+		"bottom": "ntm:blocks/frozen_dirt",
+		"side": "ntm:blocks/frozen_grass_side"
 	}
 }

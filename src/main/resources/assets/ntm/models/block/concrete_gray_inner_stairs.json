@@ -1,8 +1,8 @@
 {
     "parent": "block/inner_stairs",
     "textures": {
-        "bottom": "hbm:blocks/concrete_gray",
-        "top": "hbm:blocks/concrete_gray",
-        "side": "hbm:blocks/concrete_gray"
+        "bottom": "ntm:blocks/concrete_gray",
+        "top": "ntm:blocks/concrete_gray",
+        "side": "ntm:blocks/concrete_gray"
     }
 }

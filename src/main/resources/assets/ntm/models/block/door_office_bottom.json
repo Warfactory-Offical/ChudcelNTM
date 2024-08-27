@@ -1,7 +1,7 @@
 {
     "parent": "block/door_bottom",
     "textures": {
-        "bottom": "hbm:blocks/door_office_lower",
-        "top": "hbm:blocks/door_office_upper"
+        "bottom": "ntm:blocks/door_office_lower",
+        "top": "ntm:blocks/door_office_upper"
     }
 }

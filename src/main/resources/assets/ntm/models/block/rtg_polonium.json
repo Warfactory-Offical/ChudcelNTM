@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/rtg_polonium"
+		"all": "ntm:blocks/rtg_polonium"
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/control_panel0"
+		"all": "ntm:blocks/control_panel0"
 	}
 }

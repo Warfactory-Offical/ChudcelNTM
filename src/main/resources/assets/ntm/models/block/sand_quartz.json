@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/sand_quartz"
+		"all": "ntm:blocks/sand_quartz"
 	}
 }

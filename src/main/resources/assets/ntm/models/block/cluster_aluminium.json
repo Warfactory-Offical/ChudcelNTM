@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/cluster_aluminium"
+		"all": "ntm:blocks/cluster_aluminium"
 	}
 }

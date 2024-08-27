@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/block_coal_infernal"
+		"all": "ntm:blocks/block_coal_infernal"
 	}
 }

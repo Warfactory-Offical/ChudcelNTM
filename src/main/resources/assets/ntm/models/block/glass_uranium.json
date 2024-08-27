@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/glass_uranium"
+		"all": "ntm:blocks/glass_uranium"
 	}
 }

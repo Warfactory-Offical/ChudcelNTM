@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/digamma_matter"
+		"all": "ntm:blocks/digamma_matter"
 	}
 }

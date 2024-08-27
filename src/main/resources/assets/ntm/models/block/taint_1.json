@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/taint_1"
+		"all": "ntm:blocks/taint_1"
 	}
 }

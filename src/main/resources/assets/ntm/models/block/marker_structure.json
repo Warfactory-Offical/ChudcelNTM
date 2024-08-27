@@ -1,6 +1,6 @@
 {
 	"parent": "block/torch",
 	"textures": {
-		"torch": "hbm:blocks/marker_structure"
+		"torch": "ntm:blocks/marker_structure"
 	}
 }

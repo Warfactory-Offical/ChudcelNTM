@@ -1,12 +1,12 @@
 {
 	"parent": "block/cube",
 	"textures": {
-		"down": "hbm:blocks/crane_router_cyan",
-		"up": "hbm:blocks/crane_router_orange",
-		"north": "hbm:blocks/crane_router_red",
-		"south": "hbm:blocks/crane_router_blue",
-		"west": "hbm:blocks/crane_router_green",
-		"east": "hbm:blocks/crane_router_yellow",
-		"particle": "hbm:blocks/crane_in"
+		"down": "ntm:blocks/crane_router_cyan",
+		"up": "ntm:blocks/crane_router_orange",
+		"north": "ntm:blocks/crane_router_red",
+		"south": "ntm:blocks/crane_router_blue",
+		"west": "ntm:blocks/crane_router_green",
+		"east": "ntm:blocks/crane_router_yellow",
+		"particle": "ntm:blocks/crane_in"
 	}
 }

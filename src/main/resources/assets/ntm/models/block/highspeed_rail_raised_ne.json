@@ -1,6 +1,6 @@
 {
     "parent": "block/rail_raised_ne",
     "textures": {
-        "rail": "hbm:blocks/rail_highspeed"
+        "rail": "ntm:blocks/rail_highspeed"
     }
 }

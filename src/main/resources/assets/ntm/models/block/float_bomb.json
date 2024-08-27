@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_column",
 	"textures": {
-		"end": "hbm:blocks/bomb_float_top",
-		"side": "hbm:blocks/bomb_float"
+		"end": "ntm:blocks/bomb_float_top",
+		"side": "ntm:blocks/bomb_float"
 	}
 }

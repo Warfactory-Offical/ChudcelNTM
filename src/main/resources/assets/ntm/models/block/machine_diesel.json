@@ -1,12 +1,12 @@
 {
 	"parent": "block/cube",
 	"textures": {
-		"particle": "hbm:blocks/machine_diesel_front",
-		"north": "hbm:blocks/machine_diesel_front",
-		"south": "hbm:blocks/machine_diesel_front",
-		"east": "hbm:blocks/machine_diesel_side",
-		"west": "hbm:blocks/machine_diesel_side",
-		"up": "hbm:blocks/machine_diesel_top",
-		"down": "hbm:blocks/machine_diesel_bottom"
+		"particle": "ntm:blocks/machine_diesel_front",
+		"north": "ntm:blocks/machine_diesel_front",
+		"south": "ntm:blocks/machine_diesel_front",
+		"east": "ntm:blocks/machine_diesel_side",
+		"west": "ntm:blocks/machine_diesel_side",
+		"up": "ntm:blocks/machine_diesel_top",
+		"down": "ntm:blocks/machine_diesel_bottom"
 	}
 }

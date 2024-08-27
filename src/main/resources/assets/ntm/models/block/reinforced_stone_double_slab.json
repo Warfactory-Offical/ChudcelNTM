@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "hbm:blocks/reinforced_stone_double_slab"
+        "all": "ntm:blocks/reinforced_stone_double_slab"
     }
 }

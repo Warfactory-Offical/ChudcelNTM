@@ -1,8 +1,8 @@
 {
 	"parent": "block/orientable",
 	"textures": {
-		"top": "hbm:blocks/difurnace_top_on",
-		"front": "hbm:blocks/difurnace_front_on",
-		"side": "hbm:blocks/difurnace_side"
+		"top": "ntm:blocks/difurnace_top_on",
+		"front": "ntm:blocks/difurnace_front_on",
+		"side": "ntm:blocks/difurnace_side"
 	}
 }

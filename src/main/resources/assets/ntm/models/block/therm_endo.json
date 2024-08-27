@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_column",
 	"textures": {
-		"end": "hbm:blocks/therm_top",
-		"side": "hbm:blocks/therm_endo"
+		"end": "ntm:blocks/therm_top",
+		"side": "ntm:blocks/therm_endo"
 	}
 }

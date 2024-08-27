@@ -1,9 +1,9 @@
 {
     "parent": "block/upper_slab",
     "textures": {
-        "bottom": "hbm:blocks/concrete_cyan",
-        "top": "hbm:blocks/concrete_cyan",
-        "side": "hbm:blocks/concrete_cyan"
+        "bottom": "ntm:blocks/concrete_cyan",
+        "top": "ntm:blocks/concrete_cyan",
+        "side": "ntm:blocks/concrete_cyan"
     }
 }
 

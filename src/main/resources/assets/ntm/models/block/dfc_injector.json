@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/dfc_injector"
+		"all": "ntm:blocks/dfc_injector"
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/glass_polonium"
+		"all": "ntm:blocks/glass_polonium"
 	}
 }

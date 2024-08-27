@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-    	"all": "hbm:blocks/ore_bedrock_block"
+    	"all": "ntm:blocks/ore_bedrock_block"
 	}
 }

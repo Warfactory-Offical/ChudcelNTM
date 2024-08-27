@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "hbm:blocks/factory_advanced_hull"
+		"all": "ntm:blocks/factory_advanced_hull"
 	}
 }

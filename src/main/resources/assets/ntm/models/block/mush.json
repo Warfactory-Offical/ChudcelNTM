@@ -1,6 +1,6 @@
 {
 	"parent": "block/cross",
 	"textures": {
-		"cross": "hbm:blocks/mush"
+		"cross": "ntm:blocks/mush"
 	}
 }
