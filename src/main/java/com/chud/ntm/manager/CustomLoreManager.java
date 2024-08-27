@@ -1,9 +1,7 @@
 package com.chud.ntm.manager;
 
 import com.chud.ntm.config.GeneralConfig;
-import com.chud.ntm.item.ModItems;
 import com.chud.ntm.util.I18nUtil;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextFormatting;
 
@@ -12,11 +10,11 @@ import java.util.*;
 public class CustomLoreManager {
 
     public static void addCustomLore(ItemStack stack, List<String> list) {
-        Item item = stack.getItem();
+        String itemName = stack.getItem().getTranslationKey().substring(".item".length());
 
-        if (!customLoreEntries.containsKey(item)) return;
+        if (!customLoreEntries.containsKey(itemName)) return;
 
-        list.addAll(customLoreEntries.get(item));
+        list.addAll(customLoreEntries.get(itemName));
     }
 
     static Map<String, List<String>> customLoreEntries = new LinkedHashMap<>();
