@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:depth_dnt" }
+		"normal": { "model": "ntm:depth_dnt" }
 	}
 }

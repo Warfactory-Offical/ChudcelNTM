@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:rbmk_cooler" }
+		"normal": { "model": "ntm:rbmk_cooler" }
 	}
 }

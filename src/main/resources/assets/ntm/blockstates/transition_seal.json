@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:transition_seal" }
+		"normal": { "model": "ntm:transition_seal" }
 	}
 }

@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:ore_schrabidium" }
+		"normal": { "model": "ntm:ore_schrabidium" }
 	}
 }

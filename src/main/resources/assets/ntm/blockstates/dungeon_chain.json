@@ -1,19 +1,19 @@
 {
 	"forge_marker": 1,
 	"defaults": {
-		"model": "hbm:dungeon_chain",
+		"model": "ntm:dungeon_chain",
 		"textures": {
-			"chain": "hbm:blocks/chain"
+			"chain": "ntm:blocks/chain"
 		}
 	},
 	"variants": {
 		"wall": {
-			"true": { "model": "hbm:dungeon_chain_wall" },
-			"false": { "model": "hbm:dungeon_chain" }
+			"true": { "model": "ntm:dungeon_chain_wall" },
+			"false": { "model": "ntm:dungeon_chain" }
 		},
 		"end": {
-			"true": { "textures": { "chain": "hbm:blocks/chain_end" } },
-			"false": { "textures": { "chain": "hbm:blocks/chain" } }
+			"true": { "textures": { "chain": "ntm:blocks/chain_end" } },
+			"false": { "textures": { "chain": "ntm:blocks/chain" } }
 		},
 		"facing": {
 			"north": { },

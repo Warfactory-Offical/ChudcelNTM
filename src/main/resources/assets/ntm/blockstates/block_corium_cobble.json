@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_corium_cobble" }
+		"normal": { "model": "ntm:block_corium_cobble" }
 	}
 }

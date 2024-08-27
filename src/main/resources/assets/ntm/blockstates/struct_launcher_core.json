@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:struct_launcher_core" }
+		"normal": { "model": "ntm:struct_launcher_core" }
 	}
 }

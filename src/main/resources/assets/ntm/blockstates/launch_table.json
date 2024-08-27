@@ -1,8 +1,8 @@
 {
 	"variants": {
-		"facing=north": { "model": "hbm:launch_table" },
-     	   	"facing=south": { "model": "hbm:launch_table", "y": 180 },
-      	  	"facing=west":  { "model": "hbm:launch_table", "y": 270 },
-      		"facing=east":  { "model": "hbm:launch_table", "y": 90 }
+		"facing=north": { "model": "ntm:launch_table" },
+     	   	"facing=south": { "model": "ntm:launch_table", "y": 180 },
+      	  	"facing=west":  { "model": "ntm:launch_table", "y": 270 },
+      		"facing=east":  { "model": "ntm:launch_table", "y": 90 }
 	}
 }

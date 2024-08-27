@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_actinium" }
+		"normal": { "model": "ntm:block_actinium" }
 	}
 }

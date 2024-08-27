@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:gas_asbestos" }
+		"normal": { "model": "ntm:gas_asbestos" }
 	}
 }

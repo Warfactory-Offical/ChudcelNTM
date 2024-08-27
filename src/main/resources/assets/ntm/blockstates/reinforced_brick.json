@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:reinforced_brick" }
+		"normal": { "model": "ntm:reinforced_brick" }
 	}
 }

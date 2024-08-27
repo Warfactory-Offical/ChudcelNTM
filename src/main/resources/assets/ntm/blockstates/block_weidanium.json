@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_weidanium" }
+		"normal": { "model": "ntm:block_weidanium" }
 	}
 }

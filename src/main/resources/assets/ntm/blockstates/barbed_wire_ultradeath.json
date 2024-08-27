@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:barbed_wire_ultradeath.obj"
+		"model": "ntm:barbed_wire_ultradeath.obj"
 	},
 	"variants": {
 		"facing=north": [{}],

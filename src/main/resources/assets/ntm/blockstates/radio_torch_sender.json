@@ -1,5 +1,5 @@
 {
     "variants": {
-	   "normal": { "model": "hbm:radio_torch_sender" }
+	   "normal": { "model": "ntm:radio_torch_sender" }
     }
 }

@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:reactor_computer" }
+		"normal": { "model": "ntm:reactor_computer" }
 	}
 }

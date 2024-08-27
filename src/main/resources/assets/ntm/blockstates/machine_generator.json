@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_generator" }
+		"normal": { "model": "ntm:machine_generator" }
 	}
 }

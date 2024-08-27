@@ -1,7 +1,7 @@
 {
     "variants": {
-        "axis=y": { "model": "hbm:concrete_pillar" },
-        "axis=z": { "model": "hbm:concrete_pillar", "x": 90 },
-        "axis=x": { "model": "hbm:concrete_pillar", "x": 90, "y": 90 }
+        "axis=y": { "model": "ntm:concrete_pillar" },
+        "axis=z": { "model": "ntm:concrete_pillar", "x": 90 },
+        "axis=x": { "model": "ntm:concrete_pillar", "x": 90, "y": 90 }
     }
 }

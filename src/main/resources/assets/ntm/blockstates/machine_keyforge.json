@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_keyforge" }
+		"normal": { "model": "ntm:machine_keyforge" }
 	}
 }

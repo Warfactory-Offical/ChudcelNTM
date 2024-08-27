@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:hadron_analysis_glass" }
+		"normal": { "model": "ntm:hadron_analysis_glass" }
 	}
 }

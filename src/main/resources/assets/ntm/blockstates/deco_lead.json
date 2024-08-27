@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:deco_lead" }
+		"normal": { "model": "ntm:deco_lead" }
 	}
 }

@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:steel_poles.obj"
+		"model": "ntm:steel_poles.obj"
 	},
 	"variants": {
 		"facing=north": [{}],

@@ -1,8 +1,8 @@
 {
 	"variants": {
-		"facing=north": { "model": "hbm:reactor_ejector" },
-     	   	"facing=south": { "model": "hbm:reactor_ejector", "y": 180 },
-      	  	"facing=west":  { "model": "hbm:reactor_ejector", "y": 270 },
-      		"facing=east":  { "model": "hbm:reactor_ejector", "y": 90 }
+		"facing=north": { "model": "ntm:reactor_ejector" },
+     	   	"facing=south": { "model": "ntm:reactor_ejector", "y": 180 },
+      	  	"facing=west":  { "model": "ntm:reactor_ejector", "y": 270 },
+      		"facing=east":  { "model": "ntm:reactor_ejector", "y": 90 }
 	}
 }

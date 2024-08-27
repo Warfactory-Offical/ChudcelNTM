@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_reiium" }
+		"normal": { "model": "ntm:block_reiium" }
 	}
 }

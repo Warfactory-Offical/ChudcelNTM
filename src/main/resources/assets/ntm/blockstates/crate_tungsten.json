@@ -1,8 +1,8 @@
 {
 	"variants": {
-		"facing=north": { "model": "hbm:crate_tungsten" },
-		"facing=south": { "model": "hbm:crate_tungsten", "y": 180 },
-		"facing=west": { "model": "hbm:crate_tungsten", "y": 270 },
-		"facing=east": { "model": "hbm:crate_tungsten", "y": 90 }
+		"facing=north": { "model": "ntm:crate_tungsten" },
+		"facing=south": { "model": "ntm:crate_tungsten", "y": 180 },
+		"facing=west": { "model": "ntm:crate_tungsten", "y": 270 },
+		"facing=east": { "model": "ntm:crate_tungsten", "y": 90 }
 	}
 }

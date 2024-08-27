@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:antenna_top.obj"
+		"model": "ntm:antenna_top.obj"
 	},
 	"variants": {
 		"normal": [{}],

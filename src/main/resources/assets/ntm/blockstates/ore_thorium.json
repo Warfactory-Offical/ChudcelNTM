@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:ore_thorium" }
+		"normal": { "model": "ntm:ore_thorium" }
 	}
 }

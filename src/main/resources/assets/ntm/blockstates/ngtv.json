@@ -1,8 +1,8 @@
 {
 	"variants": {
-		"facing=north": { "model": "hbm:ngtv" },
-     	   	"facing=south": { "model": "hbm:ngtv", "y": 180 },
-      	  	"facing=west":  { "model": "hbm:ngtv", "y": 270 },
-      		"facing=east":  { "model": "hbm:ngtv", "y": 90 }
+		"facing=north": { "model": "ntm:ngtv" },
+     	   	"facing=south": { "model": "ntm:ngtv", "y": 180 },
+      	  	"facing=west":  { "model": "ntm:ngtv", "y": 270 },
+      		"facing=east":  { "model": "ntm:ngtv", "y": 90 }
 	}
 }

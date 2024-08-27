@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_deuterium_tower" }
+		"normal": { "model": "ntm:machine_deuterium_tower" }
 	}
 }

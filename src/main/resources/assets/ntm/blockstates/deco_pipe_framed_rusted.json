@@ -3,7 +3,7 @@
 	"defaults": {
 		"textures": {},
 		"custom": { "flip-v": true },
-		"model": "hbm:pipe_framed_rusted.obj"
+		"model": "ntm:pipe_framed_rusted.obj"
 	},
 	"variants": {
 		"axis=x": [{ "x": 90, "y": 90 }],

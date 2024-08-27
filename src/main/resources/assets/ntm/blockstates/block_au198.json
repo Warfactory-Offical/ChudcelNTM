@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_au198" }
+		"normal": { "model": "ntm:block_au198" }
 	}
 }

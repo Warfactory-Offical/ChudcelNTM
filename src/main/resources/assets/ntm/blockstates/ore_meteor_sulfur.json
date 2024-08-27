@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:ore_meteor_sulfur" }
+		"normal": { "model": "ntm:ore_meteor_sulfur" }
 	}
 }

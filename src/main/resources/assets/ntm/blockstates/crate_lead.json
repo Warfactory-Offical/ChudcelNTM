@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:crate_lead" }
+		"normal": { "model": "ntm:crate_lead" }
 	}
 }

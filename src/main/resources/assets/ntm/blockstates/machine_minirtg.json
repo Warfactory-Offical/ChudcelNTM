@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:rtg_mini.obj"
+		"model": "ntm:rtg_mini.obj"
 	},
 	"variants": {
 		"normal": [{}],

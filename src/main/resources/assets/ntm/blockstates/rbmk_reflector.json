@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:rbmk_reflector" }
+		"normal": { "model": "ntm:rbmk_reflector" }
 	}
 }

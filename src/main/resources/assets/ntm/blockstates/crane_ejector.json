@@ -1,7 +1,7 @@
 {
 	"forge_marker": 1,
 	"defaults": {
-        "model": "hbm:crane_ejector"
+        "model": "ntm:crane_ejector"
 	},
 	"variants": {
 		"facing": {

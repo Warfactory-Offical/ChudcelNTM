@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:red_cable" }
+		"normal": { "model": "ntm:red_cable" }
 	}
 }

@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:ore_nether_fire" }
+		"normal": { "model": "ntm:ore_nether_fire" }
 	}
 }

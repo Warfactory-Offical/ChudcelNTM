@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:red_ladder_top.obj"
+		"model": "ntm:red_ladder_top.obj"
 	},
 	"variants": {
 		"facing=north": [{ "y": 270}],

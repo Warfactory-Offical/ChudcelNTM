@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=default": { "model": "hbm:half_slab_concrete_purple" },
-        "half=top,variant=default": { "model": "hbm:upper_slab_concrete_purple" }
+        "half=bottom,variant=default": { "model": "ntm:half_slab_concrete_purple" },
+        "half=top,variant=default": { "model": "ntm:upper_slab_concrete_purple" }
     }
 }

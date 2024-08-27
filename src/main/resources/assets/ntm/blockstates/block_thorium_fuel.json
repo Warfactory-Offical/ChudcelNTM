@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_thorium_fuel" }
+		"normal": { "model": "ntm:block_thorium_fuel" }
 	}
 }

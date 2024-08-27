@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_excavator" }
+		"normal": { "model": "ntm:machine_excavator" }
 	}
 }

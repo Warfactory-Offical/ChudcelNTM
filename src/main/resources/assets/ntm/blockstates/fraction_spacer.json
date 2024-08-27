@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:fraction_spacer" }
+		"normal": { "model": "ntm:fraction_spacer" }
 	}
 }

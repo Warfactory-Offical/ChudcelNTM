@@ -1,7 +1,7 @@
 {
 	"forge_marker": 1,
 	"defaults": {
-        "model": "hbm:crane_inserter"
+        "model": "ntm:crane_inserter"
 	},
 	"variants": {
 		"facing": {

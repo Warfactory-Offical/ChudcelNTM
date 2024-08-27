@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:decon_digamma" }
+		"normal": { "model": "ntm:decon_digamma" }
 	}
 }

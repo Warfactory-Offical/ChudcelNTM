@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=default": { "model": "hbm:tile_lab_cracked" },
-        "half=top,variant=default": { "model": "hbm:tile_lab_cracked" }
+        "half=bottom,variant=default": { "model": "ntm:tile_lab_cracked" },
+        "half=top,variant=default": { "model": "ntm:tile_lab_cracked" }
     }
 }

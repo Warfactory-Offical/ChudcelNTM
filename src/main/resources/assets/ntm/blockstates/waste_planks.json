@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:waste_planks" }
+		"normal": { "model": "ntm:waste_planks" }
 	}
 }

@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:furnace_steel" }
+		"normal": { "model": "ntm:furnace_steel" }
 	}
 }

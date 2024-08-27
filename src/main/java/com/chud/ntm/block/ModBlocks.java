@@ -1,6 +1,7 @@
 package com.chud.ntm.block;
 
 import com.chud.ntm.ChudNTM;
+import com.chud.ntm.item.enums.MaterialNTM;
 import com.chud.ntm.manager.CreativeTabsManager;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -122,6 +123,7 @@ public class ModBlocks {
         ALL_BLOCKS.put("fwatz_scaffold", new BlockBase(Material.IRON, "fwatz_scaffold").setHardness(5.0F).setResistance(10.0F).setCreativeTab(CreativeTabsManager.machineTab));
         ALL_BLOCKS.put("fwatz_computer", new BlockBase(Material.IRON, "fwatz_computer").setHardness(5.0F).setResistance(10.0F).setCreativeTab(CreativeTabsManager.machineTab));
         ALL_BLOCKS.put("pink_planks", new BlockBase(Material.WOOD, "pink_planks").setSoundType(SoundType.WOOD).setCreativeTab(null));
+        ALL_BLOCKS.put("block_uranium", new BlockBase(Material.IRON, "block_uranium", MaterialNTM.uranium).setSoundType(SoundType.METAL).setCreativeTab(null));
     }
 
     private static void registerBlocks(IForgeRegistry<Block> registry) {

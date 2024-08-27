@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=default": { "model": "hbm:concrete_lime" },
-        "half=top,variant=default": { "model": "hbm:concrete_lime" }
+        "half=bottom,variant=default": { "model": "ntm:concrete_lime" },
+        "half=top,variant=default": { "model": "ntm:concrete_lime" }
     }
 }

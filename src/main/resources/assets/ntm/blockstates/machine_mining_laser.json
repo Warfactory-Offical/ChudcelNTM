@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_mining_laser" }
+		"normal": { "model": "ntm:machine_mining_laser" }
 	}
 }

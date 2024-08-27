@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:anvil_starmetal.obj"
+		"model": "ntm:anvil_starmetal.obj"
 	},
 	"variants": {
 		"facing=north": [{ "y": 90}],

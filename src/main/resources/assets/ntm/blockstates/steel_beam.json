@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:beam.obj"
+		"model": "ntm:beam.obj"
 	},
 	"variants": {
 		"facing=north": [{}],

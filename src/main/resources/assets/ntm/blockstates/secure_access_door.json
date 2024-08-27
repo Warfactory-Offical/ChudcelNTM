@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:secure_access_door" }
+		"normal": { "model": "ntm:secure_access_door" }
 	}
 }

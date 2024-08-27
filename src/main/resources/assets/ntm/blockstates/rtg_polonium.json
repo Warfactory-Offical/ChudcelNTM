@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:rtg_polonium.obj"
+		"model": "ntm:rtg_polonium.obj"
 	},
 	"variants": {
 		"normal": [{}],

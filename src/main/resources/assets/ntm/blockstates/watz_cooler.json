@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:watz_cooler" }
+		"normal": { "model": "ntm:watz_cooler" }
 	}
 }

@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:rbmk_moderator" }
+		"normal": { "model": "ntm:rbmk_moderator" }
 	}
 }

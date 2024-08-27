@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:brick_jungle_trap" }
+		"normal": { "model": "ntm:brick_jungle_trap" }
 	}
 }

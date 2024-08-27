@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:rbmk_steam_inlet" }
+		"normal": { "model": "ntm:rbmk_steam_inlet" }
 	}
 }

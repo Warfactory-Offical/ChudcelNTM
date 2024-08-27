@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_orbus" }
+		"normal": { "model": "ntm:machine_orbus" }
 	}
 }

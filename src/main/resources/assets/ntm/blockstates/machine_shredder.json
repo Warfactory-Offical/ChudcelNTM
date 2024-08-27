@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_shredder" }
+		"normal": { "model": "ntm:machine_shredder" }
 	}
 }

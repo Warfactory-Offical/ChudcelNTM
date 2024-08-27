@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:mush_block" }
+		"normal": { "model": "ntm:mush_block" }
 	}
 }

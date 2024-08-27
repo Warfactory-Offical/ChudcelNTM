@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:qe_containment" }
+		"normal": { "model": "ntm:qe_containment" }
 	}
 }

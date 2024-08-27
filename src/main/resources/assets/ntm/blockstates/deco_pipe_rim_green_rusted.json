@@ -3,7 +3,7 @@
 	"defaults": {
 		"textures": {},
 		"custom": { "flip-v": true },
-		"model": "hbm:pipe_rim_green_rusty.obj"
+		"model": "ntm:pipe_rim_green_rusty.obj"
 	},
 	"variants": {
 		"axis=x": [{ "x": 90, "y": 90 }],

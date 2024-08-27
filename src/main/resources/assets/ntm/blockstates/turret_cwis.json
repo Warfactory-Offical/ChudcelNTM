@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:turret_cwis" }
+		"normal": { "model": "ntm:turret_cwis" }
 	}
 }

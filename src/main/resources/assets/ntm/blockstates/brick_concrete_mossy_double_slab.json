@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=default": { "model": "hbm:brick_concrete_mossy" },
-        "half=top,variant=default": { "model": "hbm:brick_concrete_mossy" }
+        "half=bottom,variant=default": { "model": "ntm:brick_concrete_mossy" },
+        "half=top,variant=default": { "model": "ntm:brick_concrete_mossy" }
     }
 }

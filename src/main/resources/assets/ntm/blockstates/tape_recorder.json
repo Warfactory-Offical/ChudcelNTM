@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:tape_recorder.obj"
+		"model": "ntm:tape_recorder.obj"
 	},
 	"variants": {
 		"facing=north": [{}],

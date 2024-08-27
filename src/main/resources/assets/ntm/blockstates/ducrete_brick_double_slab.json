@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=default": { "model": "hbm:ducrete_brick" },
-        "half=top,variant=default": { "model": "hbm:ducrete_brick" }
+        "half=bottom,variant=default": { "model": "ntm:ducrete_brick" },
+        "half=top,variant=default": { "model": "ntm:ducrete_brick" }
     }
 }

@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:ore_copper" }
+		"normal": { "model": "ntm:ore_copper" }
 	}
 }

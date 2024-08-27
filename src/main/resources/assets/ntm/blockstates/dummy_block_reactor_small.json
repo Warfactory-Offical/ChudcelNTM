@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:dummy_block_reactor_small" }
+		"normal": { "model": "ntm:dummy_block_reactor_small" }
 	}
 }

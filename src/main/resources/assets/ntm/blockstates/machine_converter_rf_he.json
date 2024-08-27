@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_converter_rf_he" }
+		"normal": { "model": "ntm:machine_converter_rf_he" }
 	}
 }

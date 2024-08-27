@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:det_cord" }
+		"normal": { "model": "ntm:det_cord" }
 	}
 }

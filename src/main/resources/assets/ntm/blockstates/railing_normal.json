@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:railing_normal.obj"
+		"model": "ntm:railing_normal.obj"
 	},
 	"variants": {
 		"facing=north": [{ "y": 270}],

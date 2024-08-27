@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:watz_conductor" }
+		"normal": { "model": "ntm:watz_conductor" }
 	}
 }

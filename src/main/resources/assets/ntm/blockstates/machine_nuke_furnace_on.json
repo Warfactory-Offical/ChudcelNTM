@@ -1,8 +1,8 @@
 {
 	"variants": {
-		"facing=north": { "model": "hbm:machine_nuke_furnace_on" },
-		"facing=south": { "model": "hbm:machine_nuke_furnace_on", "y": 180 },
-		"facing=west": { "model": "hbm:machine_nuke_furnace_on", "y": 270 },
-		"facing=east": { "model": "hbm:machine_nuke_furnace_on", "y": 90 }
+		"facing=north": { "model": "ntm:machine_nuke_furnace_on" },
+		"facing=south": { "model": "ntm:machine_nuke_furnace_on", "y": 180 },
+		"facing=west": { "model": "ntm:machine_nuke_furnace_on", "y": 270 },
+		"facing=east": { "model": "ntm:machine_nuke_furnace_on", "y": 90 }
 	}
 }

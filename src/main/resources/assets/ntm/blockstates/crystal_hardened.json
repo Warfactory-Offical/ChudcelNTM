@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:crystal_hardened" }
+		"normal": { "model": "ntm:crystal_hardened" }
 	}
 }

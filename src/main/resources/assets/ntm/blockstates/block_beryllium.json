@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_beryllium" }
+		"normal": { "model": "ntm:block_beryllium" }
 	}
 }

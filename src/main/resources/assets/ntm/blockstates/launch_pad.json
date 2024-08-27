@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:launch_pad" }
+		"normal": { "model": "ntm:launch_pad" }
 	}
 }

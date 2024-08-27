@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:factory_titanium_hull" }
+		"normal": { "model": "ntm:factory_titanium_hull" }
 	}
 }

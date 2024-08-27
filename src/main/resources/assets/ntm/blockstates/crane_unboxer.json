@@ -1,7 +1,7 @@
 {
 	"forge_marker": 1,
 	"defaults": {
-        "model": "hbm:crane_unboxer"
+        "model": "ntm:crane_unboxer"
 	},
 	"variants": {
 		"facing": {

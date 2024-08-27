@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:pribris_burning.obj"
+		"model": "ntm:pribris_burning.obj"
 	},
 	"variants": {
 		"normal": [{}],

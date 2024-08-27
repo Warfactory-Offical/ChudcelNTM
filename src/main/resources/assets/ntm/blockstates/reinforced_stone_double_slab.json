@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=default": { "model": "hbm:reinforced_stone" },
-        "half=top,variant=default": { "model": "hbm:reinforced_stone" }
+        "half=bottom,variant=default": { "model": "ntm:reinforced_stone" },
+        "half=top,variant=default": { "model": "ntm:reinforced_stone" }
     }
 }

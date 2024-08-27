@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_desh" }
+		"normal": { "model": "ntm:block_desh" }
 	}
 }

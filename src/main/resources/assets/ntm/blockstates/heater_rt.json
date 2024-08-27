@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:heater_rt" }
+		"normal": { "model": "ntm:heater_rt" }
 	}
 }

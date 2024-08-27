@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:vent_cloud" }
+		"normal": { "model": "ntm:vent_cloud" }
 	}
 }

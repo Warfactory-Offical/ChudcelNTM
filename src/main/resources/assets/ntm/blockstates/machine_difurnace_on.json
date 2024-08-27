@@ -1,7 +1,7 @@
 {
 	"forge_marker": 1,
 	"defaults": {
-		"model": "hbm:machine_difurnace_on"
+		"model": "ntm:machine_difurnace_on"
 	},
 	"variants": {
 		"facing": {
@@ -13,8 +13,8 @@
 		"ext": {
 			"true": {
 				"textures": {
-					"front": "hbm:blocks/difurnace_front_on_tall",
-					"side": "hbm:blocks/difurnace_side_tall"
+					"front": "ntm:blocks/difurnace_front_on_tall",
+					"side": "ntm:blocks/difurnace_side_tall"
 				}
 			},
 			"false": {}

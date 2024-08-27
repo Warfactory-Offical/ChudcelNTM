@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_cyclotron" }
+		"normal": { "model": "ntm:machine_cyclotron" }
 	}
 }

@@ -1,10 +1,10 @@
 {
 	"variants": {
-		"facing=north": { "model": "hbm:dfc_emitter" },
- 	   	"facing=south": { "model": "hbm:dfc_emitter", "y": 180 },
-  	  	"facing=west":  { "model": "hbm:dfc_emitter", "y": 270 },
-  		"facing=east":  { "model": "hbm:dfc_emitter", "y": 90 },
-		"facing=up":  { "model": "hbm:dfc_emitter", "y": 90 },
-		"facing=down":  { "model": "hbm:dfc_emitter", "y": 90 }
+		"facing=north": { "model": "ntm:dfc_emitter" },
+ 	   	"facing=south": { "model": "ntm:dfc_emitter", "y": 180 },
+  	  	"facing=west":  { "model": "ntm:dfc_emitter", "y": 270 },
+  		"facing=east":  { "model": "ntm:dfc_emitter", "y": 90 },
+		"facing=up":  { "model": "ntm:dfc_emitter", "y": 90 },
+		"facing=down":  { "model": "ntm:dfc_emitter", "y": 90 }
 	}
 }

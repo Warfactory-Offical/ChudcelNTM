@@ -1,8 +1,8 @@
 {
 	"variants": {
-		"facing=north": { "model": "hbm:deco_sat_mapper" },
-     	   	"facing=south": { "model": "hbm:deco_sat_mapper", "y": 180 },
-      	  	"facing=west":  { "model": "hbm:deco_sat_mapper", "y": 270 },
-      		"facing=east":  { "model": "hbm:deco_sat_mapper", "y": 90 }
+		"facing=north": { "model": "ntm:deco_sat_mapper" },
+     	   	"facing=south": { "model": "ntm:deco_sat_mapper", "y": 180 },
+      	  	"facing=west":  { "model": "ntm:deco_sat_mapper", "y": 270 },
+      		"facing=east":  { "model": "ntm:deco_sat_mapper", "y": 90 }
 	}
 }

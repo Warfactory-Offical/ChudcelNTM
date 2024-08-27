@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:fwatz_scaffold" }
+		"normal": { "model": "ntm:fwatz_scaffold" }
 	}
 }

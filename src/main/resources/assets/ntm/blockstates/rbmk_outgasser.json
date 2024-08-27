@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:rbmk_outgasser" }
+		"normal": { "model": "ntm:rbmk_outgasser" }
 	}
 }

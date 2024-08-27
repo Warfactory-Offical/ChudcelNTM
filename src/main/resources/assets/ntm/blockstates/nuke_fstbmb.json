@@ -1,8 +1,8 @@
 {
 	"variants": {
-		"facing=north": { "model": "hbm:nuke_fstbmb" },
-     	   	"facing=south": { "model": "hbm:nuke_fstbmb", "y": 180 },
-      	  	"facing=west":  { "model": "hbm:nuke_fstbmb", "y": 270 },
-      		"facing=east":  { "model": "hbm:nuke_fstbmb", "y": 90 }
+		"facing=north": { "model": "ntm:nuke_fstbmb" },
+     	   	"facing=south": { "model": "ntm:nuke_fstbmb", "y": 180 },
+      	  	"facing=west":  { "model": "ntm:nuke_fstbmb", "y": 270 },
+      		"facing=east":  { "model": "ntm:nuke_fstbmb", "y": 90 }
 	}
 }

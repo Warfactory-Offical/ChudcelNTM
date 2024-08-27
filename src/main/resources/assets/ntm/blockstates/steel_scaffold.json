@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:scaffold.obj"
+		"model": "ntm:scaffold.obj"
 	},
 	"variants": {
 		"facing=north": [{ "y": 270 }],

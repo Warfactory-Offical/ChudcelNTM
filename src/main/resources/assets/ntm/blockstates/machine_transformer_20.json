@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_transformer_20" }
+		"normal": { "model": "ntm:machine_transformer_20" }
 	}
 }

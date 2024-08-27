@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:struct_scaffold" }
+		"normal": { "model": "ntm:struct_scaffold" }
 	}
 }

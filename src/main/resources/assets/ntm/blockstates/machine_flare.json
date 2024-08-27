@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_flare" }
+		"normal": { "model": "ntm:machine_flare" }
 	}
 }

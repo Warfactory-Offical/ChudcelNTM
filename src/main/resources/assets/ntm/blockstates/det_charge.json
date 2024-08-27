@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:det_charge" }
+		"normal": { "model": "ntm:det_charge" }
 	}
 }

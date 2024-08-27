@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_dineutronium" }
+		"normal": { "model": "ntm:block_dineutronium" }
 	}
 }

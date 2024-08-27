@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_unobtainium" }
+		"normal": { "model": "ntm:block_unobtainium" }
 	}
 }

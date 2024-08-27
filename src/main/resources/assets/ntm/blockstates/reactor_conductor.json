@@ -1,6 +1,6 @@
 {
 	"variants": {
-		"activated=true": { "model": "hbm:reactor_conductor" },
-     	   	"activated=false": { "model": "hbm:reactor_conductor" }
+		"activated=true": { "model": "ntm:reactor_conductor" },
+     	   	"activated=false": { "model": "ntm:reactor_conductor" }
 	}
 }

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "hbm:plant_dead_flower" }
+        "normal": { "model": "ntm:plant_dead_flower" }
     }
 }

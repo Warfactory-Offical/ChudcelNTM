@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:gas_flammable" }
+		"normal": { "model": "ntm:gas_flammable" }
 	}
 }

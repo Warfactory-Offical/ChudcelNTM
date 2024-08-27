@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:volcano_core" }
+		"normal": { "model": "ntm:volcano_core" }
 	}
 }

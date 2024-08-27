@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:machine_well" }
+		"normal": { "model": "ntm:machine_well" }
 	}
 }

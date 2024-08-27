@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:barrel_plastic.obj"
+		"model": "ntm:barrel_plastic.obj"
 	},
 	"variants": {
 		"normal": [{}],

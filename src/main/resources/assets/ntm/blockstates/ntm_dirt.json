@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:ntm_dirt" }
+		"normal": { "model": "ntm:ntm_dirt" }
 	}
 }

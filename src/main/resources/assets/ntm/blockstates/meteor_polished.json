@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:meteor_polished" }
+		"normal": { "model": "ntm:meteor_polished" }
 	}
 }

@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:cheater_virus_seed" }
+		"normal": { "model": "ntm:cheater_virus_seed" }
 	}
 }

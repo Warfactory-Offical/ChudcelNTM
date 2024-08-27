@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:sat_dock" }
+		"normal": { "model": "ntm:sat_dock" }
 	}
 }

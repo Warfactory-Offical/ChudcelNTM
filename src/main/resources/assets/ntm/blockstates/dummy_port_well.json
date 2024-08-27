@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:dummy_port_well" }
+		"normal": { "model": "ntm:dummy_port_well" }
 	}
 }

@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:fusion_core_block" }
+		"normal": { "model": "ntm:fusion_core_block" }
 	}
 }

@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:frozen_dirt" }
+		"normal": { "model": "ntm:frozen_dirt" }
 	}
 }

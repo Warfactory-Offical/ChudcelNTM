@@ -1,6 +1,6 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:dummy_block_turbofan" },
-		"inventory": { "model": "hbm:dummy_block_turbofan" }
+		"normal": { "model": "ntm:dummy_block_turbofan" },
+		"inventory": { "model": "ntm:dummy_block_turbofan" }
 	}
 }

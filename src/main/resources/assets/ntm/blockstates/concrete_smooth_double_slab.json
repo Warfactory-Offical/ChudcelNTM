@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=default": { "model": "hbm:concrete_smooth" },
-        "half=top,variant=default": { "model": "hbm:concrete_smooth" }
+        "half=bottom,variant=default": { "model": "ntm:concrete_smooth" },
+        "half=top,variant=default": { "model": "ntm:concrete_smooth" }
     }
 }

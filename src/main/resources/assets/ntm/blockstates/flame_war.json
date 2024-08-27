@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:flame_war" }
+		"normal": { "model": "ntm:flame_war" }
 	}
 }

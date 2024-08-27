@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:rbmk_boiler" }
+		"normal": { "model": "ntm:rbmk_boiler" }
 	}
 }

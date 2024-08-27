@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:turret_fritz" }
+		"normal": { "model": "ntm:turret_fritz" }
 	}
 }

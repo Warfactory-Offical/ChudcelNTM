@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:dummy_port_compact_launcher" }
+		"normal": { "model": "ntm:dummy_port_compact_launcher" }
 	}
 }

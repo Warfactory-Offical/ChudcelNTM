@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:tile_lab" }
+		"normal": { "model": "ntm:tile_lab" }
 	}
 }

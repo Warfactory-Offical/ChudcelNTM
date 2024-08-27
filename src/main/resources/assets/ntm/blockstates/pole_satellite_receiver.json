@@ -1,8 +1,8 @@
 {
 	"variants": {
-		"facing=north": { "model": "hbm:pole_satellite_receiver" },
-     	   	"facing=south": { "model": "hbm:pole_satellite_receiver", "y": 180 },
-      	  	"facing=west":  { "model": "hbm:pole_satellite_receiver", "y": 270 },
-      		"facing=east":  { "model": "hbm:pole_satellite_receiver", "y": 90 }
+		"facing=north": { "model": "ntm:pole_satellite_receiver" },
+     	   	"facing=south": { "model": "ntm:pole_satellite_receiver", "y": 180 },
+      	  	"facing=west":  { "model": "ntm:pole_satellite_receiver", "y": 270 },
+      		"facing=east":  { "model": "ntm:pole_satellite_receiver", "y": 90 }
 	}
 }

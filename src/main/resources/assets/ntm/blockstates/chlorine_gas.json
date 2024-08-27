@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:chlorine_gas" }
+		"normal": { "model": "ntm:chlorine_gas" }
 	}
 }

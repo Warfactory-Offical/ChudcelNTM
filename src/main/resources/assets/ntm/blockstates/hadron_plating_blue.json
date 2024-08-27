@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:hadron_plating_blue" }
+		"normal": { "model": "ntm:hadron_plating_blue" }
 	}
 }

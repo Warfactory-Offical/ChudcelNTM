@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=default": { "model": "hbm:reinforced_sand" },
-        "half=top,variant=default": { "model": "hbm:reinforced_sand" }
+        "half=bottom,variant=default": { "model": "ntm:reinforced_sand" },
+        "half=top,variant=default": { "model": "ntm:reinforced_sand" }
     }
 }

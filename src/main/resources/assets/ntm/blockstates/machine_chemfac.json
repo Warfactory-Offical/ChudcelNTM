@@ -1,5 +1,5 @@
 {
   "variants": {
-    "normal": { "model": "hbm:machine_chemfac" }
+    "normal": { "model": "ntm:machine_chemfac" }
   }
 }

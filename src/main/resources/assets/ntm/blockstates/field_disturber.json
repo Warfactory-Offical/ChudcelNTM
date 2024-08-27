@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:field_disturber" }
+		"normal": { "model": "ntm:field_disturber" }
 	}
 }

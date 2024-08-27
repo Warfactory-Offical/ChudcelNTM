@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:ore_niter" }
+		"normal": { "model": "ntm:ore_niter" }
 	}
 }

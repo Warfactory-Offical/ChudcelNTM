@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:absorber_pink" }
+		"normal": { "model": "ntm:absorber_pink" }
 	}
 }

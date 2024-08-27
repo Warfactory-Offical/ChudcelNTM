@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:ducrete_brick" }
+		"normal": { "model": "ntm:ducrete_brick" }
 	}
 }

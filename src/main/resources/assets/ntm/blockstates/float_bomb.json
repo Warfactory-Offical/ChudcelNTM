@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:float_bomb" }
+		"normal": { "model": "ntm:float_bomb" }
 	}
 }

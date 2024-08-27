@@ -2,7 +2,7 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {},
-    "model": "hbm:difurnace_extension.obj"
+    "model": "ntm:difurnace_extension.obj"
   },
   "variants": {
     "normal": [

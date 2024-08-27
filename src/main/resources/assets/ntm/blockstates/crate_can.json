@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:conservecrate.obj"
+		"model": "ntm:conservecrate.obj"
 	},
 	"variants": {
 		"normal": [{}],

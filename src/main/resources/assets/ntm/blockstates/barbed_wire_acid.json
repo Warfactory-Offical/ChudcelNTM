@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:barbed_wire_acid.obj"
+		"model": "ntm:barbed_wire_acid.obj"
 	},
 	"variants": {
 		"facing=north": [{}],

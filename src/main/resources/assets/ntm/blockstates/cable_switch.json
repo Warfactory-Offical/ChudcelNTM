@@ -1,6 +1,6 @@
 {
 	"variants": {
-		"state=true": { "model": "hbm:cable_switch_on" },
-		"state=false": { "model": "hbm:cable_switch_off" }
+		"state=true": { "model": "ntm:cable_switch_on" },
+		"state=false": { "model": "ntm:cable_switch_off" }
 	}
 }

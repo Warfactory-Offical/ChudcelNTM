@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:crate_metal" }
+		"normal": { "model": "ntm:crate_metal" }
 	}
 }

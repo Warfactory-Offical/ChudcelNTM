@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_solid_fuel" }
+		"normal": { "model": "ntm:block_solid_fuel" }
 	}
 }

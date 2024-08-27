@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:heater_oilburner" }
+		"normal": { "model": "ntm:heater_oilburner" }
 	}
 }

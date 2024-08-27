@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=default": { "model": "hbm:ducrete_smooth" },
-        "half=top,variant=default": { "model": "hbm:ducrete_smooth" }
+        "half=bottom,variant=default": { "model": "ntm:ducrete_smooth" },
+        "half=top,variant=default": { "model": "ntm:ducrete_smooth" }
     }
 }

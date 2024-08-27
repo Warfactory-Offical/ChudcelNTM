@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:block_niobium" }
+		"normal": { "model": "ntm:block_niobium" }
 	}
 }

@@ -3,7 +3,7 @@
 	"defaults": {
 		"textures": {},
 		"custom": { "flip-v": true },
-		"model": "hbm:pipe_quad.obj"
+		"model": "ntm:pipe_quad.obj"
 	},
 	"variants": {
 		"axis=x": [{ "x": 90, "y": 90 }],

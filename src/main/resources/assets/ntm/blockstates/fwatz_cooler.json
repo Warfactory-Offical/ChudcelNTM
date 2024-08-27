@@ -1,6 +1,6 @@
 {
 	"variants": {
-		"activated=true": { "model": "hbm:fwatz_cooler" },
-     	   	"activated=false": { "model": "hbm:fwatz_cooler" }
+		"activated=true": { "model": "ntm:fwatz_cooler" },
+     	   	"activated=false": { "model": "ntm:fwatz_cooler" }
 	}
 }

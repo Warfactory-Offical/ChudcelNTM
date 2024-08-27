@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:deco_asbestos" }
+		"normal": { "model": "ntm:deco_asbestos" }
 	}
 }

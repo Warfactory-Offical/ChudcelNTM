@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:drill_pipe" }
+		"normal": { "model": "ntm:drill_pipe" }
 	}
 }

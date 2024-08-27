@@ -1,6 +1,6 @@
 {
 	"variants": {
-		"active=true": { "model": "hbm:geysir_vapor" },
-		"active=false": { "model": "hbm:geysir_vapor" }
+		"active=true": { "model": "ntm:geysir_vapor" },
+		"active=false": { "model": "ntm:geysir_vapor" }
 	}
 }

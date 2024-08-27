@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:basalt_smooth" }
+		"normal": { "model": "ntm:basalt_smooth" }
 	}
 }

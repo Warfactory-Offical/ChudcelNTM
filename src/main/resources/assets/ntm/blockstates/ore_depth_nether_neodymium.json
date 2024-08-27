@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:ore_depth_nether_neodymium" }
+		"normal": { "model": "ntm:ore_depth_nether_neodymium" }
 	}
 }

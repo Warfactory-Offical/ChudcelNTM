@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:heater_heatex" }
+		"normal": { "model": "ntm:heater_heatex" }
 	}
 }

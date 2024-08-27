@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:stone_depth_nether" }
+		"normal": { "model": "ntm:stone_depth_nether" }
 	}
 }

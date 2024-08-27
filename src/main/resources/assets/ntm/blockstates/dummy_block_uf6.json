@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": { "model": "hbm:dummy_block_uf6" }
+		"normal": { "model": "ntm:dummy_block_uf6" }
 	}
 }

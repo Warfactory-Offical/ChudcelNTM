@@ -2,7 +2,7 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {},
-		"model": "hbm:barrel_lox.obj"
+		"model": "ntm:barrel_lox.obj"
 	},
 	"variants": {
 		"normal": [{}],
