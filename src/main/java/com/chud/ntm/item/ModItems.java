@@ -1,7 +1,9 @@
 package com.chud.ntm.item;
 
 import com.chud.ntm.ChudNTM;
-import com.chud.ntm.item.enums.MaterialNTM;
+import com.chud.ntm.item.enums.EMaterial;
+import com.chud.ntm.item.enums.EShape;
+import com.chud.ntm.item.meta.MetaItem;
 import com.chud.ntm.item.templates.*;
 import com.chud.ntm.item.tool.*;
 
@@ -21,7 +23,7 @@ public class ModItems {
 
     public static void preInit() {
         populate();
-        // TODO: meta generation here
+        generateMetaItems();
         register();
     }
 
@@ -660,857 +662,411 @@ public class ModItems {
         ALL_ITEMS.put("entanglement_kit", new CustomItem("entanglement_kit").setCreativeTab(CreativeTabsManager.partsTab));
         ALL_ITEMS.put("undefined", new CustomItem("undefined").setCreativeTab(CreativeTabsManager.partsTab));
 
-        //
-        //
-        // TODO: autogenerate below items
-        //
-        //
+    }
 
-        // ingots
+    private static void generateMetaItems() {
 
-        ALL_ITEMS.put("ingot_steel", new IngotItem(MaterialNTM.steel));
-        ALL_ITEMS.put("ingot_titanium", new IngotItem(MaterialNTM.titanium));
-        ALL_ITEMS.put("ingot_copper", new IngotItem(MaterialNTM.copper));
-        ALL_ITEMS.put("ingot_red_copper", new IngotItem(MaterialNTM.red_copper));
-        ALL_ITEMS.put("ingot_advanced_alloy", new IngotItem(MaterialNTM.advanced_alloy));
-        ALL_ITEMS.put("ingot_tungsten", new IngotItem(MaterialNTM.tungsten));
-        ALL_ITEMS.put("ingot_aluminium", new IngotItem(MaterialNTM.aluminium));
-        ALL_ITEMS.put("ingot_beryllium", new IngotItem(MaterialNTM.beryllium));
-        ALL_ITEMS.put("ingot_lead", new IngotItem(MaterialNTM.lead));
-        ALL_ITEMS.put("ingot_asbestos", new IngotItem(MaterialNTM.asbestos));
-        ALL_ITEMS.put("ingot_magnetized_tungsten", new IngotItem(MaterialNTM.magnetized_tungsten));
-        ALL_ITEMS.put("ingot_combine_steel", new IngotItem(MaterialNTM.combine_steel));
-        ALL_ITEMS.put("ingot_dura_steel", new IngotItem(MaterialNTM.dura_steel));
-        ALL_ITEMS.put("ingot_technetium", new IngotItem(MaterialNTM.technetium));
-        ALL_ITEMS.put("ingot_tcalloy", new IngotItem(MaterialNTM.tcalloy));
-        ALL_ITEMS.put("ingot_cdalloy", new IngotItem(MaterialNTM.cdalloy));
-        ALL_ITEMS.put("ingot_polymer", new IngotItem(MaterialNTM.polymer));
-        ALL_ITEMS.put("ingot_bakelite", new IngotItem(MaterialNTM.bakelite));
-        ALL_ITEMS.put("ingot_rubber", new IngotItem(MaterialNTM.rubber));
-        ALL_ITEMS.put("ingot_biorubber", new IngotItem(MaterialNTM.biorubber));
-        ALL_ITEMS.put("ingot_desh", new IngotItem(MaterialNTM.desh));
-        ALL_ITEMS.put("ingot_saturnite", new IngotItem(MaterialNTM.saturnite));
-        ALL_ITEMS.put("ingot_ferrouranium", new IngotItem(MaterialNTM.ferrouranium));
-        ALL_ITEMS.put("ingot_starmetal", new IngotItem(MaterialNTM.starmetal));
-        ALL_ITEMS.put("ingot_osmiridium", new IngotItem(MaterialNTM.osmiridium));
-        ALL_ITEMS.put("ingot_euphemium", new IngotItem(MaterialNTM.euphemium));
-        ALL_ITEMS.put("ingot_dineutronium", new IngotItem(MaterialNTM.dineutronium));
-        ALL_ITEMS.put("ingot_cadmium", new IngotItem(MaterialNTM.cadmium));
-        ALL_ITEMS.put("ingot_bismuth", new IngotItem(MaterialNTM.bismuth));
-        ALL_ITEMS.put("ingot_arsenic", new IngotItem(MaterialNTM.arsenic));
-        ALL_ITEMS.put("ingot_zirconium", new IngotItem(MaterialNTM.zirconium));
-        ALL_ITEMS.put("ingot_th232", new IngotItem(MaterialNTM.th232));
-        ALL_ITEMS.put("ingot_uranium", new IngotItem(MaterialNTM.uranium));
-        ALL_ITEMS.put("ingot_u233", new IngotItem(MaterialNTM.u233));
-        ALL_ITEMS.put("ingot_u235", new IngotItem(MaterialNTM.u235));
-        ALL_ITEMS.put("ingot_u238", new IngotItem(MaterialNTM.u238));
-        ALL_ITEMS.put("ingot_u238m2", new IngotItem(MaterialNTM.u238m2));
-        ALL_ITEMS.put("ingot_plutonium", new IngotItem(MaterialNTM.plutonium));
-        ALL_ITEMS.put("ingot_pu238", new IngotItem(MaterialNTM.pu238));
-        ALL_ITEMS.put("ingot_pu239", new IngotItem(MaterialNTM.pu239));
-        ALL_ITEMS.put("ingot_pu240", new IngotItem(MaterialNTM.pu240));
-        ALL_ITEMS.put("ingot_pu241", new IngotItem(MaterialNTM.pu241));
-        ALL_ITEMS.put("ingot_pu_mix", new IngotItem( MaterialNTM.pu_mix));
-        ALL_ITEMS.put("ingot_am241", new IngotItem(MaterialNTM.am241));
-        ALL_ITEMS.put("ingot_am242", new IngotItem(MaterialNTM.am242));
-        ALL_ITEMS.put("ingot_am_mix", new IngotItem(MaterialNTM.am_mix));
-        ALL_ITEMS.put("ingot_schraranium", new IngotItem(MaterialNTM.schraranium));
-        ALL_ITEMS.put("ingot_schrabidium", new IngotItem(MaterialNTM.schrabidium));
-        ALL_ITEMS.put("ingot_schrabidate", new IngotItem(MaterialNTM.schrabidate));
-        ALL_ITEMS.put("ingot_solinium", new IngotItem(MaterialNTM.solinium));
-        ALL_ITEMS.put("ingot_thorium_fuel", new IngotItem(MaterialNTM.thorium_fuel));
-        ALL_ITEMS.put("ingot_uranium_fuel", new IngotItem(MaterialNTM.uranium_fuel));
-        ALL_ITEMS.put("ingot_mox_fuel", new IngotItem(MaterialNTM.mox_fuel));
-        ALL_ITEMS.put("ingot_plutonium_fuel", new IngotItem(MaterialNTM.plutonium_fuel));
-        ALL_ITEMS.put("ingot_neptunium_fuel", new IngotItem(MaterialNTM.neptunium_fuel));
-        ALL_ITEMS.put("ingot_americium_fuel", new IngotItem(MaterialNTM.americium_fuel));
-        ALL_ITEMS.put("ingot_les", new IngotItem(MaterialNTM.les));
-        ALL_ITEMS.put("ingot_schrabidium_fuel", new IngotItem(MaterialNTM.schrabidium_fuel));
-        ALL_ITEMS.put("ingot_hes", new IngotItem(MaterialNTM.hes));
-        ALL_ITEMS.put("ingot_neptunium", new IngotItem(MaterialNTM.neptunium));
-        ALL_ITEMS.put("ingot_tennessine", new IngotItem(MaterialNTM.tennessine));
-        ALL_ITEMS.put("ingot_polonium", new IngotItem(MaterialNTM.polonium));
-        ALL_ITEMS.put("ingot_phosphorus", new IngotItem(MaterialNTM.phosphorus));
-        ALL_ITEMS.put("ingot_boron", new IngotItem(MaterialNTM.boron));
-        ALL_ITEMS.put("ingot_graphite", new IngotItem(MaterialNTM.graphite));
-        ALL_ITEMS.put("ingot_fiberglass", new IngotItem(MaterialNTM.fiberglass));
-        ALL_ITEMS.put("ingot_smore", new IngotItem(MaterialNTM.smore));
-        ALL_ITEMS.put("ingot_niobium", new IngotItem(MaterialNTM.niobium));
-        ALL_ITEMS.put("ingot_actinium", new IngotItem(MaterialNTM.actinium));
-        ALL_ITEMS.put("ingot_neodymium", new IngotItem(MaterialNTM.neodymium));
-        ALL_ITEMS.put("ingot_bromine", new IngotItem(MaterialNTM.bromine));
-        ALL_ITEMS.put("ingot_caesium", new IngotItem(MaterialNTM.caesium));
-        ALL_ITEMS.put("ingot_cerium", new IngotItem(MaterialNTM.cerium));
-        ALL_ITEMS.put("ingot_lanthanium", new IngotItem(MaterialNTM.lanthanium));
-        ALL_ITEMS.put("ingot_tantalium", new IngotItem(MaterialNTM.tantalium));
-        ALL_ITEMS.put("ingot_astatine", new IngotItem(MaterialNTM.astatine));
-        ALL_ITEMS.put("ingot_firebrick", new IngotItem(MaterialNTM.firebrick));
-        ALL_ITEMS.put("ingot_cobalt", new IngotItem(MaterialNTM.cobalt));
-        ALL_ITEMS.put("ingot_co60", new IngotItem(MaterialNTM.co60));
-        ALL_ITEMS.put("ingot_strontium", new IngotItem(MaterialNTM.strontium));
-        ALL_ITEMS.put("ingot_sr90", new IngotItem(MaterialNTM.sr90));
-        ALL_ITEMS.put("ingot_iodine", new IngotItem(MaterialNTM.iodine));
-        ALL_ITEMS.put("ingot_i131", new IngotItem(MaterialNTM.i131));
-        ALL_ITEMS.put("ingot_au198", new IngotItem(MaterialNTM.au198));
-        ALL_ITEMS.put("ingot_pb209", new IngotItem(MaterialNTM.pb209));
-        ALL_ITEMS.put("ingot_ra226", new IngotItem(MaterialNTM.ra226));
-        ALL_ITEMS.put("ingot_ac227", new IngotItem(MaterialNTM.ac227));
-        ALL_ITEMS.put("ingot_gh336", new IngotItem(MaterialNTM.gh336));
-        ALL_ITEMS.put("ingot_radspice", new IngotItem(MaterialNTM.radspice));
-        ALL_ITEMS.put("ingot_electronium", new IngotItem(MaterialNTM.electronium));
-        ALL_ITEMS.put("ingot_reiium", new IngotItem(MaterialNTM.reiium));
-        ALL_ITEMS.put("ingot_weidanium", new IngotItem(MaterialNTM.weidanium));
-        ALL_ITEMS.put("ingot_australium", new IngotItem(MaterialNTM.australium));
-        ALL_ITEMS.put("ingot_verticium", new IngotItem(MaterialNTM.verticium));
-        ALL_ITEMS.put("ingot_unobtainium", new IngotItem(MaterialNTM.unobtainium));
-        ALL_ITEMS.put("ingot_daffergon", new IngotItem(MaterialNTM.daffergon));
-        ALL_ITEMS.put("ingot_steel_dusted", new IngotItem(MaterialNTM.steel_dusted));
-        ALL_ITEMS.put("ingot_chainsteel", new IngotItem(MaterialNTM.chainsteel));
-        ALL_ITEMS.put("ingot_meteorite", new IngotItem(MaterialNTM.meteorite));
-        ALL_ITEMS.put("ingot_meteorite_forged", new IngotItem(MaterialNTM.meteorite_forged));
-        ALL_ITEMS.put("ingot_semtex", new IngotItem(MaterialNTM.semtex));
-        ALL_ITEMS.put("ingot_c4", new IngotItem(MaterialNTM.c4));
+        ALL_ITEMS.put("ingot", new MetaItem(EShape.INGOT,
+                EMaterial.steel,
+                EMaterial.titanium,
+                EMaterial.copper,
+                EMaterial.red_copper,
+                EMaterial.advanced_alloy,
+                EMaterial.tungsten,
+                EMaterial.aluminium,
+                EMaterial.beryllium,
+                EMaterial.lead,
+                EMaterial.asbestos,
+                EMaterial.magnetized_tungsten,
+                EMaterial.combine_steel,
+                EMaterial.dura_steel,
+                EMaterial.technetium,
+                EMaterial.tcalloy,
+                EMaterial.cdalloy,
+                EMaterial.polymer,
+                EMaterial.bakelite,
+                EMaterial.rubber,
+                EMaterial.biorubber,
+                EMaterial.desh,
+                EMaterial.saturnite,
+                EMaterial.ferrouranium,
+                EMaterial.starmetal,
+                EMaterial.osmiridium,
+                EMaterial.euphemium,
+                EMaterial.dineutronium,
+                EMaterial.cadmium,
+                EMaterial.bismuth,
+                EMaterial.arsenic,
+                EMaterial.zirconium,
+                EMaterial.th232,
+                EMaterial.uranium,
+                EMaterial.u233,
+                EMaterial.u235,
+                EMaterial.u238,
+                EMaterial.u238m2,
+                EMaterial.plutonium,
+                EMaterial.pu238,
+                EMaterial.pu239,
+                EMaterial.pu240,
+                EMaterial.pu241,
+                EMaterial.pu_mix,
+                EMaterial.am241,
+                EMaterial.am242,
+                EMaterial.am_mix,
+                EMaterial.schraranium,
+                EMaterial.schrabidium,
+                EMaterial.schrabidate,
+                EMaterial.solinium,
+                EMaterial.thorium_fuel,
+                EMaterial.uranium_fuel,
+                EMaterial.mox_fuel,
+                EMaterial.plutonium_fuel,
+                EMaterial.neptunium_fuel,
+                EMaterial.americium_fuel,
+                EMaterial.les,
+                EMaterial.schrabidium_fuel,
+                EMaterial.hes,
+                EMaterial.neptunium,
+                EMaterial.tennessine,
+                EMaterial.polonium,
+                EMaterial.phosphorus,
+                EMaterial.boron,
+                EMaterial.graphite,
+                EMaterial.fiberglass,
+                EMaterial.smore,
+                EMaterial.niobium,
+                EMaterial.actinium,
+                EMaterial.neodymium,
+                EMaterial.bromine,
+                EMaterial.caesium,
+                EMaterial.cerium,
+                EMaterial.lanthanium,
+                EMaterial.tantalium,
+                EMaterial.astatine,
+                EMaterial.firebrick,
+                EMaterial.cobalt,
+                EMaterial.co60,
+                EMaterial.strontium,
+                EMaterial.sr90,
+                EMaterial.iodine,
+                EMaterial.i131,
+                EMaterial.au198,
+                EMaterial.pb209,
+                EMaterial.ra226,
+                EMaterial.ac227,
+                EMaterial.gh336,
+                EMaterial.radspice,
+                EMaterial.electronium,
+                EMaterial.reiium,
+                EMaterial.weidanium,
+                EMaterial.australium,
+                EMaterial.verticium,
+                EMaterial.unobtainium,
+                EMaterial.daffergon,
+                EMaterial.steel_dusted,
+                EMaterial.chainsteel,
+                EMaterial.meteorite,
+                EMaterial.meteorite_forged,
+                EMaterial.semtex,
+                EMaterial.c4
+        ).setCreativeTab(CreativeTabsManager.partsTab));
 
-        // billets
+        ALL_ITEMS.put("billet", new MetaItem(EShape.BILLET,
+                EMaterial.th232,
+                EMaterial.uranium,
+                EMaterial.u233,
+                EMaterial.u235,
+                EMaterial.u238,
+                EMaterial.plutonium,
+                EMaterial.pu238,
+                EMaterial.pu239,
+                EMaterial.pu240,
+                EMaterial.pu241,
+                EMaterial.pu_mix,
+                EMaterial.am241,
+                EMaterial.am242,
+                EMaterial.am_mix,
+                EMaterial.neptunium,
+                EMaterial.polonium,
+                EMaterial.technetium,
+                EMaterial.co60,
+                EMaterial.sr90,
+                EMaterial.au198,
+                EMaterial.pb209,
+                EMaterial.ra226,
+                EMaterial.ac227,
+                EMaterial.gh336,
+                EMaterial.beryllium,
+                EMaterial.bismuth,
+                EMaterial.zirconium,
+                EMaterial.zfb_bismuth,
+                EMaterial.zfb_pu241,
+                EMaterial.zfb_am_mix,
+                EMaterial.schrabidium,
+                EMaterial.solinium,
+                EMaterial.thorium_fuel,
+                EMaterial.uranium_fuel,
+                EMaterial.mox_fuel,
+                EMaterial.plutonium_fuel,
+                EMaterial.neptunium_fuel,
+                EMaterial.americium_fuel,
+                EMaterial.les,
+                EMaterial.schrabidium_fuel,
+                EMaterial.hes,
+                EMaterial.po210be,
+                EMaterial.ra226be,
+                EMaterial.pu238be,
+                EMaterial.australium,
+                EMaterial.australium_lesser,
+                EMaterial.australium_greater,
+                EMaterial.unobtainium,
+                EMaterial.yharonite,
+                EMaterial.balefire_gold,
+                EMaterial.flashlead,
+                EMaterial.nuclear_waste
+        ).setCreativeTab(CreativeTabsManager.partsTab));
 
-        ALL_ITEMS.put("billet_th232", new BilletItem(MaterialNTM.th232));
-        ALL_ITEMS.put("billet_uranium", new BilletItem(MaterialNTM.uranium));
-        ALL_ITEMS.put("billet_u233", new BilletItem(MaterialNTM.u233));
-        ALL_ITEMS.put("billet_u235", new BilletItem(MaterialNTM.u235));
-        ALL_ITEMS.put("billet_u238", new BilletItem(MaterialNTM.u238));
-        ALL_ITEMS.put("billet_plutonium", new BilletItem(MaterialNTM.plutonium));
-        ALL_ITEMS.put("billet_pu238", new BilletItem(MaterialNTM.pu238));
-        ALL_ITEMS.put("billet_pu239", new BilletItem(MaterialNTM.pu239));
-        ALL_ITEMS.put("billet_pu240", new BilletItem(MaterialNTM.pu240));
-        ALL_ITEMS.put("billet_pu241", new BilletItem(MaterialNTM.pu241));
-        ALL_ITEMS.put("billet_pu_mix", new BilletItem(MaterialNTM.pu_mix));
-        ALL_ITEMS.put("billet_am241", new BilletItem(MaterialNTM.am241));
-        ALL_ITEMS.put("billet_am242", new BilletItem(MaterialNTM.am242));
-        ALL_ITEMS.put("billet_am_mix", new BilletItem(MaterialNTM.am_mix));
-        ALL_ITEMS.put("billet_neptunium", new BilletItem(MaterialNTM.neptunium));
-        ALL_ITEMS.put("billet_polonium", new BilletItem(MaterialNTM.polonium));
-        ALL_ITEMS.put("billet_technetium", new BilletItem(MaterialNTM.technetium));
-        ALL_ITEMS.put("billet_co60", new BilletItem(MaterialNTM.co60));
-        ALL_ITEMS.put("billet_sr90", new BilletItem(MaterialNTM.sr90));
-        ALL_ITEMS.put("billet_au198", new BilletItem(MaterialNTM.au198));
-        ALL_ITEMS.put("billet_pb209", new BilletItem(MaterialNTM.pb209));
-        ALL_ITEMS.put("billet_ra226", new BilletItem(MaterialNTM.ra226));
-        ALL_ITEMS.put("billet_ac227", new BilletItem(MaterialNTM.ac227));
-        ALL_ITEMS.put("billet_gh336", new BilletItem(MaterialNTM.gh336));
-        ALL_ITEMS.put("billet_beryllium", new BilletItem(MaterialNTM.beryllium));
-        ALL_ITEMS.put("billet_bismuth", new BilletItem(MaterialNTM.bismuth));
-        ALL_ITEMS.put("billet_zirconium", new BilletItem(MaterialNTM.zirconium));
-        ALL_ITEMS.put("billet_zfb_bismuth", new BilletItem(MaterialNTM.zfb_bismuth));
-        ALL_ITEMS.put("billet_zfb_pu241", new BilletItem(MaterialNTM.zfb_pu241));
-        ALL_ITEMS.put("billet_zfb_am_mix", new BilletItem(MaterialNTM.zfb_am_mix));
-        ALL_ITEMS.put("billet_schrabidium", new BilletItem(MaterialNTM.schrabidium));
-        ALL_ITEMS.put("billet_solinium", new BilletItem(MaterialNTM.solinium));
-        ALL_ITEMS.put("billet_thorium_fuel", new BilletItem(MaterialNTM.thorium_fuel));
-        ALL_ITEMS.put("billet_uranium_fuel", new BilletItem(MaterialNTM.uranium_fuel));
-        ALL_ITEMS.put("billet_mox_fuel", new BilletItem(MaterialNTM.mox_fuel));
-        ALL_ITEMS.put("billet_plutonium_fuel", new BilletItem(MaterialNTM.plutonium_fuel));
-        ALL_ITEMS.put("billet_neptunium_fuel", new BilletItem(MaterialNTM.neptunium_fuel));
-        ALL_ITEMS.put("billet_americium_fuel", new BilletItem(MaterialNTM.americium_fuel));
-        ALL_ITEMS.put("billet_les", new BilletItem(MaterialNTM.les));
-        ALL_ITEMS.put("billet_schrabidium_fuel", new BilletItem(MaterialNTM.schrabidium_fuel));
-        ALL_ITEMS.put("billet_hes", new BilletItem(MaterialNTM.hes));
-        ALL_ITEMS.put("billet_po210be", new BilletItem(MaterialNTM.po210be));
-        ALL_ITEMS.put("billet_ra226be", new BilletItem(MaterialNTM.ra226be));
-        ALL_ITEMS.put("billet_pu238be", new BilletItem(MaterialNTM.pu238be));
-        ALL_ITEMS.put("billet_australium", new BilletItem(MaterialNTM.australium));
-        ALL_ITEMS.put("billet_australium_lesser", new BilletItem(MaterialNTM.australium_lesser));
-        ALL_ITEMS.put("billet_australium_greater", new BilletItem(MaterialNTM.australium_greater));
-        ALL_ITEMS.put("billet_unobtainium", new BilletItem(MaterialNTM.unobtainium));
-        ALL_ITEMS.put("billet_yharonite", new BilletItem(MaterialNTM.yharonite));
-        ALL_ITEMS.put("billet_balefire_gold", new BilletItem(MaterialNTM.balefire_gold));
-        ALL_ITEMS.put("billet_flashlead", new BilletItem(MaterialNTM.flashlead));
-        ALL_ITEMS.put("billet_nuclear_waste", new BilletItem(MaterialNTM.nuclear_waste));
+        ALL_ITEMS.put("nugget", new MetaItem(EShape.NUGGET,
+                EMaterial.uranium,
+                EMaterial.u233,
+                EMaterial.u235,
+                EMaterial.u238,
+                EMaterial.u238m2,
+                EMaterial.plutonium,
+                EMaterial.pu238,
+                EMaterial.pu239,
+                EMaterial.pu240,
+                EMaterial.th232,
+                EMaterial.pu241,
+                EMaterial.pu_mix,
+                EMaterial.am241,
+                EMaterial.am242,
+                EMaterial.am_mix,
+                EMaterial.technetium,
+                EMaterial.neptunium,
+                EMaterial.polonium,
+                EMaterial.thorium_fuel,
+                EMaterial.uranium_fuel,
+                EMaterial.mox_fuel,
+                EMaterial.plutonium_fuel,
+                EMaterial.neptunium_fuel,
+                EMaterial.americium_fuel,
+                EMaterial.les,
+                EMaterial.schrabidium_fuel,
+                EMaterial.hes,
+                EMaterial.lead,
+                EMaterial.beryllium,
+                EMaterial.cadmium,
+                EMaterial.bismuth,
+                EMaterial.arsenic,
+                EMaterial.zirconium,
+                EMaterial.tantalium,
+                EMaterial.desh,
+                EMaterial.osmiridium,
+                EMaterial.schrabidium,
+                EMaterial.solinium,
+                EMaterial.euphemium,
+                EMaterial.dineutronium,
+                EMaterial.actinium,
+                EMaterial.ac227,
+                EMaterial.cobalt,
+                EMaterial.co60,
+                EMaterial.strontium,
+                EMaterial.sr90,
+                EMaterial.pb209,
+                EMaterial.gh336,
+                EMaterial.au198,
+                EMaterial.ra226,
+                EMaterial.radspice,
+                EMaterial.reiium,
+                EMaterial.weidanium,
+                EMaterial.australium,
+                EMaterial.australium_lesser,
+                EMaterial.australium_greater,
+                EMaterial.verticium,
+                EMaterial.unobtainium,
+                EMaterial.unobtainium_lesser,
+                EMaterial.unobtainium_greater,
+                EMaterial.daffergon,
+                EMaterial.mercury
+        ).setCreativeTab(CreativeTabsManager.partsTab));
 
-        // billets that perhaps for auto-generation??
+        ALL_ITEMS.put("powder", new MetaItem(EShape.POWDER,
+                EMaterial.iron,
+                EMaterial.gold,
+                EMaterial.diamond,
+                EMaterial.emerald,
+                EMaterial.lapis,
+                EMaterial.titanium,
+                EMaterial.tungsten,
+                EMaterial.copper,
+                EMaterial.beryllium,
+                EMaterial.aluminium,
+                EMaterial.lead,
+                EMaterial.advanced_alloy,
+                EMaterial.combine_steel,
+                EMaterial.tcalloy,
+                EMaterial.cdalloy,
+                EMaterial.magnetized_tungsten,
+                EMaterial.chlorophyte,
+                EMaterial.red_copper,
+                EMaterial.steel,
+                EMaterial.lithium,
+                EMaterial.quartz,
+                EMaterial.borax,
+                EMaterial.dura_steel,
+                EMaterial.polymer,
+                EMaterial.bakelite,
+                EMaterial.lanthanium,
+                EMaterial.actinium,
+                EMaterial.boron,
+                EMaterial.semtex_mix,
+                EMaterial.desh,
+                EMaterial.zirconium,
+                EMaterial.lignite,
+                EMaterial.asbestos,
+                EMaterial.cadmium,
+                EMaterial.bismuth,
+                EMaterial.coal,
+                EMaterial.yellowcake,
+                EMaterial.thorium,
+                EMaterial.uranium,
+                EMaterial.plutonium,
+                EMaterial.neptunium,
+                EMaterial.polonium,
+                EMaterial.schrabidium,
+                EMaterial.schrabidate,
+                EMaterial.euphemium,
+                EMaterial.dineutronium,
+                EMaterial.iodine,
+                EMaterial.astatine,
+                EMaterial.neodymium,
+                EMaterial.caesium,
+                EMaterial.reiium,
+                EMaterial.weidanium,
+                EMaterial.australium,
+                EMaterial.verticium,
+                EMaterial.unobtainium,
+                EMaterial.daffergon,
+                EMaterial.strontium,
+                EMaterial.cobalt,
+                EMaterial.bromine,
+                EMaterial.niobium,
+                EMaterial.tantalium,
+                EMaterial.tennessine,
+                EMaterial.cerium,
+                EMaterial.ice,
+                EMaterial.desh_mix,
+                EMaterial.desh_ready,
+                EMaterial.nitan_mix,
+                EMaterial.spark_mix,
+                EMaterial.fire,
+                EMaterial.meteorite,
+                EMaterial.tektite,
+                EMaterial.paleogenite,
+                EMaterial.impure_osmiridium,
+                EMaterial.osmiridium,
+                EMaterial.magic,
+                EMaterial.cloud,
+                EMaterial.balefire,
+                EMaterial.coltan_ore,
+                EMaterial.coltan,
+                EMaterial.poison,
+                EMaterial.thermite,
+                EMaterial.power,
+                EMaterial.co60,
+                EMaterial.sr90,
+                EMaterial.at209,
+                EMaterial.pb209,
+                EMaterial.i131,
+                EMaterial.cs137,
+                EMaterial.xe135,
+                EMaterial.au198,
+                EMaterial.ra226,
+                EMaterial.ac227,
+                EMaterial.radspice
+        ).setCreativeTab(CreativeTabsManager.partsTab));
 
-//    ALL_ITEMS.put("billet_actinium", new BilletItem(MaterialNTM.actinium));
-//    ALL_ITEMS.put("billet_advanced_alloy", new BilletItem(MaterialNTM.advanced_alloy));
-//    ALL_ITEMS.put("billet_aluminium", new BilletItem(MaterialNTM.aluminium));
-//    ALL_ITEMS.put("billet_arsenic", new BilletItem(MaterialNTM.arsenic));
-//    ALL_ITEMS.put("billet_asbestos", new BilletItem(MaterialNTM.asbestos));
-//    ALL_ITEMS.put("billet_astatine", new BilletItem(MaterialNTM.astatine));
-//    ALL_ITEMS.put("billet_bakelite", new BilletItem(MaterialNTM.bakelite));
-//    ALL_ITEMS.put("billet_biorubber", new BilletItem(MaterialNTM.biorubber));
-//    ALL_ITEMS.put("billet_boron", new BilletItem(MaterialNTM.boron));
-//    ALL_ITEMS.put("billet_bromine", new BilletItem(MaterialNTM.bromine));
-//    ALL_ITEMS.put("billet_c4", new BilletItem(MaterialNTM.c4));
-//    ALL_ITEMS.put("billet_cadmium", new BilletItem(MaterialNTM.cadmium));
-//    ALL_ITEMS.put("billet_caesium", new BilletItem(MaterialNTM.caesium));
-//    ALL_ITEMS.put("billet_cdalloy", new BilletItem(MaterialNTM.cdalloy));
-//    ALL_ITEMS.put("billet_cerium", new BilletItem(MaterialNTM.cerium));
-//    ALL_ITEMS.put("billet_chainsteel", new BilletItem(MaterialNTM.chainsteel));
-//    ALL_ITEMS.put("billet_cobalt", new BilletItem(MaterialNTM.cobalt));
-//    ALL_ITEMS.put("billet_combine_steel", new BilletItem(MaterialNTM.combine_steel));
-//    ALL_ITEMS.put("billet_copper", new BilletItem(MaterialNTM.copper));
-//    ALL_ITEMS.put("billet_daffergon", new BilletItem(MaterialNTM.daffergon));
-//    ALL_ITEMS.put("billet_desh", new BilletItem(MaterialNTM.desh));
-//    ALL_ITEMS.put("billet_dineutronium", new BilletItem(MaterialNTM.dineutronium));
-//    ALL_ITEMS.put("billet_dura_steel", new BilletItem(MaterialNTM.dura_steel));
-//    ALL_ITEMS.put("billet_electronium", new BilletItem(MaterialNTM.electronium));
-//    ALL_ITEMS.put("billet_euphemium", new BilletItem(MaterialNTM.euphemium));
-//    ALL_ITEMS.put("billet_ferrouranium", new BilletItem(MaterialNTM.ferrouranium));
-//    ALL_ITEMS.put("billet_fiberglass", new BilletItem(MaterialNTM.fiberglass));
-//    ALL_ITEMS.put("billet_firebrick", new BilletItem(MaterialNTM.firebrick));
-//    ALL_ITEMS.put("billet_graphite", new BilletItem(MaterialNTM.graphite));
-//    ALL_ITEMS.put("billet_i131", new BilletItem(MaterialNTM.i131));
-//    ALL_ITEMS.put("billet_iodine", new BilletItem(MaterialNTM.iodine));
-//    ALL_ITEMS.put("billet_lanthanium", new BilletItem(MaterialNTM.lanthanium));
-//    ALL_ITEMS.put("billet_lead", new BilletItem(MaterialNTM.lead));
-//    ALL_ITEMS.put("billet_magnetized_tungsten", new BilletItem(MaterialNTM.magnetized_tungsten));
-//    ALL_ITEMS.put("billet_meteorite", new BilletItem(MaterialNTM.meteorite));
-//    ALL_ITEMS.put("billet_meteorite_forged", new BilletItem(MaterialNTM.meteorite_forged));
-//    ALL_ITEMS.put("billet_neodymium", new BilletItem(MaterialNTM.neodymium));
-//    ALL_ITEMS.put("billet_niobium", new BilletItem(MaterialNTM.niobium));
-//    ALL_ITEMS.put("billet_osmiridium", new BilletItem(MaterialNTM.osmiridium));
-//    ALL_ITEMS.put("billet_phosphorus", new BilletItem(MaterialNTM.phosphorus));
-//    ALL_ITEMS.put("billet_polymer", new BilletItem(MaterialNTM.polymer));
-//    ALL_ITEMS.put("billet_radspice", new BilletItem(MaterialNTM.radspice));
-//    ALL_ITEMS.put("billet_red_copper", new BilletItem(MaterialNTM.red_copper));
-//    ALL_ITEMS.put("billet_reiium", new BilletItem(MaterialNTM.reiium));
-//    ALL_ITEMS.put("billet_rubber", new BilletItem(MaterialNTM.rubber));
-//    ALL_ITEMS.put("billet_saturnite", new BilletItem(MaterialNTM.saturnite));
-//    ALL_ITEMS.put("billet_schrabidate", new BilletItem(MaterialNTM.schrabidate));
-//    ALL_ITEMS.put("billet_schraranium", new BilletItem(MaterialNTM.schraranium));
-//    ALL_ITEMS.put("billet_semtex", new BilletItem(MaterialNTM.semtex));
-//    ALL_ITEMS.put("billet_smore", new BilletItem(MaterialNTM.smore));
-//    ALL_ITEMS.put("billet_starmetal", new BilletItem(MaterialNTM.starmetal));
-//    ALL_ITEMS.put("billet_steel", new BilletItem(MaterialNTM.steel));
-//    ALL_ITEMS.put("billet_steel_dusted", new BilletItem(MaterialNTM.steel_dusted));
-//    ALL_ITEMS.put("billet_strontium", new BilletItem(MaterialNTM.strontium));
-//    ALL_ITEMS.put("billet_tantalium", new BilletItem(MaterialNTM.tantalium));
-//    ALL_ITEMS.put("billet_tcalloy", new BilletItem(MaterialNTM.tcalloy));
-//    ALL_ITEMS.put("billet_tennessine", new BilletItem(MaterialNTM.tennessine));
-//    ALL_ITEMS.put("billet_titanium", new BilletItem(MaterialNTM.titanium));
-//    ALL_ITEMS.put("billet_tungsten", new BilletItem(MaterialNTM.tungsten));
-//    ALL_ITEMS.put("billet_verticium", new BilletItem(MaterialNTM.verticium));
-//    ALL_ITEMS.put("billet_weidanium", new BilletItem(MaterialNTM.weidanium));
+        ALL_ITEMS.put("powder_tiny", new MetaItem(EShape.POWDER_TINY,
+                EMaterial.steel,
+                EMaterial.lithium,
+                EMaterial.lanthanium,
+                EMaterial.actinium,
+                EMaterial.boron,
+                EMaterial.coal,
+                EMaterial.iodine,
+                EMaterial.neodymium,
+                EMaterial.cobalt,
+                EMaterial.niobium,
+                EMaterial.cerium,
+                EMaterial.meteorite,
+                EMaterial.paleogenite,
+                EMaterial.co60,
+                EMaterial.sr90,
+                EMaterial.at209,
+                EMaterial.pb209,
+                EMaterial.i131,
+                EMaterial.cs137,
+                EMaterial.xe135,
+                EMaterial.au198,
+                EMaterial.ac227,
+                EMaterial.radspice
+        ).setCreativeTab(CreativeTabsManager.partsTab));
 
-        // nuggets
+        ALL_ITEMS.put("plate", new MetaItem(EShape.PLATE,
+                EMaterial.iron,
+                EMaterial.copper,
+                EMaterial.titanium,
+                EMaterial.aluminium,
+                EMaterial.gold,
+                EMaterial.lead,
+                EMaterial.steel,
+                EMaterial.advanced_alloy,
+                EMaterial.combine_steel,
+                EMaterial.paa,
+                EMaterial.saturnite,
+                EMaterial.schrabidium,
+                EMaterial.dalekanium,
+                EMaterial.mixed,
+                EMaterial.kevlar,
+                EMaterial.polymer,
+                EMaterial.desh,
+                EMaterial.euphemium,
+                EMaterial.dineutronium,
+                EMaterial.bismuth,
+                EMaterial.dura_steel
+        ).setCreativeTab(CreativeTabsManager.partsTab));
 
-        ALL_ITEMS.put("nugget_uranium", new NuggetItem(MaterialNTM.uranium));
-        ALL_ITEMS.put("nugget_u233", new NuggetItem(MaterialNTM.u233));
-        ALL_ITEMS.put("nugget_u235", new NuggetItem(MaterialNTM.u235));
-        ALL_ITEMS.put("nugget_u238", new NuggetItem(MaterialNTM.u238));
-        ALL_ITEMS.put("nugget_u238m2", new NuggetItem(MaterialNTM.u238m2));
-        ALL_ITEMS.put("nugget_plutonium", new NuggetItem(MaterialNTM.plutonium));
-        ALL_ITEMS.put("nugget_pu238", new NuggetItem(MaterialNTM.pu238));
-        ALL_ITEMS.put("nugget_pu239", new NuggetItem(MaterialNTM.pu239));
-        ALL_ITEMS.put("nugget_pu240", new NuggetItem(MaterialNTM.pu240));
-        ALL_ITEMS.put("nugget_th232", new NuggetItem(MaterialNTM.th232));
-        ALL_ITEMS.put("nugget_pu241", new NuggetItem(MaterialNTM.pu241));
-        ALL_ITEMS.put("nugget_pu_mix", new NuggetItem(MaterialNTM.pu_mix));
-        ALL_ITEMS.put("nugget_am241", new NuggetItem(MaterialNTM.am241));
-        ALL_ITEMS.put("nugget_am242", new NuggetItem(MaterialNTM.am242));
-        ALL_ITEMS.put("nugget_am_mix", new NuggetItem(MaterialNTM.am_mix));
-        ALL_ITEMS.put("nugget_technetium", new NuggetItem(MaterialNTM.technetium));
-        ALL_ITEMS.put("nugget_neptunium", new NuggetItem(MaterialNTM.neptunium));
-        ALL_ITEMS.put("nugget_polonium", new NuggetItem(MaterialNTM.polonium));
-        ALL_ITEMS.put("nugget_thorium_fuel", new NuggetItem(MaterialNTM.thorium_fuel));
-        ALL_ITEMS.put("nugget_uranium_fuel", new NuggetItem(MaterialNTM.uranium_fuel));
-        ALL_ITEMS.put("nugget_mox_fuel", new NuggetItem(MaterialNTM.mox_fuel));
-        ALL_ITEMS.put("nugget_plutonium_fuel", new NuggetItem(MaterialNTM.plutonium_fuel));
-        ALL_ITEMS.put("nugget_neptunium_fuel", new NuggetItem(MaterialNTM.neptunium_fuel));
-        ALL_ITEMS.put("nugget_americium_fuel", new NuggetItem(MaterialNTM.americium_fuel));
-        ALL_ITEMS.put("nugget_les", new NuggetItem(MaterialNTM.les));
-        ALL_ITEMS.put("nugget_schrabidium_fuel", new NuggetItem(MaterialNTM.schrabidium_fuel));
-        ALL_ITEMS.put("nugget_hes", new NuggetItem(MaterialNTM.hes));
-        ALL_ITEMS.put("nugget_lead", new NuggetItem(MaterialNTM.lead));
-        ALL_ITEMS.put("nugget_beryllium", new NuggetItem(MaterialNTM.beryllium));
-        ALL_ITEMS.put("nugget_cadmium", new NuggetItem(MaterialNTM.cadmium));
-        ALL_ITEMS.put("nugget_bismuth", new NuggetItem(MaterialNTM.bismuth));
-        ALL_ITEMS.put("nugget_arsenic", new NuggetItem(MaterialNTM.arsenic));
-        ALL_ITEMS.put("nugget_zirconium", new NuggetItem(MaterialNTM.zirconium));
-        ALL_ITEMS.put("nugget_tantalium", new NuggetItem(MaterialNTM.tantalium));
-        ALL_ITEMS.put("nugget_desh", new NuggetItem(MaterialNTM.desh));
-        ALL_ITEMS.put("nugget_osmiridium", new NuggetItem(MaterialNTM.osmiridium));
-        ALL_ITEMS.put("nugget_schrabidium", new NuggetItem(MaterialNTM.schrabidium));
-        ALL_ITEMS.put("nugget_solinium", new NuggetItem(MaterialNTM.solinium));
-        ALL_ITEMS.put("nugget_euphemium", new NuggetItem(MaterialNTM.euphemium));
-        ALL_ITEMS.put("nugget_dineutronium", new NuggetItem(MaterialNTM.dineutronium));
-        ALL_ITEMS.put("nugget_actinium", new NuggetItem(MaterialNTM.actinium));
-        ALL_ITEMS.put("nugget_ac227", new NuggetItem(MaterialNTM.ac227));
-        ALL_ITEMS.put("nugget_cobalt", new NuggetItem(MaterialNTM.cobalt));
-        ALL_ITEMS.put("nugget_co60", new NuggetItem(MaterialNTM.co60));
-        ALL_ITEMS.put("nugget_strontium", new NuggetItem(MaterialNTM.strontium));
-        ALL_ITEMS.put("nugget_sr90", new NuggetItem(MaterialNTM.sr90));
-        ALL_ITEMS.put("nugget_pb209", new NuggetItem(MaterialNTM.pb209));
-        ALL_ITEMS.put("nugget_gh336", new NuggetItem(MaterialNTM.gh336));
-        ALL_ITEMS.put("nugget_au198", new NuggetItem(MaterialNTM.au198));
-        ALL_ITEMS.put("nugget_ra226", new NuggetItem(MaterialNTM.ra226));
-        ALL_ITEMS.put("nugget_radspice", new NuggetItem(MaterialNTM.radspice));
-        ALL_ITEMS.put("nugget_reiium", new NuggetItem(MaterialNTM.reiium));
-        ALL_ITEMS.put("nugget_weidanium", new NuggetItem(MaterialNTM.weidanium));
-        ALL_ITEMS.put("nugget_australium", new NuggetItem(MaterialNTM.australium));
-        ALL_ITEMS.put("nugget_australium_lesser", new NuggetItem(MaterialNTM.australium_lesser));
-        ALL_ITEMS.put("nugget_australium_greater", new NuggetItem(MaterialNTM.australium_greater));
-        ALL_ITEMS.put("nugget_verticium", new NuggetItem(MaterialNTM.verticium));
-        ALL_ITEMS.put("nugget_unobtainium", new NuggetItem(MaterialNTM.unobtainium));
-        ALL_ITEMS.put("nugget_unobtainium_lesser", new NuggetItem(MaterialNTM.unobtainium_lesser));
-        ALL_ITEMS.put("nugget_unobtainium_greater", new NuggetItem(MaterialNTM.unobtainium_greater));
-        ALL_ITEMS.put("nugget_daffergon", new NuggetItem(MaterialNTM.daffergon));
-        ALL_ITEMS.put("nugget_mercury", new NuggetItem(MaterialNTM.mercury));
+        ALL_ITEMS.put("wire", new MetaItem(EShape.WIRE,
+                EMaterial.advanced_alloy,
+                EMaterial.gold,
+                EMaterial.red_copper,
+                EMaterial.tungsten,
+                EMaterial.aluminium,
+                EMaterial.copper,
+                EMaterial.schrabidium,
+                EMaterial.magnetized_tungsten
+        ).setCreativeTab(CreativeTabsManager.partsTab));
 
-        // nuggets that perhaps for auto-generation??
-
-//    ALL_ITEMS.put("nugget_advanced_alloy", new NuggetItem(MaterialNTM.advanced_alloy));
-//    ALL_ITEMS.put("nugget_aluminium", new NuggetItem(MaterialNTM.aluminium));
-//    ALL_ITEMS.put("nugget_asbestos", new NuggetItem(MaterialNTM.asbestos));
-//    ALL_ITEMS.put("nugget_astatine", new NuggetItem(MaterialNTM.astatine));
-//    ALL_ITEMS.put("nugget_bakelite", new NuggetItem(MaterialNTM.bakelite));
-//    ALL_ITEMS.put("nugget_biorubber", new NuggetItem(MaterialNTM.biorubber));
-//    ALL_ITEMS.put("nugget_boron", new NuggetItem(MaterialNTM.boron));
-//    ALL_ITEMS.put("nugget_bromine", new NuggetItem(MaterialNTM.bromine));
-//    ALL_ITEMS.put("nugget_c4", new NuggetItem(MaterialNTM.c4));
-//    ALL_ITEMS.put("nugget_caesium", new NuggetItem(MaterialNTM.caesium));
-//    ALL_ITEMS.put("nugget_cdalloy", new NuggetItem(MaterialNTM.cdalloy));
-//    ALL_ITEMS.put("nugget_cerium", new NuggetItem(MaterialNTM.cerium));
-//    ALL_ITEMS.put("nugget_chainsteel", new NuggetItem(MaterialNTM.chainsteel));
-//    ALL_ITEMS.put("nugget_combine_steel", new NuggetItem(MaterialNTM.combine_steel));
-//    ALL_ITEMS.put("nugget_copper", new NuggetItem(MaterialNTM.copper));
-//    ALL_ITEMS.put("nugget_dura_steel", new NuggetItem(MaterialNTM.dura_steel));
-//    ALL_ITEMS.put("nugget_electronium", new NuggetItem(MaterialNTM.electronium));
-//    ALL_ITEMS.put("nugget_ferrouranium", new NuggetItem(MaterialNTM.ferrouranium));
-//    ALL_ITEMS.put("nugget_fiberglass", new NuggetItem(MaterialNTM.fiberglass));
-//    ALL_ITEMS.put("nugget_firebrick", new NuggetItem(MaterialNTM.firebrick));
-//    ALL_ITEMS.put("nugget_graphite", new NuggetItem(MaterialNTM.graphite));
-//    ALL_ITEMS.put("nugget_i131", new NuggetItem(MaterialNTM.i131));
-//    ALL_ITEMS.put("nugget_iodine", new NuggetItem(MaterialNTM.iodine));
-//    ALL_ITEMS.put("nugget_lanthanium", new NuggetItem(MaterialNTM.lanthanium));
-//    ALL_ITEMS.put("nugget_magnetized_tungsten", new NuggetItem(MaterialNTM.magnetized_tungsten));
-//    ALL_ITEMS.put("nugget_meteorite", new NuggetItem(MaterialNTM.meteorite));
-//    ALL_ITEMS.put("nugget_meteorite_forged", new NuggetItem(MaterialNTM.meteorite_forged));
-//    ALL_ITEMS.put("nugget_neodymium", new NuggetItem(MaterialNTM.neodymium));
-//    ALL_ITEMS.put("nugget_niobium", new NuggetItem(MaterialNTM.niobium));
-//    ALL_ITEMS.put("nugget_phosphorus", new NuggetItem(MaterialNTM.phosphorus));
-//    ALL_ITEMS.put("nugget_polymer", new NuggetItem(MaterialNTM.polymer));
-//    ALL_ITEMS.put("nugget_red_copper", new NuggetItem(MaterialNTM.red_copper));
-//    ALL_ITEMS.put("nugget_rubber", new NuggetItem(MaterialNTM.rubber));
-//    ALL_ITEMS.put("nugget_saturnite", new NuggetItem(MaterialNTM.saturnite));
-//    ALL_ITEMS.put("nugget_schrabidate", new NuggetItem(MaterialNTM.schrabidate));
-//    ALL_ITEMS.put("nugget_schraranium", new NuggetItem(MaterialNTM.schraranium));
-//    ALL_ITEMS.put("nugget_semtex", new NuggetItem(MaterialNTM.semtex));
-//    ALL_ITEMS.put("nugget_smore", new NuggetItem(MaterialNTM.smore));
-//    ALL_ITEMS.put("nugget_starmetal", new NuggetItem(MaterialNTM.starmetal));
-//    ALL_ITEMS.put("nugget_steel", new NuggetItem(MaterialNTM.steel));
-//    ALL_ITEMS.put("nugget_steel_dusted", new NuggetItem(MaterialNTM.steel_dusted));
-//    ALL_ITEMS.put("nugget_tcalloy", new NuggetItem(MaterialNTM.tcalloy));
-//    ALL_ITEMS.put("nugget_tennessine", new NuggetItem(MaterialNTM.tennessine));
-//    ALL_ITEMS.put("nugget_titanium", new NuggetItem(MaterialNTM.titanium));
-//    ALL_ITEMS.put("nugget_tungsten", new NuggetItem(MaterialNTM.tungsten));
-
-        // wires
-
-        ALL_ITEMS.put("wire_advanced_alloy", new WireItem(MaterialNTM.advanced_alloy));
-        ALL_ITEMS.put("wire_gold", new WireItem(MaterialNTM.gold));
-        ALL_ITEMS.put("wire_red_copper", new WireItem(MaterialNTM.red_copper));
-        ALL_ITEMS.put("wire_tungsten", new WireItem(MaterialNTM.tungsten));
-        ALL_ITEMS.put("wire_aluminium", new WireItem(MaterialNTM.aluminium));
-        ALL_ITEMS.put("wire_copper", new WireItem(MaterialNTM.copper));
-        ALL_ITEMS.put("wire_schrabidium", new WireItem(MaterialNTM.schrabidium));
-        ALL_ITEMS.put("wire_magnetized_tungsten", new WireItem(MaterialNTM.magnetized_tungsten));
-
-        // wires that perhaps for auto-generation??
-
-//    ALL_ITEMS.put("wire_ac227", new WireItem(MaterialNTM.ac227));
-//    ALL_ITEMS.put("wire_actinium", new WireItem(MaterialNTM.actinium));
-//    ALL_ITEMS.put("wire_am241", new WireItem(MaterialNTM.am241));
-//    ALL_ITEMS.put("wire_am242", new WireItem(MaterialNTM.am242));
-//    ALL_ITEMS.put("wire_am_mix", new WireItem(MaterialNTM.am_mix));
-//    ALL_ITEMS.put("wire_americium_fuel", new WireItem(MaterialNTM.americium_fuel));
-//    ALL_ITEMS.put("wire_arsenic", new WireItem(MaterialNTM.arsenic));
-//    ALL_ITEMS.put("wire_asbestos", new WireItem(MaterialNTM.asbestos));
-//    ALL_ITEMS.put("wire_astatine", new WireItem(MaterialNTM.astatine));
-//    ALL_ITEMS.put("wire_au198", new WireItem(MaterialNTM.au198));
-//    ALL_ITEMS.put("wire_australium", new WireItem(MaterialNTM.australium));
-//    ALL_ITEMS.put("wire_bakelite", new WireItem(MaterialNTM.bakelite));
-//    ALL_ITEMS.put("wire_beryllium", new WireItem(MaterialNTM.beryllium));
-//    ALL_ITEMS.put("wire_biorubber", new WireItem(MaterialNTM.biorubber));
-//    ALL_ITEMS.put("wire_bismuth", new WireItem(MaterialNTM.bismuth));
-//    ALL_ITEMS.put("wire_boron", new WireItem(MaterialNTM.boron));
-//    ALL_ITEMS.put("wire_bromine", new WireItem(MaterialNTM.bromine));
-//    ALL_ITEMS.put("wire_c4", new WireItem(MaterialNTM.c4));
-//    ALL_ITEMS.put("wire_cadmium", new WireItem(MaterialNTM.cadmium));
-//    ALL_ITEMS.put("wire_caesium", new WireItem(MaterialNTM.caesium));
-//    ALL_ITEMS.put("wire_cdalloy", new WireItem(MaterialNTM.cdalloy));
-//    ALL_ITEMS.put("wire_cerium", new WireItem(MaterialNTM.cerium));
-//    ALL_ITEMS.put("wire_chainsteel", new WireItem(MaterialNTM.chainsteel));
-//    ALL_ITEMS.put("wire_co60", new WireItem(MaterialNTM.co60));
-//    ALL_ITEMS.put("wire_cobalt", new WireItem(MaterialNTM.cobalt));
-//    ALL_ITEMS.put("wire_combine_steel", new WireItem(MaterialNTM.combine_steel));
-//    ALL_ITEMS.put("wire_daffergon", new WireItem(MaterialNTM.daffergon));
-//    ALL_ITEMS.put("wire_desh", new WireItem(MaterialNTM.desh));
-//    ALL_ITEMS.put("wire_dineutronium", new WireItem(MaterialNTM.dineutronium));
-//    ALL_ITEMS.put("wire_dura_steel", new WireItem(MaterialNTM.dura_steel));
-//    ALL_ITEMS.put("wire_electronium", new WireItem(MaterialNTM.electronium));
-//    ALL_ITEMS.put("wire_euphemium", new WireItem(MaterialNTM.euphemium));
-//    ALL_ITEMS.put("wire_ferrouranium", new WireItem(MaterialNTM.ferrouranium));
-//    ALL_ITEMS.put("wire_fiberglass", new WireItem(MaterialNTM.fiberglass));
-//    ALL_ITEMS.put("wire_firebrick", new WireItem(MaterialNTM.firebrick));
-//    ALL_ITEMS.put("wire_gh336", new WireItem(MaterialNTM.gh336));
-//    ALL_ITEMS.put("wire_graphite", new WireItem(MaterialNTM.graphite));
-//    ALL_ITEMS.put("wire_hes", new WireItem(MaterialNTM.hes));
-//    ALL_ITEMS.put("wire_i131", new WireItem(MaterialNTM.i131));
-//    ALL_ITEMS.put("wire_iodine", new WireItem(MaterialNTM.iodine));
-//    ALL_ITEMS.put("wire_lanthanium", new WireItem(MaterialNTM.lanthanium));
-//    ALL_ITEMS.put("wire_lead", new WireItem(MaterialNTM.lead));
-//    ALL_ITEMS.put("wire_les", new WireItem(MaterialNTM.les));
-//    ALL_ITEMS.put("wire_meteorite", new WireItem(MaterialNTM.meteorite));
-//    ALL_ITEMS.put("wire_meteorite_forged", new WireItem(MaterialNTM.meteorite_forged));
-//    ALL_ITEMS.put("wire_mox_fuel", new WireItem(MaterialNTM.mox_fuel));
-//    ALL_ITEMS.put("wire_neodymium", new WireItem(MaterialNTM.neodymium));
-//    ALL_ITEMS.put("wire_neptunium", new WireItem(MaterialNTM.neptunium));
-//    ALL_ITEMS.put("wire_neptunium_fuel", new WireItem(MaterialNTM.neptunium_fuel));
-//    ALL_ITEMS.put("wire_niobium", new WireItem(MaterialNTM.niobium));
-//    ALL_ITEMS.put("wire_osmiridium", new WireItem(MaterialNTM.osmiridium));
-//    ALL_ITEMS.put("wire_pb209", new WireItem(MaterialNTM.pb209));
-//    ALL_ITEMS.put("wire_phosphorus", new WireItem(MaterialNTM.phosphorus));
-//    ALL_ITEMS.put("wire_plutonium", new WireItem(MaterialNTM.plutonium));
-//    ALL_ITEMS.put("wire_plutonium_fuel", new WireItem(MaterialNTM.plutonium_fuel));
-//    ALL_ITEMS.put("wire_polonium", new WireItem(MaterialNTM.polonium));
-//    ALL_ITEMS.put("wire_polymer", new WireItem(MaterialNTM.polymer));
-//    ALL_ITEMS.put("wire_pu238", new WireItem(MaterialNTM.pu238));
-//    ALL_ITEMS.put("wire_pu239", new WireItem(MaterialNTM.pu239));
-//    ALL_ITEMS.put("wire_pu240", new WireItem(MaterialNTM.pu240));
-//    ALL_ITEMS.put("wire_pu241", new WireItem(MaterialNTM.pu241));
-//    ALL_ITEMS.put("wire_pu_mix", new WireItem(MaterialNTM.pu_mix));
-//    ALL_ITEMS.put("wire_ra226", new WireItem(MaterialNTM.ra226));
-//    ALL_ITEMS.put("wire_radspice", new WireItem(MaterialNTM.radspice));
-//    ALL_ITEMS.put("wire_reiium", new WireItem(MaterialNTM.reiium));
-//    ALL_ITEMS.put("wire_rubber", new WireItem(MaterialNTM.rubber));
-//    ALL_ITEMS.put("wire_saturnite", new WireItem(MaterialNTM.saturnite));
-//    ALL_ITEMS.put("wire_schrabidate", new WireItem(MaterialNTM.schrabidate));
-//    ALL_ITEMS.put("wire_schrabidium_fuel", new WireItem(MaterialNTM.schrabidium_fuel));
-//    ALL_ITEMS.put("wire_schraranium", new WireItem(MaterialNTM.schraranium));
-//    ALL_ITEMS.put("wire_semtex", new WireItem(MaterialNTM.semtex));
-//    ALL_ITEMS.put("wire_smore", new WireItem(MaterialNTM.smore));
-//    ALL_ITEMS.put("wire_solinium", new WireItem(MaterialNTM.solinium));
-//    ALL_ITEMS.put("wire_sr90", new WireItem(MaterialNTM.sr90));
-//    ALL_ITEMS.put("wire_starmetal", new WireItem(MaterialNTM.starmetal));
-//    ALL_ITEMS.put("wire_steel", new WireItem(MaterialNTM.steel));
-//    ALL_ITEMS.put("wire_steel_dusted", new WireItem(MaterialNTM.steel_dusted));
-//    ALL_ITEMS.put("wire_strontium", new WireItem(MaterialNTM.strontium));
-//    ALL_ITEMS.put("wire_tantalium", new WireItem(MaterialNTM.tantalium));
-//    ALL_ITEMS.put("wire_tcalloy", new WireItem(MaterialNTM.tcalloy));
-//    ALL_ITEMS.put("wire_technetium", new WireItem(MaterialNTM.technetium));
-//    ALL_ITEMS.put("wire_tennessine", new WireItem(MaterialNTM.tennessine));
-//    ALL_ITEMS.put("wire_th232", new WireItem(MaterialNTM.th232));
-//    ALL_ITEMS.put("wire_thorium_fuel", new WireItem(MaterialNTM.thorium_fuel));
-//    ALL_ITEMS.put("wire_titanium", new WireItem(MaterialNTM.titanium));
-//    ALL_ITEMS.put("wire_u233", new WireItem(MaterialNTM.u233));
-//    ALL_ITEMS.put("wire_u235", new WireItem(MaterialNTM.u235));
-//    ALL_ITEMS.put("wire_u238", new WireItem(MaterialNTM.u238));
-//    ALL_ITEMS.put("wire_u238m2", new WireItem(MaterialNTM.u238m2));
-//    ALL_ITEMS.put("wire_unobtainium", new WireItem(MaterialNTM.unobtainium));
-//    ALL_ITEMS.put("wire_uranium", new WireItem(MaterialNTM.uranium));
-//    ALL_ITEMS.put("wire_uranium_fuel", new WireItem(MaterialNTM.uranium_fuel));
-//    ALL_ITEMS.put("wire_verticium", new WireItem(MaterialNTM.verticium));
-//    ALL_ITEMS.put("wire_weidanium", new WireItem(MaterialNTM.weidanium));
-//    ALL_ITEMS.put("wire_zirconium", new WireItem(MaterialNTM.zirconium));
-
-        // plates
-
-        ALL_ITEMS.put("plate_iron", new PlateItem(MaterialNTM.iron));
-        ALL_ITEMS.put("plate_copper", new PlateItem(MaterialNTM.copper));
-        ALL_ITEMS.put("plate_titanium", new PlateItem(MaterialNTM.titanium));
-        ALL_ITEMS.put("plate_aluminium", new PlateItem(MaterialNTM.aluminium));
-        ALL_ITEMS.put("plate_gold", new PlateItem(MaterialNTM.gold));
-        ALL_ITEMS.put("plate_lead", new PlateItem(MaterialNTM.lead));
-        ALL_ITEMS.put("plate_steel", new PlateItem(MaterialNTM.steel));
-        ALL_ITEMS.put("plate_advanced_alloy", new PlateItem(MaterialNTM.advanced_alloy));
-        ALL_ITEMS.put("plate_combine_steel", new PlateItem(MaterialNTM.combine_steel));
-        ALL_ITEMS.put("plate_paa", new PlateItem(MaterialNTM.paa));
-        ALL_ITEMS.put("plate_saturnite", new PlateItem(MaterialNTM.saturnite));
-        ALL_ITEMS.put("plate_schrabidium", new PlateItem(MaterialNTM.schrabidium));
-        ALL_ITEMS.put("plate_dalekanium", new PlateItem(MaterialNTM.dalekanium));
-        ALL_ITEMS.put("plate_mixed", new PlateItem(MaterialNTM.mixed));
-        ALL_ITEMS.put("plate_kevlar", new PlateItem(MaterialNTM.kevlar));
-        ALL_ITEMS.put("plate_polymer", new PlateItem(MaterialNTM.polymer));
-        ALL_ITEMS.put("plate_desh", new PlateItem(MaterialNTM.desh));
-        ALL_ITEMS.put("plate_euphemium", new PlateItem(MaterialNTM.euphemium));
-        ALL_ITEMS.put("plate_dineutronium", new PlateItem(MaterialNTM.dineutronium));
-
-        // TODO: maybe remove
-        ALL_ITEMS.put("plate_bismuth", new PlateItem(MaterialNTM.bismuth));
-        ALL_ITEMS.put("plate_dura_steel", new PlateItem(MaterialNTM.dura_steel));
-
-        // armor plates
-
-//    ALL_ITEMS.put("plate_armor_titanium", new PlateItem(MaterialNTM.armor_titanium));
-//    ALL_ITEMS.put("plate_armor_ajr", new PlateItem(MaterialNTM.armor_ajr));
-//    ALL_ITEMS.put("plate_armor_hev", new PlateItem(MaterialNTM.armor_hev));
-//    ALL_ITEMS.put("plate_armor_lunar", new PlateItem(MaterialNTM.armor_lunar));
-//    ALL_ITEMS.put("plate_armor_fau", new PlateItem(MaterialNTM.armor_fau));
-//    ALL_ITEMS.put("plate_armor_dnt", new PlateItem(MaterialNTM.armor_dnt));
-
-        // plates that perhaps for auto-generation??
-
-//    ALL_ITEMS.put("plate_ac227", new PlateItem(MaterialNTM.ac227));
-//    ALL_ITEMS.put("plate_actinium", new PlateItem(MaterialNTM.actinium));
-//    ALL_ITEMS.put("plate_am241", new PlateItem(MaterialNTM.am241));
-//    ALL_ITEMS.put("plate_am242", new PlateItem(MaterialNTM.am242));
-//    ALL_ITEMS.put("plate_am_mix", new PlateItem(MaterialNTM.am_mix));
-//    ALL_ITEMS.put("plate_americium_fuel", new PlateItem(MaterialNTM.americium_fuel));
-//    ALL_ITEMS.put("plate_arsenic", new PlateItem(MaterialNTM.arsenic));
-//    ALL_ITEMS.put("plate_asbestos", new PlateItem(MaterialNTM.asbestos));
-//    ALL_ITEMS.put("plate_astatine", new PlateItem(MaterialNTM.astatine));
-//    ALL_ITEMS.put("plate_au198", new PlateItem(MaterialNTM.au198));
-//    ALL_ITEMS.put("plate_australium", new PlateItem(MaterialNTM.australium));
-//    ALL_ITEMS.put("plate_bakelite", new PlateItem(MaterialNTM.bakelite));
-//    ALL_ITEMS.put("plate_beryllium", new PlateItem(MaterialNTM.beryllium));
-//    ALL_ITEMS.put("plate_biorubber", new PlateItem(MaterialNTM.biorubber));
-//    ALL_ITEMS.put("plate_boron", new PlateItem(MaterialNTM.boron));
-//    ALL_ITEMS.put("plate_bromine", new PlateItem(MaterialNTM.bromine));
-//    ALL_ITEMS.put("plate_c4", new PlateItem(MaterialNTM.c4));
-//    ALL_ITEMS.put("plate_cadmium", new PlateItem(MaterialNTM.cadmium));
-//    ALL_ITEMS.put("plate_caesium", new PlateItem(MaterialNTM.caesium));
-//    ALL_ITEMS.put("plate_cdalloy", new PlateItem(MaterialNTM.cdalloy));
-//    ALL_ITEMS.put("plate_cerium", new PlateItem(MaterialNTM.cerium));
-//    ALL_ITEMS.put("plate_chainsteel", new PlateItem(MaterialNTM.chainsteel));
-//    ALL_ITEMS.put("plate_co60", new PlateItem(MaterialNTM.co60));
-//    ALL_ITEMS.put("plate_cobalt", new PlateItem(MaterialNTM.cobalt));
-//    ALL_ITEMS.put("plate_daffergon", new PlateItem(MaterialNTM.daffergon));
-//    ALL_ITEMS.put("plate_electronium", new PlateItem(MaterialNTM.electronium));
-//    ALL_ITEMS.put("plate_ferrouranium", new PlateItem(MaterialNTM.ferrouranium));
-//    ALL_ITEMS.put("plate_fiberglass", new PlateItem(MaterialNTM.fiberglass));
-//    ALL_ITEMS.put("plate_firebrick", new PlateItem(MaterialNTM.firebrick));
-//    ALL_ITEMS.put("plate_gh336", new PlateItem(MaterialNTM.gh336));
-//    ALL_ITEMS.put("plate_graphite", new PlateItem(MaterialNTM.graphite));
-//    ALL_ITEMS.put("plate_hes", new PlateItem(MaterialNTM.hes));
-//    ALL_ITEMS.put("plate_i131", new PlateItem(MaterialNTM.i131));
-//    ALL_ITEMS.put("plate_iodine", new PlateItem(MaterialNTM.iodine));
-//    ALL_ITEMS.put("plate_lanthanium", new PlateItem(MaterialNTM.lanthanium));
-//    ALL_ITEMS.put("plate_les", new PlateItem(MaterialNTM.les));
-//    ALL_ITEMS.put("plate_magnetized_tungsten", new PlateItem(MaterialNTM.magnetized_tungsten));
-//    ALL_ITEMS.put("plate_meteorite", new PlateItem(MaterialNTM.meteorite));
-//    ALL_ITEMS.put("plate_meteorite_forged", new PlateItem(MaterialNTM.meteorite_forged));
-//    ALL_ITEMS.put("plate_mox_fuel", new PlateItem(MaterialNTM.mox_fuel));
-//    ALL_ITEMS.put("plate_neodymium", new PlateItem(MaterialNTM.neodymium));
-//    ALL_ITEMS.put("plate_neptunium", new PlateItem(MaterialNTM.neptunium));
-//    ALL_ITEMS.put("plate_neptunium_fuel", new PlateItem(MaterialNTM.neptunium_fuel));
-//    ALL_ITEMS.put("plate_niobium", new PlateItem(MaterialNTM.niobium));
-//    ALL_ITEMS.put("plate_osmiridium", new PlateItem(MaterialNTM.osmiridium));
-//    ALL_ITEMS.put("plate_pb209", new PlateItem(MaterialNTM.pb209));
-//    ALL_ITEMS.put("plate_phosphorus", new PlateItem(MaterialNTM.phosphorus));
-//    ALL_ITEMS.put("plate_plutonium", new PlateItem(MaterialNTM.plutonium));
-//    ALL_ITEMS.put("plate_plutonium_fuel", new PlateItem(MaterialNTM.plutonium_fuel));
-//    ALL_ITEMS.put("plate_polonium", new PlateItem(MaterialNTM.polonium));
-//    ALL_ITEMS.put("plate_pu238", new PlateItem(MaterialNTM.pu238));
-//    ALL_ITEMS.put("plate_pu239", new PlateItem(MaterialNTM.pu239));
-//    ALL_ITEMS.put("plate_pu240", new PlateItem(MaterialNTM.pu240));
-//    ALL_ITEMS.put("plate_pu241", new PlateItem(MaterialNTM.pu241));
-//    ALL_ITEMS.put("plate_pu_mix", new PlateItem(MaterialNTM.pu_mix));
-//    ALL_ITEMS.put("plate_ra226", new PlateItem(MaterialNTM.ra226));
-//    ALL_ITEMS.put("plate_radspice", new PlateItem(MaterialNTM.radspice));
-//    ALL_ITEMS.put("plate_red_copper", new PlateItem(MaterialNTM.red_copper));
-//    ALL_ITEMS.put("plate_reiium", new PlateItem(MaterialNTM.reiium));
-//    ALL_ITEMS.put("plate_rubber", new PlateItem(MaterialNTM.rubber));
-//    ALL_ITEMS.put("plate_schrabidate", new PlateItem(MaterialNTM.schrabidate));
-//    ALL_ITEMS.put("plate_schrabidium_fuel", new PlateItem(MaterialNTM.schrabidium_fuel));
-//    ALL_ITEMS.put("plate_schraranium", new PlateItem(MaterialNTM.schraranium));
-//    ALL_ITEMS.put("plate_semtex", new PlateItem(MaterialNTM.semtex));
-//    ALL_ITEMS.put("plate_smore", new PlateItem(MaterialNTM.smore));
-//    ALL_ITEMS.put("plate_solinium", new PlateItem(MaterialNTM.solinium));
-//    ALL_ITEMS.put("plate_sr90", new PlateItem(MaterialNTM.sr90));
-//    ALL_ITEMS.put("plate_starmetal", new PlateItem(MaterialNTM.starmetal));
-//    ALL_ITEMS.put("plate_steel_dusted", new PlateItem(MaterialNTM.steel_dusted));
-//    ALL_ITEMS.put("plate_strontium", new PlateItem(MaterialNTM.strontium));
-//    ALL_ITEMS.put("plate_tantalium", new PlateItem(MaterialNTM.tantalium));
-//    ALL_ITEMS.put("plate_tcalloy", new PlateItem(MaterialNTM.tcalloy));
-//    ALL_ITEMS.put("plate_technetium", new PlateItem(MaterialNTM.technetium));
-//    ALL_ITEMS.put("plate_tennessine", new PlateItem(MaterialNTM.tennessine));
-//    ALL_ITEMS.put("plate_th232", new PlateItem(MaterialNTM.th232));
-//    ALL_ITEMS.put("plate_thorium_fuel", new PlateItem(MaterialNTM.thorium_fuel));
-//    ALL_ITEMS.put("plate_tungsten", new PlateItem(MaterialNTM.tungsten));
-//    ALL_ITEMS.put("plate_u233", new PlateItem(MaterialNTM.u233));
-//    ALL_ITEMS.put("plate_u235", new PlateItem(MaterialNTM.u235));
-//    ALL_ITEMS.put("plate_u238", new PlateItem(MaterialNTM.u238));
-//    ALL_ITEMS.put("plate_u238m2", new PlateItem(MaterialNTM.u238m2));
-//    ALL_ITEMS.put("plate_unobtainium", new PlateItem(MaterialNTM.unobtainium));
-//    ALL_ITEMS.put("plate_uranium", new PlateItem(MaterialNTM.uranium));
-//    ALL_ITEMS.put("plate_uranium_fuel", new PlateItem(MaterialNTM.uranium_fuel));
-//    ALL_ITEMS.put("plate_verticium", new PlateItem(MaterialNTM.verticium));
-//    ALL_ITEMS.put("plate_weidanium", new PlateItem(MaterialNTM.weidanium));
-//    ALL_ITEMS.put("plate_zirconium", new PlateItem(MaterialNTM.zirconium));
-
-        // powders
-
-        ALL_ITEMS.put("powder_iron", new PowderItem(MaterialNTM.iron));
-        ALL_ITEMS.put("powder_gold", new PowderItem(MaterialNTM.gold));
-        ALL_ITEMS.put("powder_diamond", new PowderItem(MaterialNTM.diamond));
-        ALL_ITEMS.put("powder_emerald", new PowderItem(MaterialNTM.emerald));
-        ALL_ITEMS.put("powder_lapis", new PowderItem(MaterialNTM.lapis));
-        ALL_ITEMS.put("powder_titanium", new PowderItem(MaterialNTM.titanium));
-        ALL_ITEMS.put("powder_tungsten", new PowderItem(MaterialNTM.tungsten));
-        ALL_ITEMS.put("powder_copper", new PowderItem(MaterialNTM.copper));
-        ALL_ITEMS.put("powder_beryllium", new PowderItem(MaterialNTM.beryllium));
-        ALL_ITEMS.put("powder_aluminium", new PowderItem(MaterialNTM.aluminium));
-        ALL_ITEMS.put("powder_lead", new PowderItem(MaterialNTM.lead));
-        ALL_ITEMS.put("powder_advanced_alloy", new PowderItem(MaterialNTM.advanced_alloy));
-        ALL_ITEMS.put("powder_combine_steel", new PowderItem(MaterialNTM.combine_steel));
-        ALL_ITEMS.put("powder_tcalloy", new PowderItem(MaterialNTM.tcalloy));
-        ALL_ITEMS.put("powder_cdalloy", new PowderItem(MaterialNTM.cdalloy));
-        ALL_ITEMS.put("powder_magnetized_tungsten", new PowderItem(MaterialNTM.magnetized_tungsten));
-        ALL_ITEMS.put("powder_chlorophyte", new PowderItem(MaterialNTM.chlorophyte));
-        ALL_ITEMS.put("powder_red_copper", new PowderItem(MaterialNTM.red_copper));
-        ALL_ITEMS.put("powder_steel", new PowderItem(MaterialNTM.steel));
-        ALL_ITEMS.put("powder_lithium", new PowderItem(MaterialNTM.lithium));
-        ALL_ITEMS.put("powder_quartz", new PowderItem(MaterialNTM.quartz));
-        ALL_ITEMS.put("powder_borax", new PowderItem(MaterialNTM.borax));
-        ALL_ITEMS.put("powder_dura_steel", new PowderItem(MaterialNTM.dura_steel));
-        ALL_ITEMS.put("powder_polymer", new PowderItem(MaterialNTM.polymer));
-        ALL_ITEMS.put("powder_bakelite", new PowderItem(MaterialNTM.bakelite));
-        ALL_ITEMS.put("powder_lanthanium", new PowderItem(MaterialNTM.lanthanium));
-        ALL_ITEMS.put("powder_actinium", new PowderItem(MaterialNTM.actinium));
-        ALL_ITEMS.put("powder_boron", new PowderItem(MaterialNTM.boron));
-        ALL_ITEMS.put("powder_semtex_mix", new PowderItem(MaterialNTM.semtex_mix));
-        ALL_ITEMS.put("powder_desh", new PowderItem(MaterialNTM.desh));
-        ALL_ITEMS.put("powder_zirconium", new PowderItem(MaterialNTM.zirconium));
-        ALL_ITEMS.put("powder_lignite", new PowderItem(MaterialNTM.lignite));
-        ALL_ITEMS.put("powder_asbestos", new PowderItem(MaterialNTM.asbestos));
-        ALL_ITEMS.put("powder_cadmium", new PowderItem(MaterialNTM.cadmium));
-        ALL_ITEMS.put("powder_bismuth", new PowderItem(MaterialNTM.bismuth));
-        ALL_ITEMS.put("powder_coal", new PowderItem(MaterialNTM.coal));
-        ALL_ITEMS.put("powder_yellowcake", new PowderItem(MaterialNTM.yellowcake));
-        ALL_ITEMS.put("powder_thorium", new PowderItem(MaterialNTM.thorium));
-        ALL_ITEMS.put("powder_uranium", new PowderItem(MaterialNTM.uranium));
-        ALL_ITEMS.put("powder_plutonium", new PowderItem(MaterialNTM.plutonium));
-        ALL_ITEMS.put("powder_neptunium", new PowderItem(MaterialNTM.neptunium));
-        ALL_ITEMS.put("powder_polonium", new PowderItem(MaterialNTM.polonium));
-        ALL_ITEMS.put("powder_schrabidium", new PowderItem(MaterialNTM.schrabidium));
-        ALL_ITEMS.put("powder_schrabidate", new PowderItem(MaterialNTM.schrabidate));
-        ALL_ITEMS.put("powder_euphemium", new PowderItem(MaterialNTM.euphemium));
-        ALL_ITEMS.put("powder_dineutronium", new PowderItem(MaterialNTM.dineutronium));
-        ALL_ITEMS.put("powder_iodine", new PowderItem(MaterialNTM.iodine));
-        ALL_ITEMS.put("powder_astatine", new PowderItem(MaterialNTM.astatine));
-        ALL_ITEMS.put("powder_neodymium", new PowderItem(MaterialNTM.neodymium));
-        ALL_ITEMS.put("powder_caesium", new PowderItem(MaterialNTM.caesium));
-        ALL_ITEMS.put("powder_reiium", new PowderItem(MaterialNTM.reiium));
-        ALL_ITEMS.put("powder_weidanium", new PowderItem(MaterialNTM.weidanium));
-        ALL_ITEMS.put("powder_australium", new PowderItem(MaterialNTM.australium));
-        ALL_ITEMS.put("powder_verticium", new PowderItem(MaterialNTM.verticium));
-        ALL_ITEMS.put("powder_unobtainium", new PowderItem(MaterialNTM.unobtainium));
-        ALL_ITEMS.put("powder_daffergon", new PowderItem(MaterialNTM.daffergon));
-        ALL_ITEMS.put("powder_strontium", new PowderItem(MaterialNTM.strontium));
-        ALL_ITEMS.put("powder_cobalt", new PowderItem(MaterialNTM.cobalt));
-        ALL_ITEMS.put("powder_bromine", new PowderItem(MaterialNTM.bromine));
-        ALL_ITEMS.put("powder_niobium", new PowderItem(MaterialNTM.niobium));
-        ALL_ITEMS.put("powder_tantalium", new PowderItem(MaterialNTM.tantalium));
-        ALL_ITEMS.put("powder_tennessine", new PowderItem(MaterialNTM.tennessine));
-        ALL_ITEMS.put("powder_cerium", new PowderItem(MaterialNTM.cerium));
-        ALL_ITEMS.put("powder_ice", new PowderItem(MaterialNTM.ice));
-        ALL_ITEMS.put("powder_desh_mix", new PowderItem(MaterialNTM.desh_mix));
-        ALL_ITEMS.put("powder_desh_ready", new PowderItem(MaterialNTM.desh_ready));
-        ALL_ITEMS.put("powder_nitan_mix", new PowderItem(MaterialNTM.nitan_mix));
-        ALL_ITEMS.put("powder_spark_mix", new PowderItem(MaterialNTM.spark_mix));
-        ALL_ITEMS.put("powder_fire", new PowderItem(MaterialNTM.fire));
-        ALL_ITEMS.put("powder_meteorite", new PowderItem(MaterialNTM.meteorite));
-        ALL_ITEMS.put("powder_tektite", new PowderItem(MaterialNTM.tektite));
-        ALL_ITEMS.put("powder_paleogenite", new PowderItem(MaterialNTM.paleogenite));
-        ALL_ITEMS.put("powder_impure_osmiridium", new PowderItem(MaterialNTM.impure_osmiridium));
-        ALL_ITEMS.put("powder_osmiridium", new PowderItem(MaterialNTM.osmiridium));
-        ALL_ITEMS.put("powder_magic", new PowderItem(MaterialNTM.magic));
-        ALL_ITEMS.put("powder_cloud", new PowderItem(MaterialNTM.cloud));
-        ALL_ITEMS.put("powder_balefire", new PowderItem(MaterialNTM.balefire));
-        ALL_ITEMS.put("powder_coltan_ore", new PowderItem(MaterialNTM.coltan_ore));
-        ALL_ITEMS.put("powder_coltan", new PowderItem(MaterialNTM.coltan));
-        ALL_ITEMS.put("powder_poison", new PowderItem(MaterialNTM.poison));
-        ALL_ITEMS.put("powder_thermite", new PowderItem(MaterialNTM.thermite));
-        ALL_ITEMS.put("powder_power", new PowderItem(MaterialNTM.power));
-        ALL_ITEMS.put("powder_co60", new PowderItem(MaterialNTM.co60));
-        ALL_ITEMS.put("powder_sr90", new PowderItem(MaterialNTM.sr90));
-        ALL_ITEMS.put("powder_at209", new PowderItem(MaterialNTM.at209));
-        ALL_ITEMS.put("powder_pb209", new PowderItem(MaterialNTM.pb209));
-        ALL_ITEMS.put("powder_i131", new PowderItem(MaterialNTM.i131));
-        ALL_ITEMS.put("powder_cs137", new PowderItem(MaterialNTM.cs137));
-        ALL_ITEMS.put("powder_xe135", new PowderItem(MaterialNTM.xe135));
-        ALL_ITEMS.put("powder_au198", new PowderItem(MaterialNTM.au198));
-        ALL_ITEMS.put("powder_ra226", new PowderItem(MaterialNTM.ra226));
-        ALL_ITEMS.put("powder_ac227", new PowderItem(MaterialNTM.ac227));
-        ALL_ITEMS.put("powder_radspice", new PowderItem(MaterialNTM.radspice));
-
-        // powders that perhaps for auto-generation??
-
-//    ALL_ITEMS.put("powder_am241", new PowderItem(MaterialNTM.am241));
-//    ALL_ITEMS.put("powder_am242", new PowderItem(MaterialNTM.am242));
-//    ALL_ITEMS.put("powder_am_mix", new PowderItem(MaterialNTM.am_mix));
-//    ALL_ITEMS.put("powder_americium_fuel", new PowderItem(MaterialNTM.americium_fuel));
-//    ALL_ITEMS.put("powder_arsenic", new PowderItem(MaterialNTM.arsenic));
-//    ALL_ITEMS.put("powder_biorubber", new PowderItem(MaterialNTM.biorubber));
-//    ALL_ITEMS.put("powder_c4", new PowderItem(MaterialNTM.c4));
-//    ALL_ITEMS.put("powder_chainsteel", new PowderItem(MaterialNTM.chainsteel));
-//    ALL_ITEMS.put("powder_electronium", new PowderItem(MaterialNTM.electronium));
-//    ALL_ITEMS.put("powder_ferrouranium", new PowderItem(MaterialNTM.ferrouranium));
-//    ALL_ITEMS.put("powder_fiberglass", new PowderItem(MaterialNTM.fiberglass));
-//    ALL_ITEMS.put("powder_firebrick", new PowderItem(MaterialNTM.firebrick));
-//    ALL_ITEMS.put("powder_gh336", new PowderItem(MaterialNTM.gh336));
-//    ALL_ITEMS.put("powder_graphite", new PowderItem(MaterialNTM.graphite));
-//    ALL_ITEMS.put("powder_hes", new PowderItem(MaterialNTM.hes));
-//    ALL_ITEMS.put("powder_les", new PowderItem(MaterialNTM.les));
-//    ALL_ITEMS.put("powder_meteorite_forged", new PowderItem(MaterialNTM.meteorite_forged));
-//    ALL_ITEMS.put("powder_mox_fuel", new PowderItem(MaterialNTM.mox_fuel));
-//    ALL_ITEMS.put("powder_neptunium_fuel", new PowderItem(MaterialNTM.neptunium_fuel));
-//    ALL_ITEMS.put("powder_phosphorus", new PowderItem(MaterialNTM.phosphorus));
-//    ALL_ITEMS.put("powder_plutonium_fuel", new PowderItem(MaterialNTM.plutonium_fuel));
-//    ALL_ITEMS.put("powder_pu238", new PowderItem(MaterialNTM.pu238));
-//    ALL_ITEMS.put("powder_pu239", new PowderItem(MaterialNTM.pu239));
-//    ALL_ITEMS.put("powder_pu240", new PowderItem(MaterialNTM.pu240));
-//    ALL_ITEMS.put("powder_pu241", new PowderItem(MaterialNTM.pu241));
-//    ALL_ITEMS.put("powder_pu_mix", new PowderItem(MaterialNTM.pu_mix));
-//    ALL_ITEMS.put("powder_rubber", new PowderItem(MaterialNTM.rubber));
-//    ALL_ITEMS.put("powder_saturnite", new PowderItem(MaterialNTM.saturnite));
-//    ALL_ITEMS.put("powder_schrabidium_fuel", new PowderItem(MaterialNTM.schrabidium_fuel));
-//    ALL_ITEMS.put("powder_schraranium", new PowderItem(MaterialNTM.schraranium));
-//    ALL_ITEMS.put("powder_semtex", new PowderItem(MaterialNTM.semtex));
-//    ALL_ITEMS.put("powder_smore", new PowderItem(MaterialNTM.smore));
-//    ALL_ITEMS.put("powder_solinium", new PowderItem(MaterialNTM.solinium));
-//    ALL_ITEMS.put("powder_starmetal", new PowderItem(MaterialNTM.starmetal));
-//    ALL_ITEMS.put("powder_steel_dusted", new PowderItem(MaterialNTM.steel_dusted));
-//    ALL_ITEMS.put("powder_technetium", new PowderItem(MaterialNTM.technetium));
-//    ALL_ITEMS.put("powder_th232", new PowderItem(MaterialNTM.th232));
-//    ALL_ITEMS.put("powder_thorium_fuel", new PowderItem(MaterialNTM.thorium_fuel));
-//    ALL_ITEMS.put("powder_u233", new PowderItem(MaterialNTM.u233));
-//    ALL_ITEMS.put("powder_u235", new PowderItem(MaterialNTM.u235));
-//    ALL_ITEMS.put("powder_u238", new PowderItem(MaterialNTM.u238));
-//    ALL_ITEMS.put("powder_u238m2", new PowderItem(MaterialNTM.u238m2));
-//    ALL_ITEMS.put("powder_uranium_fuel", new PowderItem(MaterialNTM.uranium_fuel));
-
-        // tiny powders
-
-        ALL_ITEMS.put("powder_steel_tiny", new PowderTinyItem(MaterialNTM.steel));
-        ALL_ITEMS.put("powder_lithium_tiny", new PowderTinyItem(MaterialNTM.lithium));
-        ALL_ITEMS.put("powder_lanthanium_tiny", new PowderTinyItem(MaterialNTM.lanthanium));
-        ALL_ITEMS.put("powder_actinium_tiny", new PowderTinyItem(MaterialNTM.actinium));
-        ALL_ITEMS.put("powder_boron_tiny", new PowderTinyItem(MaterialNTM.boron));
-        ALL_ITEMS.put("powder_coal_tiny", new PowderTinyItem(MaterialNTM.coal));
-        ALL_ITEMS.put("powder_iodine_tiny", new PowderTinyItem(MaterialNTM.iodine));
-        ALL_ITEMS.put("powder_neodymium_tiny", new PowderTinyItem(MaterialNTM.neodymium));
-        ALL_ITEMS.put("powder_cobalt_tiny", new PowderTinyItem(MaterialNTM.cobalt));
-        ALL_ITEMS.put("powder_niobium_tiny", new PowderTinyItem(MaterialNTM.niobium));
-        ALL_ITEMS.put("powder_cerium_tiny", new PowderTinyItem(MaterialNTM.cerium));
-        ALL_ITEMS.put("powder_meteorite_tiny", new PowderTinyItem(MaterialNTM.meteorite));
-        ALL_ITEMS.put("powder_paleogenite_tiny", new PowderTinyItem(MaterialNTM.paleogenite));
-        ALL_ITEMS.put("powder_co60_tiny", new PowderTinyItem(MaterialNTM.co60));
-        ALL_ITEMS.put("powder_sr90_tiny", new PowderTinyItem(MaterialNTM.sr90));
-        ALL_ITEMS.put("powder_at209_tiny", new PowderTinyItem(MaterialNTM.at209));
-        ALL_ITEMS.put("powder_pb209_tiny", new PowderTinyItem(MaterialNTM.pb209));
-        ALL_ITEMS.put("powder_i131_tiny", new PowderTinyItem(MaterialNTM.i131));
-        ALL_ITEMS.put("powder_cs137_tiny", new PowderTinyItem(MaterialNTM.cs137));
-        ALL_ITEMS.put("powder_xe135_tiny", new PowderTinyItem(MaterialNTM.xe135));
-        ALL_ITEMS.put("powder_au198_tiny", new PowderTinyItem(MaterialNTM.au198));
-        ALL_ITEMS.put("powder_ac227_tiny", new PowderTinyItem(MaterialNTM.ac227));
-        ALL_ITEMS.put("powder_radspice_tiny", new PowderTinyItem(MaterialNTM.radspice));
-
-        // tiny powders that perhaps for auto-generation??
-
-//    ALL_ITEMS.put("powder_advanced_alloy_tiny", new PowderTinyItem(MaterialNTM.advanced_alloy));
-//    ALL_ITEMS.put("powder_aluminium_tiny", new PowderTinyItem(MaterialNTM.aluminium));
-//    ALL_ITEMS.put("powder_am241_tiny", new PowderTinyItem(MaterialNTM.am241));
-//    ALL_ITEMS.put("powder_am242_tiny", new PowderTinyItem(MaterialNTM.am242));
-//    ALL_ITEMS.put("powder_am_mix_tiny", new PowderTinyItem(MaterialNTM.am_mix));
-//    ALL_ITEMS.put("powder_americium_fuel_tiny", new PowderTinyItem(MaterialNTM.americium_fuel));
-//    ALL_ITEMS.put("powder_arsenic_tiny", new PowderTinyItem(MaterialNTM.arsenic));
-//    ALL_ITEMS.put("powder_asbestos_tiny", new PowderTinyItem(MaterialNTM.asbestos));
-//    ALL_ITEMS.put("powder_astatine_tiny", new PowderTinyItem(MaterialNTM.astatine));
-//    ALL_ITEMS.put("powder_australium_tiny", new PowderTinyItem(MaterialNTM.australium));
-//    ALL_ITEMS.put("powder_bakelite_tiny", new PowderTinyItem(MaterialNTM.bakelite));
-//    ALL_ITEMS.put("powder_beryllium_tiny", new PowderTinyItem(MaterialNTM.beryllium));
-//    ALL_ITEMS.put("powder_biorubber_tiny", new PowderTinyItem(MaterialNTM.biorubber));
-//    ALL_ITEMS.put("powder_bismuth_tiny", new PowderTinyItem(MaterialNTM.bismuth));
-//    ALL_ITEMS.put("powder_bromine_tiny", new PowderTinyItem(MaterialNTM.bromine));
-//    ALL_ITEMS.put("powder_c4_tiny", new PowderTinyItem(MaterialNTM.c4));
-//    ALL_ITEMS.put("powder_cadmium_tiny", new PowderTinyItem(MaterialNTM.cadmium));
-//    ALL_ITEMS.put("powder_caesium_tiny", new PowderTinyItem(MaterialNTM.caesium));
-//    ALL_ITEMS.put("powder_cdalloy_tiny", new PowderTinyItem(MaterialNTM.cdalloy));
-//    ALL_ITEMS.put("powder_chainsteel_tiny", new PowderTinyItem(MaterialNTM.chainsteel));
-//    ALL_ITEMS.put("powder_combine_steel_tiny", new PowderTinyItem(MaterialNTM.combine_steel));
-//    ALL_ITEMS.put("powder_copper_tiny", new PowderTinyItem(MaterialNTM.copper));
-//    ALL_ITEMS.put("powder_daffergon_tiny", new PowderTinyItem(MaterialNTM.daffergon));
-//    ALL_ITEMS.put("powder_desh_tiny", new PowderTinyItem(MaterialNTM.desh));
-//    ALL_ITEMS.put("powder_dineutronium_tiny", new PowderTinyItem(MaterialNTM.dineutronium));
-//    ALL_ITEMS.put("powder_dura_steel_tiny", new PowderTinyItem(MaterialNTM.dura_steel));
-//    ALL_ITEMS.put("powder_electronium_tiny", new PowderTinyItem(MaterialNTM.electronium));
-//    ALL_ITEMS.put("powder_euphemium_tiny", new PowderTinyItem(MaterialNTM.euphemium));
-//    ALL_ITEMS.put("powder_ferrouranium_tiny", new PowderTinyItem(MaterialNTM.ferrouranium));
-//    ALL_ITEMS.put("powder_fiberglass_tiny", new PowderTinyItem(MaterialNTM.fiberglass));
-//    ALL_ITEMS.put("powder_firebrick_tiny", new PowderTinyItem(MaterialNTM.firebrick));
-//    ALL_ITEMS.put("powder_gh336_tiny", new PowderTinyItem(MaterialNTM.gh336));
-//    ALL_ITEMS.put("powder_graphite_tiny", new PowderTinyItem(MaterialNTM.graphite));
-//    ALL_ITEMS.put("powder_hes_tiny", new PowderTinyItem(MaterialNTM.hes));
-//    ALL_ITEMS.put("powder_lead_tiny", new PowderTinyItem(MaterialNTM.lead));
-//    ALL_ITEMS.put("powder_les_tiny", new PowderTinyItem(MaterialNTM.les));
-//    ALL_ITEMS.put("powder_magnetized_tungsten_tiny", new PowderTinyItem(MaterialNTM.magnetized_tungsten));
-//    ALL_ITEMS.put("powder_meteorite_forged_tiny", new PowderTinyItem(MaterialNTM.meteorite_forged));
-//    ALL_ITEMS.put("powder_mox_fuel_tiny", new PowderTinyItem(MaterialNTM.mox_fuel));
-//    ALL_ITEMS.put("powder_neptunium_tiny", new PowderTinyItem(MaterialNTM.neptunium));
-//    ALL_ITEMS.put("powder_neptunium_fuel_tiny", new PowderTinyItem(MaterialNTM.neptunium_fuel));
-//    ALL_ITEMS.put("powder_osmiridium_tiny", new PowderTinyItem(MaterialNTM.osmiridium));
-//    ALL_ITEMS.put("powder_phosphorus_tiny", new PowderTinyItem(MaterialNTM.phosphorus));
-//    ALL_ITEMS.put("powder_plutonium_tiny", new PowderTinyItem(MaterialNTM.plutonium));
-//    ALL_ITEMS.put("powder_plutonium_fuel_tiny", new PowderTinyItem(MaterialNTM.plutonium_fuel));
-//    ALL_ITEMS.put("powder_polonium_tiny", new PowderTinyItem(MaterialNTM.polonium));
-//    ALL_ITEMS.put("powder_polymer_tiny", new PowderTinyItem(MaterialNTM.polymer));
-//    ALL_ITEMS.put("powder_pu238_tiny", new PowderTinyItem(MaterialNTM.pu238));
-//    ALL_ITEMS.put("powder_pu239_tiny", new PowderTinyItem(MaterialNTM.pu239));
-//    ALL_ITEMS.put("powder_pu240_tiny", new PowderTinyItem(MaterialNTM.pu240));
-//    ALL_ITEMS.put("powder_pu241_tiny", new PowderTinyItem(MaterialNTM.pu241));
-//    ALL_ITEMS.put("powder_pu_mix_tiny", new PowderTinyItem(MaterialNTM.pu_mix));
-//    ALL_ITEMS.put("powder_ra226_tiny", new PowderTinyItem(MaterialNTM.ra226));
-//    ALL_ITEMS.put("powder_red_copper_tiny", new PowderTinyItem(MaterialNTM.red_copper));
-//    ALL_ITEMS.put("powder_reiium_tiny", new PowderTinyItem(MaterialNTM.reiium));
-//    ALL_ITEMS.put("powder_rubber_tiny", new PowderTinyItem(MaterialNTM.rubber));
-//    ALL_ITEMS.put("powder_saturnite_tiny", new PowderTinyItem(MaterialNTM.saturnite));
-//    ALL_ITEMS.put("powder_schrabidate_tiny", new PowderTinyItem(MaterialNTM.schrabidate));
-//    ALL_ITEMS.put("powder_schrabidium_tiny", new PowderTinyItem(MaterialNTM.schrabidium));
-//    ALL_ITEMS.put("powder_schrabidium_fuel_tiny", new PowderTinyItem(MaterialNTM.schrabidium_fuel));
-//    ALL_ITEMS.put("powder_schraranium_tiny", new PowderTinyItem(MaterialNTM.schraranium));
-//    ALL_ITEMS.put("powder_semtex_tiny", new PowderTinyItem(MaterialNTM.semtex));
-//    ALL_ITEMS.put("powder_smore_tiny", new PowderTinyItem(MaterialNTM.smore));
-//    ALL_ITEMS.put("powder_solinium_tiny", new PowderTinyItem(MaterialNTM.solinium));
-//    ALL_ITEMS.put("powder_starmetal_tiny", new PowderTinyItem(MaterialNTM.starmetal));
-//    ALL_ITEMS.put("powder_steel_dusted_tiny", new PowderTinyItem(MaterialNTM.steel_dusted));
-//    ALL_ITEMS.put("powder_strontium_tiny", new PowderTinyItem(MaterialNTM.strontium));
-//    ALL_ITEMS.put("powder_tantalium_tiny", new PowderTinyItem(MaterialNTM.tantalium));
-//    ALL_ITEMS.put("powder_tcalloy_tiny", new PowderTinyItem(MaterialNTM.tcalloy));
-//    ALL_ITEMS.put("powder_technetium_tiny", new PowderTinyItem(MaterialNTM.technetium));
-//    ALL_ITEMS.put("powder_tennessine_tiny", new PowderTinyItem(MaterialNTM.tennessine));
-//    ALL_ITEMS.put("powder_th232_tiny", new PowderTinyItem(MaterialNTM.th232));
-//    ALL_ITEMS.put("powder_thorium_fuel_tiny", new PowderTinyItem(MaterialNTM.thorium_fuel));
-//    ALL_ITEMS.put("powder_titanium_tiny", new PowderTinyItem(MaterialNTM.titanium));
-//    ALL_ITEMS.put("powder_tungsten_tiny", new PowderTinyItem(MaterialNTM.tungsten));
-//    ALL_ITEMS.put("powder_u233_tiny", new PowderTinyItem(MaterialNTM.u233));
-//    ALL_ITEMS.put("powder_u235_tiny", new PowderTinyItem(MaterialNTM.u235));
-//    ALL_ITEMS.put("powder_u238_tiny", new PowderTinyItem(MaterialNTM.u238));
-//    ALL_ITEMS.put("powder_u238m2_tiny", new PowderTinyItem(MaterialNTM.u238m2));
-//    ALL_ITEMS.put("powder_unobtainium_tiny", new PowderTinyItem(MaterialNTM.unobtainium));
-//    ALL_ITEMS.put("powder_uranium_tiny", new PowderTinyItem(MaterialNTM.uranium));
-//    ALL_ITEMS.put("powder_uranium_fuel_tiny", new PowderTinyItem(MaterialNTM.uranium_fuel));
-//    ALL_ITEMS.put("powder_verticium_tiny", new PowderTinyItem(MaterialNTM.verticium));
-//    ALL_ITEMS.put("powder_weidanium_tiny", new PowderTinyItem(MaterialNTM.weidanium));
-//    ALL_ITEMS.put("powder_zirconium_tiny", new PowderTinyItem(MaterialNTM.zirconium));
     }
 
     private static void registerItems(IForgeRegistry<Item> registry) {
-        ALL_ITEMS.values().forEach(item -> {
-            registry.register(item);
-            ChudNTM.LOGGER.info("Registered item: {}", item.getRegistryName());
-        });
+        ALL_ITEMS.values().forEach(registry::register);
     }
 
     private static void registerModels() {
         ALL_ITEMS.values().forEach(item -> {
-            ModelLoader
-                    .setCustomModelResourceLocation(item, 0,
-                            new ModelResourceLocation(
-                                    Objects.requireNonNull(item.getRegistryName()),
-                                    "inventory"
-                            )
-                    );
-//            ChudNTM.LOGGER.info("Registered render for item: {}", item.getRegistryName());
+            if (item instanceof MetaItem metaItem) {
+                metaItem.registerModels();
+            } else {
+                ModelLoader
+                        .setCustomModelResourceLocation(item, 0,
+                                new ModelResourceLocation(
+                                        Objects.requireNonNull(item.getRegistryName()),
+                                        "inventory"
+                                )
+                        );
+            }
         });
     }
 
@@ -1518,63 +1074,6 @@ public class ModItems {
         registerItems(ForgeRegistries.ITEMS);
         registerModels();
     }
-
-//    static {
-//        Field[] fields = ModItems.class.getFields();
-//
-//        final Set<String> failed_noTexture = new HashSet<>();
-//        final Set<String> failed_noName = new HashSet<>();
-//
-//        for (Field field : fields) {
-//            String name = field.getName();
-//            if (field.getType() == Item.class) {
-//                field.setAccessible(true);
-//                try {
-//                    Item item = (Item) field.get(null);
-//                    if (item != null) {
-//                        ResourceLocation itemRegistryName = item.getRegistryName();
-//
-//                        if (itemRegistryName == null) continue;
-//
-//                        ResourceLocation textureLocation = new ResourceLocation(
-//                                itemRegistryName.getNamespace(),
-//                                "textures/items/" + itemRegistryName.getPath() + ".png"
-//                        );
-//
-//                        try {
-//                            if (Minecraft.getMinecraft().getResourceManager().getResource(textureLocation) != null) {
-//                                if (I18n.hasKey("item." + name + ".name")) {
-//                                    ALL_ITEMS.add(item);
-//                                } else {
-//                                    failed_noName.add(name);
-//                                }
-//                            } else {
-//                                throw new IOException("Texture " + textureLocation + " missing");
-//                            }
-//                        } catch (IOException ignored) {
-//                            // TODO: Generate textures on the fly?? Do the meta generation starting here
-//                            failed_noTexture.add(name);
-//                        }
-//                    } else {
-//                        throw new RuntimeException();
-//                    }
-//                } catch (IllegalAccessException e) {
-//                    throw new RuntimeException(e);
-//                }
-//            }
-//        }
-//
-//        ChudNTM.LOGGER.warn("Failed to load below items ({}), because the texture is missing:", failed_noTexture.size());
-//        for (String name : failed_noTexture.stream().sorted().collect(Collectors.toList())) {
-//            ChudNTM.LOGGER.warn("\t\t{}", name);
-//        }
-//
-//        ChudNTM.LOGGER.warn("Failed to load below items ({}), because the translation is missing:", failed_noName.size());
-//        for (String name : failed_noName.stream().sorted().collect(Collectors.toList())) {
-//            ChudNTM.LOGGER.warn("\t\t{}", name);
-//        }
-//    }
-//
 
 
 }

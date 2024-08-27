@@ -127,11 +127,7 @@ public class ModBlocks {
     }
 
     private static void registerBlocks(IForgeRegistry<Block> registry) {
-        ChudNTM.LOGGER.info("registerBlocks");
-        ALL_BLOCKS.values().forEach(block -> {
-            registry.register(block);
-            ChudNTM.LOGGER.info("Registered Block: {}", block.getRegistryName());
-        });
+        ALL_BLOCKS.values().forEach(registry::register);
     }
 
     private static void registerBlockItems(IForgeRegistry<Item> registry) {
@@ -139,7 +135,6 @@ public class ModBlocks {
             ItemBlock itemBlock = new ItemBlock(block);
             itemBlock.setRegistryName(Objects.requireNonNull(block.getRegistryName()));
             registry.register(itemBlock);
-            ChudNTM.LOGGER.info("Registered ItemBlock: {}", itemBlock.getRegistryName());
         });
     }
 

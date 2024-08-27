@@ -63,8 +63,6 @@ public class CraftingManager {
 
         recipe.setRegistryName(loc);
         CRAFTING_REGISTRY.getRegistry().register(recipe);
-
-        ChudNTM.LOGGER.info("Added recipe for {}", loc);
     }
 
     private static void addAllRecipes() {

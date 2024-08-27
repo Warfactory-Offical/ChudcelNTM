@@ -1,7 +1,7 @@
 package com.chud.ntm.item.enums;
 
 @SuppressWarnings("unused")
-public enum MaterialNTM {
+public enum EMaterial {
     ac227,
     actinium,
     advanced_alloy,
@@ -158,16 +158,8 @@ public enum MaterialNTM {
     thermite,
     power;
 
-    public String lowercase() {
-        return toString().toLowerCase();
-    }
-
-    public String UPPERCASE() {
-        return toString().toUpperCase();
-    }
-
     public String snake_case() {
-        return toString();
+        return toString().toLowerCase();
     }
 
     public String PascalCase() {

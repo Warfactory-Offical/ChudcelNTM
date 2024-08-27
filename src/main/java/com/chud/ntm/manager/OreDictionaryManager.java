@@ -22,7 +22,6 @@ public class OreDictionaryManager {
     private static void register() {
         for (Map.Entry<String, Item> entry : itemMap.entrySet()) {
             OreDictionary.registerOre(entry.getKey(), entry.getValue());
-            ChudNTM.LOGGER.info("new OreDict entry: {}", entry.getKey());
         }
     }
 

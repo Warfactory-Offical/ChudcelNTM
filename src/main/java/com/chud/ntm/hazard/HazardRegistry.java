@@ -2,9 +2,8 @@ package com.chud.ntm.hazard;
 
 import akka.japi.Pair;
 import com.chud.ntm.ChudNTM;
-import com.chud.ntm.item.enums.MaterialNTM;
+import com.chud.ntm.item.enums.EMaterial;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -64,173 +63,173 @@ public class HazardRegistry {
         shapeMultipliers.put("wire",        wire);
     }
 
-    private static final Map<MaterialNTM, HazardList> materialHazards = new LinkedHashMap<>();
+    private static final Map<EMaterial, HazardList> materialHazards = new LinkedHashMap<>();
 
     static {
-        materialHazards.put(MaterialNTM.lead, new HazardList(
+        materialHazards.put(EMaterial.lead, new HazardList(
                 new Hazard(Hazard.Type.TOXIC, 2.f)
         ));
-        materialHazards.put(MaterialNTM.asbestos, new HazardList(
+        materialHazards.put(EMaterial.asbestos, new HazardList(
                 new Hazard(Hazard.Type.ASBESTOS, 1f)
         ));
-        materialHazards.put(MaterialNTM.pb209, new HazardList(
+        materialHazards.put(EMaterial.pb209, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 10_000.f),
                 new Hazard(Hazard.Type.TOXIC, 2.f),
                 new Hazard(Hazard.Type.BLINDING, 50.f),
                 new Hazard(Hazard.Type.HOT, 3.f)
         ));
-        materialHazards.put(MaterialNTM.arsenic, new HazardList(
+        materialHazards.put(EMaterial.arsenic, new HazardList(
                 new Hazard(Hazard.Type.TOXIC, 10.f)
         ));
-        materialHazards.put(MaterialNTM.c4, new HazardList(
+        materialHazards.put(EMaterial.c4, new HazardList(
                 new Hazard(Hazard.Type.EXPLOSIVE, 10.f)
         ));
-        materialHazards.put(MaterialNTM.phosphorus, new HazardList(
+        materialHazards.put(EMaterial.phosphorus, new HazardList(
                 new Hazard(Hazard.Type.EXPLOSIVE, 4.f)
         ));
-        materialHazards.put(MaterialNTM.lithium, new HazardList(
+        materialHazards.put(EMaterial.lithium, new HazardList(
                 new Hazard(Hazard.Type.HYDROACTIVE, 2.f)
         ));
-        materialHazards.put(MaterialNTM.cerium, new HazardList(
+        materialHazards.put(EMaterial.cerium, new HazardList(
                 new Hazard(Hazard.Type.HYDROACTIVE, 4.f)
         ));
-        materialHazards.put(MaterialNTM.th232, new HazardList(
+        materialHazards.put(EMaterial.th232, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 0.1f)
         ));
-        materialHazards.put(MaterialNTM.thorium_fuel, new HazardList(
+        materialHazards.put(EMaterial.thorium_fuel, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 1.75f)
         ));
-        materialHazards.put(MaterialNTM.ferrouranium, new HazardList(
+        materialHazards.put(EMaterial.ferrouranium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 0.175f)
         ));
-        materialHazards.put(MaterialNTM.uranium, new HazardList(
+        materialHazards.put(EMaterial.uranium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 0.35f)
         ));
-        materialHazards.put(MaterialNTM.u233, new HazardList(
+        materialHazards.put(EMaterial.u233, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 5.f)
         ));
-        materialHazards.put(MaterialNTM.u238, new HazardList(
+        materialHazards.put(EMaterial.u238, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 5.f)
         ));
-        materialHazards.put(MaterialNTM.u235, new HazardList(
+        materialHazards.put(EMaterial.u235, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 1.f)
         ));
-        materialHazards.put(MaterialNTM.uranium_fuel, new HazardList(
+        materialHazards.put(EMaterial.uranium_fuel, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 0.5f)
         ));
-        materialHazards.put(MaterialNTM.schrabidate, new HazardList(
+        materialHazards.put(EMaterial.schrabidate, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 3.f),
                 new Hazard(Hazard.Type.BLINDING,  50.f)
         ));
-        materialHazards.put(MaterialNTM.schrabidium, new HazardList(
+        materialHazards.put(EMaterial.schrabidium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 15.f),
                 new Hazard(Hazard.Type.BLINDING,  50.f)
         ));
-        materialHazards.put(MaterialNTM.schraranium, new HazardList(
+        materialHazards.put(EMaterial.schraranium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 1.5f),
                 new Hazard(Hazard.Type.BLINDING,  50.f)
         ));
-        materialHazards.put(MaterialNTM.solinium, new HazardList(
+        materialHazards.put(EMaterial.solinium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 17.5f),
                 new Hazard(Hazard.Type.BLINDING,  50.f)
         ));
-        materialHazards.put(MaterialNTM.schrabidium_fuel, new HazardList(
+        materialHazards.put(EMaterial.schrabidium_fuel, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 5.85f),
                 new Hazard(Hazard.Type.BLINDING,  50.f)
         ));
-        materialHazards.put(MaterialNTM.les, new HazardList(
+        materialHazards.put(EMaterial.les, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 2.52f),
                 new Hazard(Hazard.Type.BLINDING,  50.f)
         ));
-        materialHazards.put(MaterialNTM.hes, new HazardList(
+        materialHazards.put(EMaterial.hes, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 8.8f),
                 new Hazard(Hazard.Type.BLINDING,  50.f)
         ));
-        materialHazards.put(MaterialNTM.neptunium, new HazardList(
+        materialHazards.put(EMaterial.neptunium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 2.5f),
                 new Hazard(Hazard.Type.HOT, 3.f)
         ));
-        materialHazards.put(MaterialNTM.neptunium_fuel, new HazardList(
+        materialHazards.put(EMaterial.neptunium_fuel, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 1.5f),
                 new Hazard(Hazard.Type.HOT, 3.f)
         ));
-        materialHazards.put(MaterialNTM.plutonium, new HazardList(
+        materialHazards.put(EMaterial.plutonium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 7.5f)
         ));
-        materialHazards.put(MaterialNTM.pu238, new HazardList(
+        materialHazards.put(EMaterial.pu238, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 10.f),
                 new Hazard(Hazard.Type.HOT,  6.f)
         ));
-        materialHazards.put(MaterialNTM.pu239, new HazardList(
+        materialHazards.put(EMaterial.pu239, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 5.f)
         ));
-        materialHazards.put(MaterialNTM.pu240, new HazardList(
+        materialHazards.put(EMaterial.pu240, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 7.5f)
         ));
-        materialHazards.put(MaterialNTM.pu241, new HazardList(
+        materialHazards.put(EMaterial.pu241, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 25.f)
         ));
-        materialHazards.put(MaterialNTM.pu_mix, new HazardList(
+        materialHazards.put(EMaterial.pu_mix, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 6.25f)
         ));
-        materialHazards.put(MaterialNTM.plutonium_fuel, new HazardList(
+        materialHazards.put(EMaterial.plutonium_fuel, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 4.25f)
         ));
 
-        materialHazards.put(MaterialNTM.am241, new HazardList(
+        materialHazards.put(EMaterial.am241, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 8.5f)
         ));
-        materialHazards.put(MaterialNTM.am242, new HazardList(
+        materialHazards.put(EMaterial.am242, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 9.5f)
         ));
-        materialHazards.put(MaterialNTM.am_mix, new HazardList(
+        materialHazards.put(EMaterial.am_mix, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 9.f)
         ));
-        materialHazards.put(MaterialNTM.americium_fuel, new HazardList(
+        materialHazards.put(EMaterial.americium_fuel, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 4.75f)
         ));
-        materialHazards.put(MaterialNTM.co60, new HazardList(
+        materialHazards.put(EMaterial.co60, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 30.f),
                 new Hazard(Hazard.Type.HOT, 6.f)
         ));
-        materialHazards.put(MaterialNTM.tennessine, new HazardList(
+        materialHazards.put(EMaterial.tennessine, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 120.f)
         ));
-        materialHazards.put(MaterialNTM.magnetized_tungsten, new HazardList(
+        materialHazards.put(EMaterial.magnetized_tungsten, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 0.75f)
         ));
-        materialHazards.put(MaterialNTM.technetium, new HazardList(
+        materialHazards.put(EMaterial.technetium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 2.75f)
         ));
-        materialHazards.put(MaterialNTM.tcalloy, new HazardList(
+        materialHazards.put(EMaterial.tcalloy, new HazardList(
                new Hazard(Hazard.Type.RADIATION, 0.075f)
         ));
-        materialHazards.put(MaterialNTM.polonium, new HazardList(
+        materialHazards.put(EMaterial.polonium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 75.f)
         ));
-        materialHazards.put(MaterialNTM.strontium, new HazardList(
+        materialHazards.put(EMaterial.strontium, new HazardList(
                 new Hazard(Hazard.Type.HYDROACTIVE, 8f)
         ));
-        materialHazards.put(MaterialNTM.sr90, new HazardList(
+        materialHazards.put(EMaterial.sr90, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 15f),
                 new Hazard(Hazard.Type.HYDROACTIVE, 8f),
                 new Hazard(Hazard.Type.HOT, 8f)
         ));
-        materialHazards.put(MaterialNTM.i131, new HazardList(
+        materialHazards.put(EMaterial.i131, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 150.f)
         ));
-        materialHazards.put(MaterialNTM.ra226, new HazardList(
+        materialHazards.put(EMaterial.ra226, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 7.5f),
                 new Hazard(Hazard.Type.HYDROACTIVE, 10f)
         ));
-        materialHazards.put(MaterialNTM.ra226, new HazardList(
+        materialHazards.put(EMaterial.ra226, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 500.f),
                 new Hazard(Hazard.Type.HOT, 8f)
         ));
-        materialHazards.put(MaterialNTM.ac227, new HazardList(
+        materialHazards.put(EMaterial.ac227, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 30.f)
         ));
-        materialHazards.put(MaterialNTM.radspice, new HazardList(
+        materialHazards.put(EMaterial.radspice, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 20_000.f)
         ));
     }
@@ -239,7 +238,7 @@ public class HazardRegistry {
 
     private static void populate() {
         for (Map.Entry<String, Float> shapeEntry : shapeMultipliers.entrySet()) {
-            for (MaterialNTM material : MaterialNTM.values()) {
+            for (EMaterial material : EMaterial.values()) {
                 if (!materialHazards.containsKey(material)) continue; // TODO: remove
 
                 final String oreDictEntryName = shapeEntry.getKey() + material.PascalCase();
@@ -256,8 +255,6 @@ public class HazardRegistry {
                     Pair<Item, Integer> key = new Pair<>(is.getItem(), is.getMetadata());
                     hazardMap.put(key, hazards);
                 }
-
-                ChudNTM.LOGGER.info("oreDictEntryName: {}, hazards: {}", oreDictEntryName, hazards);
             }
         }
 
