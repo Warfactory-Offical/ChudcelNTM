@@ -31,7 +31,7 @@ public class HazardRegistry {
         final float powderMult = 3.0F;
         final float block = 10.0F;
         final float plate = ingot;
-        final float plateCast = plate * 3; //IDK what that is
+//        final float plateCast = plate * 3;
         final float powder = ingot * powderMult;
         final float powderTiny = nugget * powderMult;
         final float ore = ingot * 3;
@@ -66,7 +66,6 @@ public class HazardRegistry {
         materialHazards.put(MaterialNTM.lead, new HazardList(
                 new Hazard(Hazard.Type.TOXIC, 2.f)
         ));
-        //ASBESTOS
         materialHazards.put(MaterialNTM.asbestos, new HazardList(
                 new Hazard(Hazard.Type.ASBESTOS, 1f)
         ));
@@ -91,14 +90,12 @@ public class HazardRegistry {
         materialHazards.put(MaterialNTM.cerium, new HazardList(
                 new Hazard(Hazard.Type.HYDROACTIVE, 4.f)
         ));
-        //THORIUM
         materialHazards.put(MaterialNTM.th232, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 0.1f)
         ));
         materialHazards.put(MaterialNTM.thorium_fuel, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 1.75f)
         ));
-        //URANIUM
         materialHazards.put(MaterialNTM.ferrouranium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 0.175f)
         ));
@@ -117,7 +114,6 @@ public class HazardRegistry {
         materialHazards.put(MaterialNTM.uranium_fuel, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 0.5f)
         ));
-        //SCHRABIDIUMLIKE
         materialHazards.put(MaterialNTM.schrabidate, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 3.f),
                 new Hazard(Hazard.Type.BLINDING,  50.f)
@@ -146,7 +142,6 @@ public class HazardRegistry {
                 new Hazard(Hazard.Type.RADIATION, 8.8f),
                 new Hazard(Hazard.Type.BLINDING,  50.f)
         ));
-        //NEPTUNIUM
         materialHazards.put(MaterialNTM.neptunium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 2.5f),
                 new Hazard(Hazard.Type.HOT, 3.f)
@@ -155,7 +150,6 @@ public class HazardRegistry {
                 new Hazard(Hazard.Type.RADIATION, 1.5f),
                 new Hazard(Hazard.Type.HOT, 3.f)
         ));
-        //PLUTONIUM
         materialHazards.put(MaterialNTM.plutonium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 7.5f)
         ));
@@ -178,7 +172,7 @@ public class HazardRegistry {
         materialHazards.put(MaterialNTM.plutonium_fuel, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 4.25f)
         ));
-        ///AMERICIUM
+
         materialHazards.put(MaterialNTM.am241, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 8.5f)
         ));
@@ -191,32 +185,25 @@ public class HazardRegistry {
         materialHazards.put(MaterialNTM.americium_fuel, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 4.75f)
         ));
-        //COBALT60
         materialHazards.put(MaterialNTM.co60, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 30.f),
                 new Hazard(Hazard.Type.HOT, 6.f)
         ));
-
-        //TENNESINE
         materialHazards.put(MaterialNTM.tennessine, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 120.f)
         ));
-        //MAGTUNGST
         materialHazards.put(MaterialNTM.magnetized_tungsten, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 0.75f)
         ));
-        //TECHNICIUM
         materialHazards.put(MaterialNTM.technetium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 2.75f)
         ));
         materialHazards.put(MaterialNTM.tcalloy, new HazardList(
                new Hazard(Hazard.Type.RADIATION, 0.075f)
         ));
-        //POLONIUM
         materialHazards.put(MaterialNTM.polonium, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 75.f)
         ));
-        //STRONTIUM
         materialHazards.put(MaterialNTM.strontium, new HazardList(
                 new Hazard(Hazard.Type.HYDROACTIVE, 8f)
         ));
@@ -225,25 +212,20 @@ public class HazardRegistry {
                 new Hazard(Hazard.Type.HYDROACTIVE, 8f),
                 new Hazard(Hazard.Type.HOT, 8f)
         ));
-        //IODINE131
         materialHazards.put(MaterialNTM.i131, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 150.f)
         ));
-        //RADIUM
         materialHazards.put(MaterialNTM.ra226, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 7.5f),
                 new Hazard(Hazard.Type.HYDROACTIVE, 10f)
         ));
-        //GOLD 198
         materialHazards.put(MaterialNTM.ra226, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 500.f),
                 new Hazard(Hazard.Type.HOT, 8f)
         ));
-        //AC227
         materialHazards.put(MaterialNTM.ac227, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 30.f)
         ));
-        //RADSPICE
         materialHazards.put(MaterialNTM.radspice, new HazardList(
                 new Hazard(Hazard.Type.RADIATION, 20_000.f)
         ));
@@ -310,22 +292,18 @@ public class HazardRegistry {
         NonNullList<ItemStack> mainInventory = player.inventory.mainInventory;
         NonNullList<ItemStack> armorInventory = player.inventory.armorInventory;
 
-        // Iterate over main inventory
         for (int i = 0; i < mainInventory.size(); i++) {
             ItemStack stack = mainInventory.get(i);
 
-            // Check if stack is not empty
             if (!stack.isEmpty()) {
                 applyHazards(stack, player);
 
-                // Check if stack is now empty after applying hazards
                 if (stack.getCount() == 0) {
                     mainInventory.set(i, ItemStack.EMPTY);
                 }
             }
         }
 
-        // Iterate over armor inventory
         for (ItemStack stack : armorInventory) {
             if (!stack.isEmpty()) {
                 applyHazards(stack, player);

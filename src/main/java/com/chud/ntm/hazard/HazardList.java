@@ -2,14 +2,12 @@ package com.chud.ntm.hazard;
 
 import com.chud.ntm.capabilites.LivingCapabilityNTM;
 import com.chud.ntm.config.GeneralConfig;
-import com.chud.ntm.config.RadiationConfig;
-import com.chud.ntm.util.ArmorRegistry;
+import com.chud.ntm.item.ModItems;
 import com.chud.ntm.util.BobMathUtil;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -18,7 +16,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -39,8 +36,8 @@ public class HazardList {
     }
 
     public static boolean isHoldingReacher(EntityLivingBase target) {
-//        if (target instanceof EntityPlayer && !GeneralConfig.enable528) {
-//            return Library.checkForHeld((EntityPlayer) target, ModItems.reacher);
+//        if (target instanceof EntityPlayer player && !GeneralConfig.enable528) {
+//            return checkForHeld(player, ModItems.reacher);
 //        }
 
         return false;
