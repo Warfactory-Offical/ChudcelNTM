@@ -6,26 +6,27 @@ import com.chud.ntm.item.templates.*;
 import com.chud.ntm.item.tool.*;
 
 import com.chud.ntm.manager.CreativeTabsManager;
-import com.chud.ntm.util.I18nUtil;
-import com.google.common.util.concurrent.AtomicDouble;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.enchantment.Enchantment.Rarity;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.client.resources.I18n;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.registries.IForgeRegistry;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 
 public class ModItems {
 
-    public static void forEachItem(Consumer<Item> action) {
+    private static final List<Item> ALL_ITEMS = new ArrayList<>();
+
+    static {
         Field[] fields = ModItems.class.getFields();
 
         final Set<String> failed_noTexture = new HashSet<>();
@@ -50,7 +51,7 @@ public class ModItems {
                         try {
                             if (Minecraft.getMinecraft().getResourceManager().getResource(textureLocation) != null) {
                                 if (I18n.hasKey("item." + name + ".name")) {
-                                    action.accept(item);
+                                    ALL_ITEMS.add(item);
                                 } else {
                                     failed_noName.add(name);
                                 }
@@ -79,6 +80,26 @@ public class ModItems {
         for (String name : failed_noName.stream().sorted().collect(Collectors.toList())) {
             ChudNTM.LOGGER.warn("\t\t{}", name);
         }
+    }
+
+    public static void registerItems(IForgeRegistry<Item> registry) {
+        ALL_ITEMS.forEach(item -> {
+            registry.register(item);
+            ChudNTM.LOGGER.info("Registered item: {}", item.getRegistryName());
+        });
+    }
+
+    public static void registerRenders() {
+        ALL_ITEMS.forEach(item -> {
+            ModelLoader
+                    .setCustomModelResourceLocation(item, 0,
+                            new ModelResourceLocation(
+                                    Objects.requireNonNull(item.getRegistryName()),
+                                    "inventory"
+                            )
+                    );
+            ChudNTM.LOGGER.info("Registered render for item: {}", item.getRegistryName());
+        });
     }
 
     // items

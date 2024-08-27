@@ -29,7 +29,7 @@ public class CreativeTabsManager {
 
     // Creative Tabs
     // ingots, nuggets, wires, machine parts
-    public static CreativeTabs partsTab = new Tab("tabParts", ModItems.ingot_zirconium);
+    public static CreativeTabs partsTab = new Tab("tabParts", /* TODO: ModItems.ingot_zirconium */ Items.IRON_PICKAXE);
     // items that belong in machines, fuels, etc
     public static CreativeTabs controlTab = new Tab("tabControl", /* TODO: ModItems.pellet_rtg */ Items.IRON_PICKAXE);
     // templates, siren tracks

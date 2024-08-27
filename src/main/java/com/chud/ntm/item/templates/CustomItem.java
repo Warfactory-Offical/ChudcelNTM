@@ -1,7 +1,6 @@
 package com.chud.ntm.item.templates;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantment.Rarity;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
