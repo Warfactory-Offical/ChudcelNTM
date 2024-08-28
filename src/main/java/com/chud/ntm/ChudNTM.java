@@ -4,15 +4,12 @@ import com.chud.ntm.block.ModBlocks;
 import com.chud.ntm.client.ClientProxy;
 import com.chud.ntm.hazard.HazardRegistry;
 import com.chud.ntm.item.ModItems;
-import com.chud.ntm.machine.FurnaceIron;
+import com.chud.ntm.manager.GameRegistryManager;
 import com.chud.ntm.manager.OreDictionaryManager;
 
-import com.chud.ntm.tileentity.TileEntityProxyCombo;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.*;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -36,9 +33,7 @@ public class ChudNTM {
         {
             ModItems.preInit();
             ModBlocks.preInit();
-
-            GameRegistry.registerTileEntity(TileEntityProxyCombo.class, new ResourceLocation(RefStrings.MODID, "tileentity_proxy_combo"));
-            GameRegistry.registerTileEntity(FurnaceIron.TileEntity.class, new ResourceLocation(RefStrings.MODID, "tileentity_furnace_iron"));
+            GameRegistryManager.preInit();
         }
         LOGGER.info("PreInit end");
     }
