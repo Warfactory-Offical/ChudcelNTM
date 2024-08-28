@@ -2,6 +2,7 @@ package com.chud.ntm.block;
 
 import com.chud.ntm.ChudNTM;
 import com.chud.ntm.item.enums.EMaterial;
+import com.chud.ntm.machine.FurnaceIron;
 import com.chud.ntm.manager.CreativeTabsManager;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -13,12 +14,10 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
-import org.apache.commons.lang3.NotImplementedException;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
-import java.util.logging.Logger;
 
 public class ModBlocks {
 
@@ -27,8 +26,12 @@ public class ModBlocks {
     public static void preInit() {
         populate();
         register();
-        registerOredict();
+        populateOreDictionary();
         addBlastTooltip();
+    }
+
+    public static void init() {
+
     }
 
     private static void populate() {
@@ -127,6 +130,8 @@ public class ModBlocks {
         ALL_BLOCKS.put("fwatz_computer", new BlockBase(Material.IRON, "fwatz_computer").setHardness(5.0F).setResistance(10.0F).setCreativeTab(CreativeTabsManager.machineTab));
         ALL_BLOCKS.put("pink_planks", new BlockBase(Material.WOOD, "pink_planks").setSoundType(SoundType.WOOD).setCreativeTab(null));
         ALL_BLOCKS.put("block_uranium", new BlockBase(Material.IRON, "block_uranium").setSoundType(SoundType.METAL).setCreativeTab(null));
+
+        ALL_BLOCKS.put("furnace_iron", new FurnaceIron.Block(Material.IRON, "furnace_iron").setHardness(5.0F).setResistance(10.0F).setCreativeTab(CreativeTabsManager.machineTab));
     }
 
     private static void registerBlocks(IForgeRegistry<Block> registry) {
@@ -161,7 +166,7 @@ public class ModBlocks {
         registerModels();
     }
 
-    private static void registerOredict() {
+    private static void populateOreDictionary() {
         ModBlocks.ALL_BLOCKS.keySet().forEach(blockName -> {
             for (EMaterial material : EMaterial.values()) {
                 if (blockName.substring(0).equals("block_" + material))
@@ -178,7 +183,7 @@ public class ModBlocks {
         });
     }
 
-    public Block get(String name) {
+    public static Block get(String name) {
         return ALL_BLOCKS.get(name);
     }
 

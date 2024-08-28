@@ -1,6 +1,5 @@
 package com.chud.ntm.item;
 
-import com.chud.ntm.ChudNTM;
 import com.chud.ntm.item.enums.EMaterial;
 import com.chud.ntm.item.enums.EShape;
 import com.chud.ntm.item.meta.MetaItem;
