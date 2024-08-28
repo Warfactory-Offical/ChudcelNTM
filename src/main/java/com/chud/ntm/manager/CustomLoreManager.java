@@ -2,15 +2,17 @@ package com.chud.ntm.manager;
 
 import com.chud.ntm.config.GeneralConfig;
 import com.chud.ntm.util.I18nUtil;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextFormatting;
 
+import javax.naming.NameNotFoundException;
 import java.util.*;
 
 public class CustomLoreManager {
 
     public static void addCustomLore(ItemStack stack, List<String> list) {
-        String itemName = stack.getItem().getTranslationKey().substring(".item".length());
+        String itemName = stack.getTranslationKey().substring(".item".length());
 
         if (!customLoreEntries.containsKey(itemName)) return;
 
@@ -20,6 +22,7 @@ public class CustomLoreManager {
     static Map<String, List<String>> customLoreEntries = new LinkedHashMap<>();
 
     private static void addCustomLoreEntry(String itemName, String... lines) {
+        if (!I18n.hasKey("item." + itemName +  ".name")) throw new RuntimeException(new NameNotFoundException(itemName));
         customLoreEntries.put(itemName, new ArrayList<>(Arrays.asList(lines)));
     }
 
@@ -31,16 +34,16 @@ public class CustomLoreManager {
 
     static {
         addCustomLoreEntry("powder_asbestos", TextFormatting.ITALIC + "\"Sniffffffff- MHHHHHHMHHHHHHHHH\"");
-//        addCustomLoreEntry("bismuth_tool", "§eRight-click a Dud while having empty cells in inventory gives you antimatter cells.", "§8§oMight set off the Dud tho");
+        addCustomLoreEntry("bismuth_tool", "§eRight-click a Dud while having empty cells in inventory gives you antimatter cells.", "§8§oMight set off the Dud tho");
         addCustomLoreEntry("ingot_fiberglass", "High in fiber, high in glass. Everything the body needs.");
         addCustomLoreEntry("missile_soyuz_lander", "Doubles as a crappy lander!");
-//        addCustomLoreEntry("book_of_", "Denn wer den Walzer richtig tritt,", "der ist auch für den Abgang fit.");
+        addCustomLoreEntry("book_of_", "Denn wer den Walzer richtig tritt,", "der ist auch für den Abgang fit.");
         addCustomLoreEntry("watch", "A small blue pocket watch.", "It's glass has a few cracks in it,", "and some shards are missing.", "It stopped ticking at 2:34.");
         addCustomLoreEntry("reacher", "Holding this in main hand or off hand reduces radiation coming from items to its square-root.", "It also is useful to handle very hot or cold items.");
         addCustomLoreEntry("ingot_asbestos", TextFormatting.ITALIC + "\"Filled with life, self-doubt and asbestos. That comes with the air.\"");
         addCustomLoreEntry("entanglement_kit", "Teleporter crafting item.", "Enables dimension-shifting via", "beryllium-enhanced resource scanner.");
-//        addCustomLoreEntry("ams_focus_limiter", "Maximum performance for restriction field:", "Standard cooling, no energy bonus.");
-//        addCustomLoreEntry("ams_focus_booster", "Weaker restriction field and core energy injection:", "More heat generation, extra energy.");
+        addCustomLoreEntry("ams_focus_limiter", "Maximum performance for restriction field:", "Standard cooling, no energy bonus.");
+        addCustomLoreEntry("ams_focus_booster", "Weaker restriction field and core energy injection:", "More heat generation, extra energy.");
         addCustomLoreEntry("ams_muzzle", "...it emits an energy-beam thingy.");
         addCustomLoreEntry("powder_poison", "Used in multi purpose bombs:", "Warning: Poisonous!");
         addCustomLoreEntry("pellet_cluster", "Used in multi purpose bombs:", "Adds some extra boom!");
@@ -57,13 +60,13 @@ public class CustomLoreManager {
         addCustomLoreEntry("ingot_lanthanium", "'Lanthanum'");
         addCustomLoreEntry("billet_flashlead", "The lattice decays, causing antimatter-matter annihilation reactions, causing the release of pions, decaying into muons, catalyzing fusion of the nuclei, creating the new element. Please try to keep up.");
         addCustomLoreEntry("euphemium_capacitor", "Permits passive dispersion of accumulated positive energy.");
-//        addCustomLoreEntry("iv_empty", I18nUtil.resolveKey("desc.ivempty"));
-//        addCustomLoreEntry("radaway", I18nUtil.resolveKey("desc.radamount", -250), I18nUtil.resolveKey("desc.radspeed", -25), I18nUtil.resolveKey("desc.duration", 10));
-//        addCustomLoreEntry("radaway_strong", I18nUtil.resolveKey("desc.radamount", -500), I18nUtil.resolveKey("desc.radspeed", -100), I18nUtil.resolveKey("desc.duration", 5));
-//        addCustomLoreEntry("radaway_flush", I18nUtil.resolveKey("desc.radamount", -1000), I18nUtil.resolveKey("desc.radspeed", -400), I18nUtil.resolveKey("desc.duration", 2.5));
+        addCustomLoreEntry("iv_empty", I18nUtil.resolveKey("desc.ivempty"));
+        addCustomLoreEntry("radaway", I18nUtil.resolveKey("desc.radamount", -250), I18nUtil.resolveKey("desc.radspeed", -25), I18nUtil.resolveKey("desc.duration", 10));
+        addCustomLoreEntry("radaway_strong", I18nUtil.resolveKey("desc.radamount", -500), I18nUtil.resolveKey("desc.radspeed", -100), I18nUtil.resolveKey("desc.duration", 5));
+        addCustomLoreEntry("radaway_flush", I18nUtil.resolveKey("desc.radamount", -1000), I18nUtil.resolveKey("desc.radspeed", -400), I18nUtil.resolveKey("desc.duration", 2.5));
         addCustomLoreEntry("pin", "Can be used with a screwdriver to pick locks.");
         addCustomLoreEntry("crystal_energy", "Densely packed energy powder.", "Not edible.");
-//        addCustomLoreEntry("pellet_coolant", "Required for cyclotron operation.", "Do NOT operate cyclotron without it!");
+        addCustomLoreEntry("pellet_coolant", "Required for cyclotron operation.", "Do NOT operate cyclotron without it!");
         addCustomLoreEntry("fuse", "This item is needed for every large", "nuclear reactor, as it allows the", "reactor to generate electricity and", "use up it's fuel. Removing the fuse", "from a reactor will instantly shut", "it down.");
         addCustomLoreEntry("gun_super_shotgun", "It's super broken!");
         addCustomLoreEntry("burnt_bark", "A piece of bark from an exploded golden oak tree.");
@@ -96,14 +99,14 @@ public class CustomLoreManager {
                 ? "Woo, scary!"
                 : "That one's my favour"
         );
-//        addCustomLoreEntry("pellet_rtg", true // TODO: MainRegistry.polaroidID == 11
-//                ? "Contains ~100% Pu238 oxide."
-//                : "RTG fuel pellet for infinite energy!"
-//        );
-//        addCustomLoreEntry("pellet_rtg_polonium", true // TODO: MainRegistry.polaroidID == 11
-//                ? "Polonium 4 U and me."
-//                : "Tastes nice in Tea"
-//        );
+        addCustomLoreEntry("pellet_rtg", true // TODO: MainRegistry.polaroidID == 11
+                ? "Contains ~100% Pu238 oxide."
+                : "RTG fuel pellet for infinite energy!"
+        );
+        addCustomLoreEntry("pellet_rtg_polonium", true // TODO: MainRegistry.polaroidID == 11
+                ? "Polonium 4 U and me."
+                : "Tastes nice in Tea"
+        );
         addCustomLoreEntry("flame_pony", "Blue horse beats yellow horse, look it up!", I18nUtil.resolveKey("desc.flamepony"));
         addCustomLoreEntry("ingot_combine_steel", "*insert Civil Protection reference here*");
         addCustomLoreEntry(new String[] { "ingot_gh336", "billet_gh336", "nugget_gh336" }, "Seaborgium's colleague");
